@@ -1,0 +1,139 @@
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  /* light tan */
+  /* background: #f0ebe3; */
+  /* hot mauve */
+  /* background: #532846; */
+  /*more saturated tan */
+  background: #f3e4c7;
+  color: rgb(73,165,180);
+  /*color: #fff;*/
+  margin-left: -60px;
+  padding-left: 60px;
+  flex: 1.2;
+  color: #49a5b4;
+  color: rgb(73,165,180);
+  box-shadow: 0 0 35px rgba(10,30,30,0.4);
+
+  /*Initial Nav Focused*/
+  z-index: 3;
+  box-shadow: 0 0 30px rgba(10,30,20,0.3);
+} 
+
+nav, main {
+  animation: none;
+  transition: background 0.3s, color 0.3s, opacity 0.3s, box-shadow 0.3s;
+  transform-origin: 50% 80%;
+}
+
+nav ul li a, nav ul li a:hover, nav ul li a:active, nav ul li a:visited {
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-size: 10em;
+  line-height: 1em;
+  font-family: 'Jaldi', sans-serif;
+}
+
+nav ul li a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 3px;
+  left: -33px;
+  height: 40px;
+  background: #e183a4;
+  z-index: -1;
+  border-radius: 4px;
+  transform: skewX(-40deg);
+  transition: all 0.3s;
+}
+
+main {
+  background: #fff;
+  margin-right: -60px;
+  padding-right: 60px;
+  flex: 1;
+  overflow-y: auto;
+  filter: blur(2px);
+  z-index: 2;
+}
+
+/*Initial Main UnFocused*/
+main section {
+  opacity: 0.5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main.on section {
+  opacity: 1;
+}
+
+main section {
+  transition: all 0.3s;
+}
+
+nav.on {
+  z-index: 3;
+  /*color: rgb(73,165,180);
+  box-shadow: 0 0 35px rgba(10,30,30,0.4);*/
+  animation: nav-switch-bounce-on-nav 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+nav.off {
+  /*color: rgba(255,255,255,0.4);*/
+  /*color: #3f3f3f;*/
+  color: rgb(63,63,63);
+  background: #222;
+  animation: nav-switch-bounce-off 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+nav.off ul li a:before {
+  background: #171717;
+}
+
+main.on {
+  z-index: 3;
+  box-shadow: -10px 0 40px #000;
+  animation: nav-switch-bounce-on-main 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+  filter: none;
+}
+
+main.off {
+  animation: nav-switch-bounce-off 0.3s linear;
+  animation-fill-mode: forwards;
+  filter: blur(2px);
+}
+
+main.off section {
+  opacity: 0.5;
+}
+
+@keyframes nav-switch-bounce-on-main {
+  0% { flex: 1; }
+  25% { transform: skewX(4deg); }
+  50% { flex: 1.34; }
+  68% { transform: skewX(-2deg); }
+  100% { flex: 1.2; }
+}
+
+@keyframes nav-switch-bounce-on-nav {
+  0% { flex: 1; }
+  25% { transform: skewX(-4deg); }
+  50% { flex: 1.34; }
+  68% { transform: skewX(2deg); }
+  100% { flex: 1.2; }
+}
+
+@keyframes nav-switch-bounce-off {
+  0% { flex: 1.2; }
+  100% { flex: 1; }
+}
