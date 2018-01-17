@@ -66,7 +66,7 @@ if (domDialog.dialog.modal.length > 0 && domDialog.dialog.btnOpen.length > 0) {
     domDialog.dialog.btnOpen[i].addEventListener('click', function() {
       dialog.ModalToggle(i)
     })
-    domDialog.dialog.btnOpen[i].addEventListener('touchevent', function(e) {
+    domDialog.dialog.btnOpen[i].addEventListener('touchstart', function(e) {
       e.preventDefault()
       e.stopPropagation()
       dialog.ModalToggle(i)
@@ -75,7 +75,7 @@ if (domDialog.dialog.modal.length > 0 && domDialog.dialog.btnOpen.length > 0) {
     domDialog.dialog.btnClose[i].addEventListener('click', function() {
       dialog.ModalToggle(i)
     })
-    domDialog.dialog.btnClose[i].addEventListener('touchevent', function(e) {
+    domDialog.dialog.btnClose[i].addEventListener('touchstart', function(e) {
       e.preventDefault()
       e.stopPropagation()
       dialog.ModalToggle(i)
@@ -84,7 +84,7 @@ if (domDialog.dialog.modal.length > 0 && domDialog.dialog.btnOpen.length > 0) {
     domDialog.dialog.outer[i].addEventListener('click', function(e) {
       dialog.ModalToggle(i)
     })
-    domDialog.dialog.outer[i].addEventListener('touchevent', function(e) {
+    domDialog.dialog.outer[i].addEventListener('touchstart', function(e) {
       e.preventDefault()
       e.stopPropagation()
       dialog.ModalToggle(i)
@@ -93,7 +93,7 @@ if (domDialog.dialog.modal.length > 0 && domDialog.dialog.btnOpen.length > 0) {
     domDialog.dialog.inner[i].addEventListener('click', function(e) {
       e.stopPropagation()
     })
-    domDialog.dialog.inner[i].addEventListener('click', function(e) {
+    domDialog.dialog.inner[i].addEventListener('touchstart', function(e) {
       e.preventDefault()
       e.stopPropagation()
     },{passive:false})

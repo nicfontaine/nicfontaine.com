@@ -8,14 +8,17 @@ nav {
   /* hot mauve */
   /* background: #532846; */
   /*more saturated tan */
-  background: #f3e4c7;
-  color: rgb(73,165,180);
+  /*background: #f3e4c7;*/
+  background: #fbecba;
+  /*color: rgb(73,165,180);*/
   /*color: #fff;*/
   margin-left: -60px;
   padding-left: 60px;
   flex: 1.2;
   color: #49a5b4;
-  color: rgb(73,165,180);
+  /*color: rgb(73,165,180);*/
+  /*color: rgb(79, 190, 208);*/
+  color: #41d1e9;
   box-shadow: 0 0 35px rgba(10,30,30,0.4);
 
   /*Initial Nav Focused*/
@@ -46,7 +49,8 @@ nav ul li a:before {
   bottom: 3px;
   left: -33px;
   height: 40px;
-  background: #e183a4;
+  /*background: #e183a4;*/
+  background: #ff91b8;
   z-index: -1;
   border-radius: 4px;
   transform: skewX(-40deg);
@@ -55,12 +59,15 @@ nav ul li a:before {
 
 main {
   background: #fff;
-  margin-right: -60px;
-  padding-right: 60px;
+  /*margin-right: -60px;
+  padding-right: 60px;*/
   flex: 1;
   overflow-y: auto;
-  filter: blur(2px);
   z-index: 2;
+}
+
+main, main.off, nav.off {
+  /*filter: blur(2px);*/
 }
 
 /*Initial Main UnFocused*/
@@ -89,7 +96,7 @@ nav.on {
 nav.off {
   /*color: rgba(255,255,255,0.4);*/
   /*color: #3f3f3f;*/
-  color: rgb(63,63,63);
+  color: rgb(50,50,50);
   background: #222;
   animation: nav-switch-bounce-off 0.3s linear;
   animation-fill-mode: forwards;
@@ -110,7 +117,6 @@ main.on {
 main.off {
   animation: nav-switch-bounce-off 0.3s linear;
   animation-fill-mode: forwards;
-  filter: blur(2px);
 }
 
 main.off section {
@@ -118,11 +124,13 @@ main.off section {
 }
 
 @keyframes nav-switch-bounce-on-main {
-  0% { flex: 1; }
+  0% { flex: 1; margin-right: 0; padding-right: 0;}
+  0.1% { margin-right: -60px; padding-right: 60px; }
   25% { transform: skewX(4deg); }
   50% { flex: 1.34; }
   68% { transform: skewX(-2deg); }
-  100% { flex: 1.2; }
+  99.9% { margin-right: -60px; padding-right: 60px; }
+  100% { flex: 1.2; margin-right: 0; padding-right: 0;}
 }
 
 @keyframes nav-switch-bounce-on-nav {

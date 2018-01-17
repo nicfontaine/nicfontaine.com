@@ -35,6 +35,16 @@ body {
   border: 0;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 /* Redefine base focus style */
 
 /* :focus {
@@ -63,7 +73,8 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sub { bottom: -0.25em; }
 sup { top: -0.5em; }
 img { border-style: none; }
-code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+code, kbd, pre, samp { font-family: mo
+  pace, monospace; font-size: 1em; }
 figure { margin: 1em 40px; }
 optgroup { font-weight: bold; }
 fieldset { margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
@@ -87,11 +98,21 @@ main {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3em;
   margin-top: 0;
+  position: relative;
 }
 
 h1.underline, h2.underline, h3.underline, h4.underline, h5.underline, h6.underline {
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.15em;
+}
+
+.linker {
+  position: absolute;
+  left: -14px;
+  transform: translateX(-100%);
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 h1 { font-size: 3.2em; margin-bottom: 0.6em; }
@@ -107,7 +128,8 @@ hr {
   height: 1px;
 }
 
-a, a:active, a:visited, a:hover { color: inherit; font-weight: bold; text-decoration: underline; }
+a { text-decoration: underline; font-weight: bold; }
+a:active, a:visited, a:hover { color: inherit;  }
 
 p {
   line-height: 1.45;
@@ -248,6 +270,9 @@ button.full-width, input[type='submit'].full-width { display: block; width: 100%
 
 body > header { border-bottom: 1px solid #ccc; }
 
+a.linker { color: #eee; }
+a.linker:hover { color: #ddd; }
+
 button, .btn, input[type='submit'] {
   background: #ddd;
   border-color: #bbb;
@@ -318,9 +343,10 @@ code {
 /******************/
 
 /*** Positioning ***/
+
 .pos-abs-center {
   position: absolute;
-  right: 0; left: 0; 
+  right: 0; left: 0;
   margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
@@ -328,12 +354,26 @@ code {
 .pos-abs {
   position: absolute;
 }
-.pos-abs-whole {
-  top: 0; right: 0; bottom: 0; left: 0;
-}
 .pos-rel {
   position: relative;
 }
+.pos-fixed {
+  position: fixed;
+}
+
+.pos-all-0 {
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.flt-l {
+  float: left;
+}
+
+.flt-r {
+  float: right;
+}
+
+/*** Text Styles ***/
 
 .text-left { text-align: left; }
 .text-right { text-align: right; }

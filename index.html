@@ -11,8 +11,9 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/boilerplate-nf.css">
-  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="./css/bonkr.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/main.css">
 
   <!-- Fonts -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Dosis:400,700,800" rel="stylesheet">
@@ -20,17 +21,31 @@
   <link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Jaldi:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
 
 </head>
-<body class='pos-abs pos-abs-whole d-flx flx-row' tabindex='-1'>
+<noscript>
+  <style>
+    .loader { display: none !important;  }
+    nav, main { flex: 1; transition-property: none;}
+    main { filter: none; }
+    main section { opacity: 1; transition: none; }
+    /*(NOTE) Add hover style for nav links*/
+  </style>
+</noscript>
+<body class='pos-abs pos-all-0 d-flx flx-row' tabindex='-1'>
+
+  <div id='loader' class='loader show pos-fixed pos-all-0'>
+    <!-- <div class='pos-abs-center text-center'>loader</div> -->
+  </div>
 
   <!-- Left, Nav -->
   <nav role='navigation' class='pos-rel'>
-    <ul class='pos-abs-center d-flx flx-col flx-1 text-center'>
-      <li><a href=''>About</a></li>
-      <li><a href=''>Design</a></li>
-      <li><a href=''>Code</a></li>
-      <li><a href=''>Contact</a></li>
+    <ul class='pos-abs-center text-center noselect'>
+      <li><a href='' class='nav-link'>About</a></li>
+      <li><a href='' class='nav-link'>Design</a></li>
+      <li><a href='' class='nav-link'>Code</a></li>
+      <li><a href='' class='nav-link'>Contact</a></li>
     </ul>
   </nav>
 
@@ -38,19 +53,19 @@
   <main class='pos-rel'>
 
     <section class='pd-a-40 pd-b-0'>
-      <h1 class='underline mg-b-0'>H1 Heading</h1>
+      <h1 class='underline mg-b-0' id='heading-01'>Hey There Good Lookin'<a href='#heading-01' class='linker'>&para;</a></h1>
     </section>
 
     <section class='pd-a-40 pd-b-0'>
 
-      <h3>H3 Heading</h3>
-
-      <p>
+      <!-- <p>
         <button type='button' class='dialog-btn-open'>Dialog 01</button>
-      </p>
+      </p> -->
+
+      <img src='./img/nf-headshot-explode-c.jpg' class='flt-r mg-l-30 mg-b-20' style='max-width: 380px;'>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas finibus mauris eu gravida. Nunc convallis eget tellus a auctor. Nam ultricies ex ut nunc ultricies, eget porttitor est malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nibh nunc, maximus eu sapien ac, convallis ultricies quam.
+        I'm an Digital Artist and Developer currently living in San Francisco, CA. I specialize in imaginative graphic branding and illustration, unique but functionally tested front-end web and UI/UX design, and 3D modeling and animation.
       </p>
 
       <p>
@@ -102,7 +117,7 @@
   </main>
   
   <!-- Dialog 01 Intro -->
-  <div class='dialog active center' role='dialog'>
+  <!-- <div class='dialog active center' role='dialog'>
     <div class='dialog-outer'>
       <div class='dialog-inner pd-a-20'>
         <header role='banner'>
@@ -116,10 +131,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <script src="js/boilerplate-nf.js"></script>
-  <script src="js/main.js"></script>
+  <script src="./js/loader.js"></script>
+  <script src="./js/bonkr.js"></script>
+  <script src="./js/nav.js"></script>
+  <script src="./js/main.js"></script>
 
 </body>
 </html>
