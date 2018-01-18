@@ -129,7 +129,7 @@ hr {
 }
 
 a { text-decoration: underline; font-weight: bold; }
-a:active, a:visited, a:hover { color: inherit;  }
+a, a:active, a:visited, a:hover { color: inherit;  }
 
 p {
   line-height: 1.45;
