@@ -1,3 +1,12 @@
+h1 {
+  font-size: 5.4em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 4em;
+}
+
 .loader {
   z-index: 500;
   background: #fff;
@@ -11,35 +20,90 @@
   pointer-events: auto;
 }
 
-nav ul li {
-  height: 130px;
-  margin-bottom: 40px;
-}
-
-nav ul li a {
-  top: 50%;
-  transform: translateY(-50%);
-  position: relative;
-}
-
-.nav-link:focus, .nav-link.cycled {
-  /*font-family: 'Schoolbell';*/
-  /*font-size: 7em;*/
-  color: #ff91b8;
-  color: #87ef7c;;
-}
-
-.nav-link:focus:after, .nav-link.cycled:after {
-  content: '?';
+main .symbol-bg-01:after {
+  content: '@';
   position: absolute;
-  font-family: 'Schoolbell';
-  left: -60px;
-  transform: translateX(-100%) rotate(180deg);
-  color: #8fa6e7;
-  color: #ff91b8;
+  font-size: 50vw;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%) translateZ(0.01px);
+  text-align: left;
+  font-weight: bold;
+  opacity: 0;
+  color: #ffe3a1;
+  transition: all 0;
+  transition-delay: 0;
+  transition-duration: 0;
 }
 
-.nav-link:focus:before, .nav-link.cycled:before {
-  background: #a2f68d;
-  background: #8fa6e7;
+main.on .symbol-bg-01:after {
+  opacity: 1;
+  transition: all;
+  transition-delay: 0.3s;
+  transition-duration: 0.5s;
+  transform: translateY(-50%) translateX(-50%) translateZ(0.01px);
+}
+
+main p {
+  font-weight: 500;
+  font-family: 'Assistant';
+}
+
+.text-block-corner-left {
+  max-width: 510px;
+  margin-top: 422px;
+  padding-left: 110px;
+  text-align: justify;
+  font-size: 1.1em;
+  font-style: italic;
+  font-family: 'Work Sans';
+  font-weight: 500;
+}
+
+.ltr-rot {
+  transition: all 0.3s ease-out;
+  transform-origin: 50% 50%;
+}
+
+.ltr-rot-01-01 {
+  transform: rotate(-7deg) translate(-2px,4px);
+  display: inline-block;
+}
+
+.ltr-rot-01-02 {
+  transform: rotate(20deg) translate(4px,5px);
+  display: inline-block;
+}
+
+.ltr-rot-02-01 {
+  transform: rotate(-12deg) translate(-5px,4px);
+  display: inline-block;
+}
+
+.ltr-rot-02-02 {
+  transform: rotate(7deg) translate(6px,4px);
+  display: inline-block;
+}
+
+.ltr-rot-03-01 {
+  transform: rotate(30deg) translate(15px,-4px);
+  display: inline-block;
+}
+
+.ltr-rot-04-01 {
+  transform: rotate(-12deg) translate(0,4px);
+  display: inline-block;
+}
+
+.ltr-rot-04-02 {
+  transform: rotate(-7deg) translate(-2px,1px);
+  display: inline-block;
+}
+
+li.cycled .ltr-rot {
+  transform: none;
+}
+
+nav.off .ltr-rot {
+  /*transform: none;*/
 }

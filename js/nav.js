@@ -5,11 +5,14 @@
   const domNav = {
     main: document.getElementsByTagName('main'),
     nav: document.getElementsByTagName('nav'),
-    navLinks: document.getElementsByClassName('nav-link')
+    navLi: document.getElementsByClassName('nav-li'),
+    navA: document.getElementsByClassName('nav-link')
   }
 
-  domNav.navLinks[0].focus()
-  domNav.navLinks[0].classList.add('cycled')
+  domNav.navA[0].focus()
+  domNav.navLi[0].classList.add('cycled')
+
+  // (NOTE) should reset main.scrollTop, but not working
 
   // Handle main/menu navigation
   var nav = {
@@ -22,22 +25,22 @@
       cycle: function(countDir) {
         if (countDir === 'next') {
           nav.links.i++
-          if (nav.links.i > domNav.navLinks.length-1) {
+          if (nav.links.i > domNav.navLi.length-1) {
             nav.links.i = 0
           }
         } else if (countDir === 'prev') {
           nav.links.i--
           if (nav.links.i < 0) {
-            nav.links.i = domNav.navLinks.length-1
+            nav.links.i = domNav.navLi.length-1
           }
         }
-        domNav.navLinks[nav.links.i].focus()
+        domNav.navA[nav.links.i].focus()
         // Clear .cycled from all
-        for (var i=0; i<domNav.navLinks.length; i++) {
-          domNav.navLinks[i].classList.remove('cycled')
+        for (var i=0; i<domNav.navLi.length; i++) {
+          domNav.navLi[i].classList.remove('cycled')
         }
         // Add .cycled to keep style even when we lose focus by switching to MAIN
-        domNav.navLinks[nav.links.i].classList.add('cycled')
+        domNav.navLi[nav.links.i].classList.add('cycled')
       }
     },
     navSwitch: function() {
@@ -57,8 +60,10 @@
         m.classList.add('off')
         n.classList.remove('off')
         n.classList.add('on')
+        n.tabIndex = '-1'
+        n.focus()
         m.removeAttribute('tabindex')
-        domNav.navLinks[nav.links.i].focus()
+        domNav.navA[nav.links.i].focus()
       }
 
       // Log focused foc.side
