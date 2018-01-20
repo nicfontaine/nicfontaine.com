@@ -87,7 +87,7 @@ main.on section {
   opacity: 1;
 }
 
-main section {
+main section, main article {
   transition: all 0.3s;
 }
 
@@ -126,7 +126,7 @@ main.off {
   animation-fill-mode: forwards;
 }
 
-main.off section {
+main.off section, main.off article {
   opacity: 0.5;
 }
 
@@ -156,6 +156,7 @@ main.off section {
 nav ul li {
   height: 130px;
   margin-bottom: 40px;
+  position: relative;
 }
 
 nav ul li a {
@@ -168,10 +169,34 @@ nav.on li.cycled {
   /*color: red;*/
 }
 
+nav ul li:after {
+  transition: all 0.4s;
+  content: 'ENTER Key To Visit';
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-right: 11px;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  text-align: right;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s;
+  font-style: italic;
+}
+
+nav.on ul li.cycled:after {
+  opacity: 1;
+  transition: all 0.3s 0.4s;
+}
+
 nav ul li.cycled a:before {
   left: 100px;
   background: #f972a1;
-  width: 160%;
+  width: 180%;
 }
 
 .nav-instr-nav {
