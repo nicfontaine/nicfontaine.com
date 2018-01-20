@@ -7,19 +7,6 @@ h2 {
   font-size: 4em;
 }
 
-.loader {
-  z-index: 500;
-  background: #fff;
-  pointer-events: none;
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.loader.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 main .symbol-bg-01:after {
   content: '@';
   position: absolute;
