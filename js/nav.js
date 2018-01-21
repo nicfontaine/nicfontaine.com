@@ -63,6 +63,10 @@
         n.tabIndex = '-1'
         n.focus()
         m.removeAttribute('tabindex')
+        // Reset focus & .cycled to top
+        // (Note) maybe should do current page index
+        nav.links.i = 0
+        nav.links.cycle()
         domNav.navA[nav.links.i].focus()
       }
 

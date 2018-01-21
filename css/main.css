@@ -20,18 +20,19 @@ main .symbol-bg-01:after {
   transform: translateY(-50%) translateX(-50%) translateZ(0.01px);
   text-align: left;
   font-weight: bold;
-  opacity: 0;
-  color: #ffe3a1;
+  /*opacity: 0;*/
+  color: #f3f3f3;
   transition: all 0;
   transition-delay: 0;
   transition-duration: 0;
 }
 
 main.on .symbol-bg-01:after {
-  opacity: 1;
+  color: #ffe3a1;
+  /*opacity: 1;*/
   transition: all;
-  transition-delay: 0.3s;
-  transition-duration: 0.5s;
+  transition-delay: 0.1s;
+  transition-duration: 0.4s;
   transform: translateY(-50%) translateX(-50%) translateZ(0.01px);
 }
 
@@ -91,10 +92,24 @@ main p {
   display: inline-block;
 }
 
-li.cycled .ltr-rot {
+li.cycled .ltr-rot, li.active .ltr-rot {
   transform: none;
 }
 
 nav.off .ltr-rot {
   /*transform: none;*/
+}
+
+.heading-split-bar {
+  color: #fff;
+}
+
+main.off .heading-split-bar-01 {
+  background: #aaa;
+  transition: all 0.3s;
+}
+
+.heading-split-bar-01 {
+  background: #bf62d7; 
+  transition: all 0.3s;
 }

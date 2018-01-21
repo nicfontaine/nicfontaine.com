@@ -551,6 +551,10 @@ code {
 .mg-l-40 { margin-left: 40px; }
 
 /*** Max Width ***/
+.w-mx-200 { max-width: 200px; }
+.w-mx-250 { max-width: 250px; }
+.w-mx-300 { max-width: 300px; }
+.w-mx-350 { max-width: 350px; }
 .w-mx-400 { max-width: 400px; }
 .w-mx-450 { max-width: 450px; }
 .w-mx-500 { max-width: 500px; }
