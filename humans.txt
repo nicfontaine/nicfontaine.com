@@ -3,13 +3,12 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+  Nic Fontaine @ngpfontaine
 
 # THANKS
 
-  <name>
+  Janet Reno, Heffer Wolf, Ty Pennington
 
 # TECHNOLOGY COLOPHON
 
-  CSS3, HTML5
-Apache Server Configs, jQuery, Modernizr, Normalize.css
+  ES5, CSS3, HTML5, das it

@@ -67,7 +67,7 @@
         // (Note) maybe should do current page index
         nav.links.i = 0
         nav.links.cycle()
-        domNav.navA[nav.links.i].focus()
+        // domNav.navA[nav.links.i].focus()
       }
 
       // Log focused foc.side

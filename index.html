@@ -9,6 +9,7 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+  <link rel="canonical" href="https://nicfontaine.com">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/bonkr.css">
@@ -21,17 +22,16 @@
   <link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Jaldi:700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Assistant:400,800" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
 
 </head>
 <noscript>
   <style>
     .loader { display: none !important;  }
-    nav, main { flex: 1; transition-property: none;}
-    main { filter: none; }
+    nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
+    main, main p { color: #333; }
+    main img { opacity: 1;
     main section { opacity: 1; transition: none; }
     /*(NOTE) Add hover style for nav links*/
   </style>
@@ -46,14 +46,14 @@
   <nav role='navigation' class='on pos-rel'>
     <ul class='pos-abs-center text-center noselect'>
       <li class='nav-li active'><a href='' class='nav-link'>A<span class='ltr-rot ltr-rot-01-01'>b</span>o<span class='ltr-rot ltr-rot-01-02'>u</span>t</a></li>
-      <li class='nav-li'><a href='' class='nav-link'>D<span class='ltr-rot ltr-rot-02-01'>e</span>si<span class='ltr-rot ltr-rot-02-02'>g</span>n</a></li>
+      <li class='nav-li'><a href='./design.html' class='nav-link'>D<span class='ltr-rot ltr-rot-02-01'>e</span>si<span class='ltr-rot ltr-rot-02-02'>g</span>n</a></li>
       <li class='nav-li'><a href='' class='nav-link'>C<span class='ltr-rot ltr-rot-03-01'>o</span>de</a></li>
       <li class='nav-li'><a href='' class='nav-link'><span class='ltr-rot ltr-rot-04-01'>C</span>ont<span class='ltr-rot ltr-rot-04-02'>a</span>ct</a></li>
     </ul>
-    <!-- <div class='nav-instr-nav pos-abs pd-a-15'> -->
-      <!-- <span class='text-key'>&gt;</span> -->
-      <!-- <div class='nav-instr-text'>Right Key To Switch</div> -->
-    <!-- </div> -->
+    <!-- <div class='nav-instr-nav pos-abs pd-a-15'>
+      <span class='text-key'>&gt;</span>
+      <div class='nav-instr-text'>Right Key To Switch</div>
+    </div> -->
   </nav>
 
   <!-- Right, Content -->
@@ -74,18 +74,13 @@
     </section>
 
     <section class='pd-a-25'>
-      <!-- <hr> -->
     </section>
 
-    <!-- <section class='pd-a-40 pd-b-0'> -->
     <article class='heading-split-bar heading-split-bar-01 text-right pd-a-40 mg-t-40'>
       <h2 class='mg-b-0' id='heading-01'>But like.. What else?</h2>
     </article>
-    <!-- </section> -->
 
     <section class='pd-a-40 symbol-bg-01'>
-
-      <!-- <img src='./img/nf-headshot-explode-c.jpg' class='flt-r mg-l-30 mg-b-20' style='max-width: 380px; shape-outside:content-box;'> -->
 
       <h3>Background</h3>
 
@@ -94,7 +89,7 @@
       </p>
 
       <p>
-        Before <span class='text-italic'>SF</span>, I was in <span class='text-italic'>Asheville, NC</span> designing landing pages &amp; display ads for PPC campaigns / running AB testing at <a href='https://element-360.com' target='_blank'>Element-360</a>, and designing for games, animation, and branding under various freelance contracts. I graduated from UNC Asheville in 2012, and grew up in <span class='text-italic'>Tallahassee, FL</span>.
+        Before <em>SF</em>, I was in <em>Asheville, NC</em> designing landing pages &amp; display ads for PPC campaigns / running AB testing at <a href='https://element-360.com' target='_blank'>Element-360</a>, and designing for games, animation, and branding under various freelance contracts. I graduated from UNC Asheville in 2012, and grew up in <em>Tallahassee, FL</em>.
       </p>
 
       <p>
@@ -102,9 +97,9 @@
       </p>
 
       <ul>
-        <li><span class='text-bold'>Linux, Node/Php, Vanilla JS, HTML, CSS</span> - deploying responsive, lightweight, user-friendly web-apps</li>
-        <li><span class='text-bold'>Unity3D and C#</span> - crafting interfaces for dashboards, in-game HUDs, and VR</li>
-        <li><span class='text-bold'>PS, Inkscape, Invision, Draw.io &amp; more</span> - wireframing user experience, prototypes, and designing assets</li>
+        <li><strong>Linux, Node/Php, Vanilla JS, HTML, CSS</strong> - deploying responsive, lightweight, user-friendly web-apps</li>
+        <li><strong>Unity3D, Photoshop, &amp; C#</strong> - crafting logical interfaces for dashboards, in-game HUDs, and VR</li>
+        <li><strong>Pen &amp; Paper, Sketch, Invision, &amp; more</strong> - wireframing user experience, prototypes, and designing assets</li>
       </ul>
 
     </section>
@@ -116,11 +111,11 @@
       <img src='./img/nf-school-01.jpg' class='flt-l mg-r-20 w-mx-200'>
 
       <p>
-        Yea, it's <span class='text-italic'>Nicholas</span>. Apparently 1st grade me didn't think adding another letter made any sense.
+        Yea, it's <em>Nicholas</em>. Apparently 1st grade me didn't think adding another letter made any sense.
       </p>
 
       <p>
-        Fully - <span class='text-italic'>Nicholas Grayson Paul Fontaine</span>. Or if you're my grandmother, you can use <span class='text-italic'>Nico</span>.
+        Fully - <em>Nicholas Grayson Paul Fontaine</em>. Or if you're my grandmother, you can use <em>Nico</em>.
       </p>
 
       <div style='clear: both'></div>
@@ -146,7 +141,7 @@
       </p>
 
       <p>
-        I love finding the unique edge-cases that seem to only arise in release, and trying to accomodate for them - and the humbling experience of knowing you, <span class='text-italic'>again</span>, came up short in the hypothetical storytelling of planning for every possibility. <span class='text-bold'>(That night Jeff Goldbloum visits you in your dreams to seductively explain chaos theory)</span>.
+        I love finding the unique edge-cases that seem to only arise in release, and trying to accomodate for them - and the humbling experience of knowing you, <em>again</em>, came up short in the hypothetical storytelling of planning for every possibility. <strong>(And that night Jeff Goldbloum visits you in your dreams to seductively explain chaos theory)</strong>.
       </p>
 
       <img src='./img/screen-jp-01-c.png'>
