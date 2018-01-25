@@ -93,8 +93,8 @@ nav ul li.active:before {
 
 main {
   background: #fff;
-  padding-right: 60px;*/
-  flex: 1;
+  /*padding-right: 60px;*/
+  /*flex: 1;*/
   overflow-y: auto;
   z-index: 2;
   font-family: 'Work Sans';
@@ -138,7 +138,7 @@ p {
 }
 
 main.off {
-  animation: nav-switch-bounce-off 0.3s linear;
+  animation: nav-switch-bounce-off-main 0.3s linear;
   animation-fill-mode: forwards;
 }
 
@@ -146,11 +146,16 @@ main.off section, main.off article {
   /*opacity: 0.5;*/
 }
 
+nav.off {
+  animation: nav-switch-bounce-off-nav 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
 @keyframes nav-switch-bounce-on-main {
   0% { flex: 1; margin-right: 0; padding-right: 0;}
   0.1% { margin-right: -60px; padding-right: 60px; }
   25% { transform: skewX(3deg); }
-  50% { flex: 1.18; }
+  50% { flex: 1.13; }
   68% { transform: skewX(-1.2deg); }
   99.9% { margin-right: -60px; padding-right: 60px; }
   100% { flex: 1.07; margin-right: 0; padding-right: 0;}
@@ -159,12 +164,17 @@ main.off section, main.off article {
 @keyframes nav-switch-bounce-on-nav {
   0% { flex: 1; }
   25% { transform: skewX(-3deg); }
-  50% { flex: 1.18; }
+  50% { flex: 1.13; }
   68% { transform: skewX(1.2deg); }
   100% { flex: 1.07; }
 }
 
-@keyframes nav-switch-bounce-off {
+@keyframes nav-switch-bounce-off-main {
+  0% { flex: 1.07; }
+  100% { flex: 1; }
+}
+
+@keyframes nav-switch-bounce-off-nav {
   0% { flex: 1.07; }
   100% { flex: 1; }
 }
@@ -313,7 +323,7 @@ nav.off .nav-instr-nav {
 
 /* Inactive lighten */
 
-main, main p, main ul li, main h1, main h2, main h3, main h4, main h5, main h6 {
+main p, main ul li, main h1, main h2, main h3, main h4, main h5, main h6 {
   color: #aaa;
   transition: all 0.3s;
 }
@@ -402,7 +412,7 @@ main.on h1, main.on h2, main.on h3, main.on h4, main.on h5, main.on h6 {
 
 /* Inactive White Background */
 
-main .symbol-bg-01:after {
+/*main .symbol-bg-01:after {
   color: #fff;
 }
 
@@ -434,7 +444,7 @@ main.on h1, main.on h2, main.on h3, main.on h4, main.on h5, main.on h6 {
 
 main figure {
   background: transparent;
-}
+}*/
 
 /*** Media Queries To Keep Main From Overflowing ***/
 /*** max-width / 2.45 ***/

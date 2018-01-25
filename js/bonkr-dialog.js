@@ -52,7 +52,11 @@ var dialog = {
       dialog.openIndex = undefined
       target.classList.remove('active')
       // Focus Open btn again
-      domDialog.dialog.btnOpen[index].focus()
+      if (domDialog.dialog.btnOpen[index] !== undefined) {
+        domDialog.dialog.btnOpen[index].focus()
+      } else {
+        console.log('bonkr js - we would normally focus dialog open btn on close, but an open button for this index does not exist')
+      }
     }
     
   }
@@ -60,17 +64,19 @@ var dialog = {
 }
 
 // Add Dialog events
-if (domDialog.dialog.modal.length > 0 && domDialog.dialog.btnOpen.length > 0) {
+if (domDialog.dialog.modal.length > 0) {
   Array.from(domDialog.dialog.modal).forEach((dModal,i) => {
-    // Open button
-    domDialog.dialog.btnOpen[i].addEventListener('click', function() {
-      dialog.ModalToggle(i)
-    })
-    domDialog.dialog.btnOpen[i].addEventListener('touchstart', function(e) {
-      e.preventDefault()
-      e.stopPropagation()
-      dialog.ModalToggle(i)
-    },{passive:false})
+    if (domDialog.dialog.btnOpen[i] !== undefined) {
+      // Open button
+      domDialog.dialog.btnOpen[i].addEventListener('click', function() {
+        dialog.ModalToggle(i)
+      })
+      domDialog.dialog.btnOpen[i].addEventListener('touchstart', function(e) {
+        e.preventDefault()
+        e.stopPropagation()
+        dialog.ModalToggle(i)
+      },{passive:false})
+    }
     // Close button
     domDialog.dialog.btnClose[i].addEventListener('click', function() {
       dialog.ModalToggle(i)
