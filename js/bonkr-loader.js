@@ -13,4 +13,6 @@ const loader = {
   }
 }
 
-window.addEventListener('load', loader.kill)
+if (loader.cont != null || loader.cont != undefined) {
+  window.addEventListener('load', loader.kill)
+}

@@ -11,40 +11,17 @@ h2 {
   font-size: 4em;
 }
 
-main .symbol-bg-01:after {
-  content: '@';
-  position: absolute;
-  font-size: 50vw;
-  z-index: -1;
-  top: 50%;
-  transform: translateY(-50%) translateX(-50%) translateZ(0.01px);
-  text-align: left;
-  font-weight: bold;
-  /*opacity: 0;*/
-  color: #f3f3f3;
-  transition: all 0;
-  transition-delay: 0;
-  transition-duration: 0;
-}
-
-main.on .symbol-bg-01:after {
-  color: #ffe3a1;
-  /*opacity: 1;*/
-  transition: all;
-  transition-delay: 0.1s;
-  transition-duration: 0.4s;
-  transform: translateY(-50%) translateX(-50%) translateZ(0.01px);
-}
-
 main p {
   font-weight: 400;
   font-family: 'Assistant';
 }
 
+/*(NOTE) This needs some queries so it doesn't overflow & move text beneath down */
 .text-block-corner-left {
   max-width: 510px;
   margin-top: 422px;
   padding-left: 110px;
+  padding-left: 25%;
   text-align: justify;
   font-size: 1.1em;
   font-style: italic;
@@ -53,7 +30,7 @@ main p {
 }
 
 .ltr-rot {
-  transition: all 0.3s ease-out;
+  transition: transform 0.3s ease-out;
   transform-origin: 50% 50%;
 }
 
@@ -92,7 +69,7 @@ main p {
   display: inline-block;
 }
 
-li.cycled .ltr-rot, li.active .ltr-rot {
+li.cycled .ltr-rot/*, li.active .ltr-rot*/ {
   transform: none;
 }
 
@@ -104,12 +81,22 @@ nav.off .ltr-rot {
   color: #fff;
 }
 
-main.off .heading-split-bar-01 {
+main h2 {
+  background: none;
+}
+
+main .heading-split-bar-01 {
   background: #aaa;
+  background: #f5f5f5;
   transition: all 0.3s;
 }
 
-.heading-split-bar-01 {
+main.on .heading-split-bar-01 {
   background: #bf62d7; 
   transition: all 0.3s;
+  color: #fff;
+}
+
+main.on h2 {
+  color: #fff;
 }

@@ -38,10 +38,6 @@
 </noscript>
 <body class='pos-abs pos-all-0 d-flx flx-row' tabindex='-1'>
 
-  <div id='loader' class='loader show pos-fixed pos-all-0'>
-    <!-- <div class='pos-abs-center text-center'>loader</div> -->
-  </div>
-
   <!-- Left, Nav -->
   <nav role='navigation' class='on pos-rel'>
     <ul class='pos-abs-center text-center noselect'>
@@ -65,7 +61,9 @@
 
     <section class='pd-a-40 symbol-bg-01'>
 
-      <img src='./img/nf-headshot-explode-c.jpg' class='flt-r mg-l-30 mg-b-20' style='max-width: 380px;'>
+      <figure class='flt-r mg-l-30 mg-b-20' style='max-width: 380px;'>
+        <img src='./img/nf-headshot-explode-c.jpg'>
+      </figure>
 
       <p class='text-block-corner-left'>
         I'm a professional designer &amp; developer in San Francisco, CA. I craft experiences in the form of digital tools, &amp; script the logic that drives them.
@@ -76,13 +74,33 @@
     <section class='pd-a-25'>
     </section>
 
-    <article class='heading-split-bar heading-split-bar-01 text-right pd-a-40 mg-t-40'>
+    <section class='pd-a-40 pd-t-20'>
+
+      <h3>Wait, there's no <span style='text-decoration: underline'>k</span> in your name?</h3>
+
+      <figure class='flt-l mg-t-25 mg-r-20 w-mx-200'>
+        <img src='./img/nf-school-01.jpg' style='box-shadow: -20px -20px 0 rgba(30,180,120,0.3)'>
+      </figure>
+
+      <p>
+        Yea, it's <em>Nicholas &gt; Nic</em>. Apparently 1st grade me didn't think adding another letter made any sense.
+      </p>
+
+      <p>
+        Fully &mdash; <em>Nicholas Grayson Paul Fontaine</em>. Or if you're my grandmother,  just <em>Nico</em>.
+      </p>
+
+      <div style='clear: both'></div>
+
+    </section>
+
+    <!-- <article class='heading-split-bar heading-split-bar-01 text-right pd-a-40 mg-t-40'>
       <h2 class='mg-b-0' id='heading-01'>But like.. What else?</h2>
-    </article>
+    </article> -->
 
     <section class='pd-a-40 symbol-bg-01'>
 
-      <h3>Background</h3>
+      <h3>Professional Background</h3>
 
       <p>
         I'm currently working as a front-end developer driving UX designs &amp; web/Unity3d applications at <a href='https://mursion.com' target='_blank'>Mursion, Inc.</a>
@@ -106,25 +124,11 @@
 
     <section class='pd-a-40 pd-t-20'>
 
-      <h3>Wait, there's no <span style='text-decoration: underline'>k</span> in your name?</h3>
-
-      <img src='./img/nf-school-01.jpg' class='flt-l mg-r-20 w-mx-200'>
-
-      <p>
-        Yea, it's <em>Nicholas</em>. Apparently 1st grade me didn't think adding another letter made any sense.
-      </p>
-
-      <p>
-        Fully - <em>Nicholas Grayson Paul Fontaine</em>. Or if you're my grandmother, you can use <em>Nico</em>.
-      </p>
-
-      <div style='clear: both'></div>
-
-    </section>
-
-    <section class='pd-a-40 pd-t-20'>
-
       <h3>'Not' Work</h3>
+
+      <p>
+        buy it, use it, break it, fix it, trash it, change it, melt, upgrade it..
+      </p>
 
     </section>
 
@@ -144,11 +148,17 @@
         I love finding the unique edge-cases that seem to only arise in release, and trying to accomodate for them - and the humbling experience of knowing you, <em>again</em>, came up short in the hypothetical storytelling of planning for every possibility. <strong>(And that night Jeff Goldbloum visits you in your dreams to seductively explain chaos theory)</strong>.
       </p>
 
-      <img src='./img/screen-jp-01-c.png'>
+      <figure>
+        <img src='./img/screen-jp-01-c.png'>
+      </figure>
 
     </section>
 
   </main>
+
+  <div id='loader' class='loader show pos-fixed pos-all-0' style='background: #5FE6BA;'>
+    <h3 class='pos-abs-center text-center'>loader</h3>
+  </div>
   
   <!-- Dialog 01 Intro -->
   <!-- <div class='dialog active center' role='dialog'>
