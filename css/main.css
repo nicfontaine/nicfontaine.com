@@ -97,6 +97,6 @@ main.on .heading-split-bar-01 {
   color: #fff;
 }
 
-main.on h2 {
+main.on .heading-split-bar-01 h2 {
   color: #fff;
 }
