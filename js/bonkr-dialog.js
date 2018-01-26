@@ -111,7 +111,9 @@ if (domDialog.dialog.modal.length > 0) {
           domDialog.body[0].classList.remove('dialog-active')
           document.removeEventListener('keydown', dialog.escListener)
           domDialog.dialog.modal[index].classList.remove('active')
-          domDialog.dialog.btnOpen[dialog.openIndex].focus()
+          if (domDialog.dialog.btnOpen[i] !== undefined) {
+            domDialog.dialog.btnOpen[dialog.openIndex].focus()
+          }
         }
       })(i)
     })
