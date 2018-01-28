@@ -1,0 +1,225 @@
+/*Basically reset nav/main & .on .off styling to basic pos relative, no flex*/
+@media (max-width: 750px) {
+
+  body, body.d-flx {
+    display: block;
+  }
+
+  body.pos-abs {
+    position: relative;
+  }
+
+  nav, nav.on, nav.off, main, main.on, main.off {
+    position: relative;
+    animation: none;
+    transition: none;
+  }
+
+  nav, nav.on, nav.off {
+    position: fixed;
+    height: auto;
+    left: initial;
+    margin-left: 0;
+    top: auto;
+    bottom: 0;
+    right: 0; left: 0;
+    box-shadow: 0 -6px 10px rgba(108, 85, 119, 0.3);
+  }
+
+  main {
+    padding-bottom: 80px;
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 1rem 1rem;
+  }
+
+  nav ul {
+    position: relative !important;
+    top: initial !important;
+    transform: none !important;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    padding-right: 25px;
+    margin-left: 10px !important;
+    /*flex-grow: 1;*/
+    justify-content: space-between;
+  }
+
+  nav ul li, nav ul li a {
+    height: auto;
+    margin: 0;
+    left: initial;
+    top: initial;
+    transform: none;
+  }
+
+  nav ul li:first-child a {
+    padding-left: 0;
+  }
+
+  nav ul li:last-child a {
+    padding-right: 0;
+  }
+
+  nav ul li, nav ul li:last-child {
+    padding: 0;
+    /*flex: 1;*/
+  }
+
+  nav ul li, nav ul li.active, nav ul li.active.cycled {
+    background: none;
+    box-shadow: none;
+  }
+
+  nav ul li a {
+    padding: 1rem 10px 1.5rem;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-size: 25px;
+    letter-spacing: -2px;
+  }
+  
+  nav ul li.active a {
+    cursor: pointer; 
+  }
+
+  nav.on ul li a:before, nav.on ul li.active a:before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    bottom: 15px;
+    /*left: 20px;*/
+    left: auto;
+    right: -10px;
+    height: 19px;
+    background: #63c3e9;
+    z-index: -1;
+    transform: skewX(-40deg);
+    transition: all 0.2s;
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  nav.on ul li.active a:before {
+    background: #cf7edb;
+  }
+
+  nav.on ul li.active a:hover:before, nav.on ul li a:hover:before {
+    /*left: 50px;*/
+    /*right: initial;*/
+    background: #cf7edb;
+    box-shadow: -10px 8px 0 rgba(0,0,0,0.05);
+    /*width: 180%;*/
+    width: 80%;
+    left: auto;
+    right: -20px;
+    bottom: 15px;
+    height: 25px;
+  }
+
+  nav .nav-tip, nav.on .nav-tip, nav.off .nav-tip {
+    display: none;
+  }
+
+  #nav-link-home {
+    right: auto;
+    left: 0;
+    top: 0;
+    line-height: 1;
+    font-size: 23px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    transform: none;
+    text-align: center;
+    width: 60px;
+    /*left: 60px;*/
+  }
+
+  #nav-link-home .nav-link {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0; right: 0;
+    background: none;
+    padding: 10px 0;
+    background: rgba(0,0,0,0.07);
+  }
+
+  #nav-link-home .nav-link:hover {
+    background: rgba(0,0,0,0.2);
+  }
+
+  .nav-txtr {
+    display: none;
+  }
+
+  main section, main.on section, main.off section, main article, main.on article, main.off article {
+    opacity: 1;
+  }
+
+  main.off, main.off p, main.off ul li, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6 {
+    color: #333;
+  }
+
+  main img {
+    opacity: 1;
+  }
+
+  nav {
+    overflow: hidden;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  main section {
+    max-width: none;
+  }
+
+  main .heading-split-bar-01, main.on .heading-split-bar-01 {
+    background: #bf62d7; 
+    transition: all 0.3s;
+    color: #fff;
+  }
+
+  main .heading-split-bar-01 h2, main.on .heading-split-bar-01 h2 {
+    color: #fff;
+  }
+
+  h1 { font-size: 4rem; }
+  h2 { font-size: 3rem; }
+  #heading-01 { margin-top: 1rem; }
+  main .heading-split-bar { padding: 2rem; margin-bottom: 1.5rem; }
+
+  main .symbol-bg-01:after {
+    font-size: 150vw;
+    top: 660px;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 1rem 3px 1.5rem;
+  }
+
+  figure {
+    float: none;
+    width: 100%;
+    max-width: none !important;
+    margin: none !important;
+  }
+
+  video {
+    width: 100%;
+  }
+
+}

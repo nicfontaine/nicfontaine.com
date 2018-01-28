@@ -11,13 +11,31 @@ nav {
   /*Initial Nav Focused*/
   /*z-index: 3;*/
   /*box-shadow: 0 0 30px rgba(10,30,20,0.3);*/
-  overflow-x: hidden;
+  overflow-x: hidden;pos-abs
 } 
+
+.nav-txtr {
+  position: fixed;
+  right: 0; left: 0; top: 0; bottom: 0;
+  background: url('./../img/txtr-leaves-dead-03.jpg') repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: initial;
+  background-position: 0 0;
+  opacity: 0.05;
+  transition: all 0.2s;
+}
+
+nav.off .nav-txtr {
+  background-position: -60px 0;
+  opacity: 0.02;
+}
 
 nav, main {
   animation: none;
   transition: background 0.3s, color 0.3s, opacity 0.3s, box-shadow 0.3s;
-  transform-origin: 50% 80%;
+  transform-origin: 50% 100%;
   /*transform-origin: 50% 50%;*/
 }
 
@@ -40,20 +58,21 @@ nav ul li a, nav ul li a:hover, nav ul li a:active, nav ul li a:visited {
   line-height: 1em;
   font-family: 'Assistant', sans-serif;
   font-weight: 800;
-  letter-spacing: 25px;
+  /*letter-spacing: 25px;*/
 }
 
 nav ul li a:before {
   content: '';
   position: absolute;
   width: 100%;
-  bottom: 3px;
+  bottom: -2px;
   left: -33px;
-  height: 40px;
+  height: 45px;
   background: #63c3e9;
   z-index: -1;
   transform: skewX(-40deg);
   transition: all 0.2s;
+  pointer-events: none;
 }
 
 
@@ -77,6 +96,7 @@ nav.off ul li a:before, nav.off ul li.cycled a:before {
 
 nav ul li.active a:before {
   opacity: 0;
+  /*background: red;*/
 }
 
 nav.off ul li.active {
@@ -85,6 +105,147 @@ nav.off ul li.active {
 
 nav ul li.active:before {
   opacity: 0;
+}
+
+nav ul li {
+  height: 134px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 9px;
+}
+
+nav ul li a {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
+#nav-link-home {
+  position: fixed;
+  top: 50px;
+  right: 70px;
+  width: 0;
+  width: 60px;
+  word-wrap: break-word;
+  font-size: 2em;
+  line-height: 1.3;
+}
+
+#nav-link-home.cycled {
+}
+
+#nav-link-home a {
+  text-decoration: none;
+}
+
+nav ul li a:focus {
+  background: initial;
+}
+
+nav.on li.cycled {
+  /*color: red;*/
+}
+
+/*nav ul li:after {
+  transition: all 0.4s;
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-right: 11px;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  text-align: right;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s;
+  font-style: italic;
+}*/
+
+nav ul li.active {
+  background: #F972A6;
+  box-shadow: 0 14px 15px #547a8f99;
+  /*background: #ff6076;*/
+  /*text-decoration: underline;*/
+  transition: all 0.3s;
+}
+
+nav ul li.active a {
+  cursor: initial;
+}
+
+nav.off ul li.active {
+  box-shadow: 0 14px 15px rgba(0,0,0,0.5);
+}
+
+nav ul li.active.cycled {
+  background: #ff5ea8;
+}
+
+nav ul li.active a:before {
+  /*display: none;*/
+}
+
+/*Nav Tips*/
+nav.on ul li .nav-tip {
+  position: absolute;
+  right: 13px;
+  bottom: 30px;
+  line-height: 0;
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  text-align: right;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.2s;
+  font-style: italic;
+}
+
+nav.on ul li .nav-tip span {
+  margin-right: 6px;
+  padding: 7px 11px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 5px;
+  font-stretch: normal;
+}
+
+nav.on ul li .nav-tip-ent {
+  bottom: 17px;
+}
+
+nav.on ul li .nav-tip-ent span {
+  padding: 3px 11px;
+}
+
+nav.on ul li.cycled .nav-tip-ent {
+  opacity: 1;
+  transition: all 0.1s 0.2s;
+}
+
+nav.on ul li.active .nav-tip-ent, nav.on ul li.cycled.active .nav-tip-ent {
+  opacity: 0;
+  display: none;
+}
+
+nav.on ul li.active .nav-tip-r {
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+nav.off ul li .nav-tip {
+  opacity: 0;
+}
+
+/*nav.on ul li.cycled a:before {*/
+nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
+  left: 100px;
+  background: #9e91f2;
+  background: #cf7edb;
+  box-shadow: -10px 8px 0 rgba(0,0,0,0.05);
+  width: 180%;
 }
 
 /*********************/
@@ -154,18 +315,18 @@ nav.off {
 @keyframes nav-switch-bounce-on-main {
   0% { flex: 1; margin-right: 0; padding-right: 0;}
   0.1% { margin-right: -60px; padding-right: 60px; }
-  25% { transform: skewX(3deg); }
+  25% { transform: skewX(2deg); }
   50% { flex: 1.13; }
-  68% { transform: skewX(-1.2deg); }
+  68% { transform: skewX(-1deg); }
   99.9% { margin-right: -60px; padding-right: 60px; }
   100% { flex: 1.07; margin-right: 0; padding-right: 0;}
 }
 
 @keyframes nav-switch-bounce-on-nav {
   0% { flex: 1; }
-  25% { transform: skewX(-3deg); }
+  25% { transform: skewX(-2deg); }
   50% { flex: 1.13; }
-  68% { transform: skewX(1.2deg); }
+  68% { transform: skewX(1deg); }
   100% { flex: 1.07; }
 }
 
@@ -179,113 +340,6 @@ nav.off {
   100% { flex: 1; }
 }
 
-nav ul li {
-  height: 130px;
-  margin-bottom: 40px;
-  position: relative;
-  padding-bottom: 9px;
-}
-
-nav ul li a {
-  top: 50%;
-  transform: translateY(-50%);
-  position: relative;
-}
-
-#nav-link-home {
-  position: fixed;
-  top: 50px;
-  right: 70px;
-  width: 0;
-  width: 60px;
-  word-wrap: break-word;
-  font-size: 2em;
-  line-height: 1.3;
-}
-
-#nav-link-home.cycled {
-}
-
-#nav-link-home a {
-  text-decoration: none;
-}
-
-nav ul li a:focus {
-  background: initial;
-}
-
-nav.on li.cycled {
-  /*color: red;*/
-}
-
-nav ul li:after {
-  transition: all 0.4s;
-  content: '';
-  position: absolute;
-  right: 0;
-  left: 0;
-  padding-right: 11px;
-  width: 100%;
-  bottom: 0;
-  color: #fff;
-  color: rgba(255,255,255,0.6);
-  font-size: 16px;
-  text-align: right;
-  font-weight: bold;
-  opacity: 0;
-  transition: all 0.3s;
-  font-style: italic;
-}
-
-nav ul li.active {
-  background: #F972A6;
-  transition: all 0.3s;
-}
-
-nav ul li.active a:before {
-  /*display: none;*/
-}
-
-nav.on ul li.cycled:after{
-  opacity: 1;
-  transition: all 0.2s 0.4s;
-  content: 'ENTER Key to Visit';
-}
-
-nav.on ul li.cycled.active:after {
-  content: 'RIGHT Key to Explore';
-  opacity: 1;
-  transition: all 0.3s;
-}
-
-/*nav.on ul li.active a:before {
-  content: '';
-  position: absolute;
-  background: #F972A6;
-  right: -20%;
-  width: 80%;
-  height: 100%;
-  opacity: 1;
-  transform: skewX(-40deg);
-
-  background: #5FE6BA;
-  right: 0;
-  margin: 0;
-  left: 0;
-  width: 80%;
-}*/
-
-nav.on ul li.cycled a:before {
-  left: 100px;
-  background: #f972a1;
-
-  background: #63c3e9;
-  background: #9e91f2;
-
-  box-shadow: -10px 8px 0 rgba(0,0,0,0.05);
-  width: 180%;
-}
-
 .nav-instr-nav {
   transition: opacity 1s;
 }
@@ -294,8 +348,6 @@ nav.on .nav-instr-nav {
   right: 0;
   top: 47%;
   transform: translateY(-50%);
-  /*border: 2px solid rgba(255,255,255,0.2);*/
-  /*background: rgba(0,0,0,0.08);*/
   color: #fff;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
@@ -314,7 +366,6 @@ nav.on .nav-instr-nav {
   top: 50%;
   transform: translateY(-50%);
   z-index: -1;
-  /*box-shadow: inset 8px 5px 8px rgba(0,0,0,0.1);*/
 }
 
 .nav-instr-nav .text-key {
@@ -341,7 +392,7 @@ nav.off .nav-instr-nav {
 
 /* Inactive lighten */
 
-main p, main ul li, main h1, main h2, main h3, main h4, main h5, main h6 {
+main.off p, main.off ul li, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6 {
   color: #aaa;
   transition: all 0.3s;
 }
@@ -464,6 +515,10 @@ main figure {
   background: transparent;
 }*/
 
+.loader > * {
+  color: #CF7EDB;
+}
+
 /*** Media Queries To Keep Main From Overflowing ***/
 /*** max-width / 2.45 ***/
 @media (max-width: 2500px) {
@@ -520,6 +575,6 @@ main figure {
 @media (max-width: 800px) {
   main section { max-width: 341px; }
 }
-@media (max-width: 700px) {
+/*@media (max-width: 700px) {
   main section { max-width: 296px; }
-}
+}*/

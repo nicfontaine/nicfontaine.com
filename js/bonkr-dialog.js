@@ -53,8 +53,6 @@ var dialog = {
       // Focus Open btn again
       if (domDialog.dialog.btnOpen[index] !== undefined) {
         domDialog.dialog.btnOpen[index].focus()
-      } else {
-        console.log('bonkr js - we would normally focus dialog open btn on close, but an open button for this index does not exist')
       }
     }
     

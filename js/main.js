@@ -2,6 +2,40 @@ const dom = {
   linker: document.getElementsByClassName('linker')
 }
 
+// Page related vars & values
+var page = {
+  w: window.innerWidth,
+  h: window.innerHeight,
+  mSize: 750,
+  resizeTimer: undefined,
+  checkSize: function() {
+    this.w = window.innerWidth
+    this.h = window.innerHeight
+    // Totally remove nav/main on/off classes if m size
+    if (this.w < this.mSize) {
+      domNav.nav[0].classList.add('on')
+      domNav.nav[0].classList.remove('off')
+      domNav.main[0].classList.add('on')
+      domNav.main[0].classList.remove('off')
+    } else { // Add back starting on/off if > m size
+      domNav.nav[0].classList.add('on')
+      domNav.main[0].classList.add('off')
+    }
+  }
+}
+page.checkSize()
+
+//
+// Keep track of window size, through resize
+//
+
+window.addEventListener('resize', function() {
+  clearTimeout(page.resizeTimer)
+  page.resizeTimer = setTimeout(function() {
+    page.checkSize()
+  }, 250)
+})
+
 // Remove default anchor functionality for a.linker(s)
 // Instead, add event to append to url so history isn't changed
 // If JS is disabled, regular href will fire

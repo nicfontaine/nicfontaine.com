@@ -15,12 +15,9 @@
   <link rel="stylesheet" href="./css/bonkr.css">
   <link rel="stylesheet" href="./css/nav.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/mobile.css">
 
   <!-- Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Dosis:400,700,800" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Jaldi:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Assistant:400,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
@@ -31,8 +28,12 @@
     .loader { display: none !important;  }
     nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
     main, main p { color: #333; }
-    main img { opacity: 1;
+    main img { opacity: 1; }
     main section { opacity: 1; transition: none; }
+    .dialog, .dialog.active, .dialog-outer, .dialog-inner { display: none; pointer-events: none; }
+    .nav-tip { display: none !important; }
+    nav ul li a:hover:before { left: 100px; background: #9e91f2; background: #cf7edb; box-shadow: -10px 8px 0 rgba(0,0,0,0.05); width: 180%;
+    }
     /*(NOTE) Add hover style for nav links*/
   </style>
 </noscript>
@@ -40,17 +41,34 @@
 
   <!-- Left, Nav -->
   <nav role='navigation' class='on pos-rel'>
-    <div id='nav-link-home' class='nav-li'><a href='./' class='nav-link'>HOME</a></div>
+
+    <div id='nav-link-home' class='nav-li'><a href='./' class='nav-link'>HO<br>ME</a></div>
+
     <ul class='pos-abs-center text-center noselect'>
-      <li class='nav-li'><a href='./design' class='nav-link'>D<span class='ltr-rot ltr-rot-02-01'>e</span>si<span class='ltr-rot ltr-rot-02-02'>g</span>n</a></li>
-      <li class='nav-li'><a href='./code' class='nav-link'>C<span class='ltr-rot ltr-rot-03-01'>o</span>de</a></li>
-      <li class='nav-li'><a href='./contact' class='nav-link'><span class='ltr-rot ltr-rot-04-01'>C</span>ont<span class='ltr-rot ltr-rot-04-02'>a</span>ct</a></li>
-      <li class='nav-li'><a href='./resume' class='nav-link'>R<span class='ltr-rot ltr-rot-01-01'>e</span>s<span class='ltr-rot ltr-rot-01-02'>u</span>me</a></li>
+
+      <li class='nav-li'>
+        <a href='./design' class='nav-link'>D<span class='ltr-rot ltr-rot-02-01'>e</span>si<span class='ltr-rot ltr-rot-02-02'>g</span>n</a>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit to visit</div>
+      </li>
+
+      <!-- Active -->
+      <li class='nav-li active'>
+        <a href='#' class='nav-link'>I<span class='ltr-rot ltr-rot-02-01'>n</span>t<span class='ltr-rot ltr-rot-02-01'>e</span>r<span class='ltr-rot ltr-rot-04'>a</span><span class='ltr-rot ltr-rot-01-01'>c</span>tiv<span class='ltr-rot ltr-rot-01-01'>e</span></a>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+      </li>
+
+      <li class='nav-li'>
+        <a href='./contact' class='nav-link'><span class='ltr-rot ltr-rot-04-01'>C</span>ont<span class='ltr-rot ltr-rot-04-02'>a</span>ct</a>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+      </li>
+
+      <li class='nav-li'>
+        <a href='./resume' class='nav-link'>R<span class='ltr-rot ltr-rot-01-01'>e</span>s<span class='ltr-rot ltr-rot-01-02'>u</span>me</a>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+      </li>
+
     </ul>
-    <!-- <div class='nav-instr-nav pos-abs pd-a-15'>
-      <span class='text-key'>&gt;</span>
-      <div class='nav-instr-text'>Right Key To Switch</div>
-    </div> -->
+
   </nav>
 
   <!-- Right, Content -->
@@ -59,7 +77,7 @@
     <!-- Zoom Scheduling -->
     <section>
 
-      <h2>Zoom Scheduling App</h2>
+      <h3>Zoom Scheduling App</h3>
 
       <p>
         A small session scheduling web-app created to connect a group of learners, over a few-week timespan, to multiple Zoom accounts for simulation delivery. Built on NodeJS with Express to manage views, and using the ZOOM RestAPI to create and cancel meetings. Without the need for a full database, sign-up contact info &amp; zoom url are entered into a JSON file organized by date.
@@ -67,7 +85,7 @@
 
       <figure>
         <div class="cont-img-inl">
-          <img src="images/web-session-scheduling-01.png" alt="scheduling application">  
+          <img src="./img/code/web-session-scheduling-01.png" alt="scheduling application">  
         </div>
       </figure>
 
@@ -77,7 +95,7 @@
 
       <figure>
         <div class="cont-img-inl">
-          <img src="images/web-session-scheduling-02.png" alt="scheduling application">  
+          <img src="./img/code/web-session-scheduling-02.png" alt="scheduling application">  
         </div>
       </figure>
 
@@ -87,7 +105,7 @@
 
       <figure>
         <div class="cont-img-inl">
-          <img src="images/web-session-scheduling-03.png" alt="scheduling application">  
+          <img src="./img/code/web-session-scheduling-03.png" alt="scheduling application">  
         </div>
       </figure>
 
@@ -96,14 +114,14 @@
     <!-- IHL -->
     <section>
 
-      <h2>ianhaneylopez.com</h2>
+      <h3>ianhaneylopez.com</h3>
 
       <p>
         I won't try to paraphrase Ian's (a chaired law professor at Berkeley) ideas and insights as I feel that is better left to him, but for the technical info - I designed a custom, simple, and clean Wordpress theme built for regular additions of writings, interviews, and events &amp; publications.
       </p>
 
       <figure>
-        <img src="images/web_site_ianhaneylopez_01_c.png" alt="Screenshots of ianhaneylopez.com, Wordpress site created for a professor of law at Berkeley.">
+        <img src="./img/code/web_site_ianhaneylopez_01_c.png" alt="Screenshots of ianhaneylopez.com, Wordpress site created for a professor of law at Berkeley.">
       </figure>
 
       <p>
@@ -115,7 +133,7 @@
     <!-- Metrognome -->
     <section>
 
-      <h2>Metrognome</h2>
+      <h3>Metrognome</h3>
 
       <p>
         Javascript-based metronome that I'm still in the process of building. Features include tap-tempo, keyboard shortcuts for play/pause and volume/tempo, time signature with counter, bpm presets.
@@ -123,7 +141,7 @@
 
       <figure>
         <video autoplay loop>
-          <source src="images/web_metrognome_rec_01.webm" type="video/webm" />
+          <source src="./img/code/web_metrognome_rec_01.webm" type="video/webm" />
           Your browser does not support the video tag
         </video>
       </figure>
@@ -139,7 +157,7 @@
     <!-- Start Page -->
     <section>
 
-      <h2>Start Page</h2>
+      <h3>Start Page</h3>
 
       <p>
         I wanted a personalized start page with common links I use, search features, and relevant hud stats and naturally it had to be navigable w/o the use of a mouse. Additionally, I wanted local info like weather, time, and IP auto-configured; and important information legible from across the room w/o taking over the smaller elements in the viewport.
@@ -147,7 +165,7 @@
 
       <figure>
         <div class="cont-img-inl">
-          <img src="images/web_start_page_01.png" alt="personal in-browser start page">  
+          <img src="./img/code/web_start_page_01.png" alt="personal in-browser start page">  
         </div>
       </figure>
 
@@ -168,17 +186,17 @@
     <!-- Clpsm -->
     <section>
 
-      <h2>Clpsm</h2>
+      <h3>Clpsm</h3>
 
       <p>
         An opinionated, sassy command-line lorem ipsum generator.
       </p>
 
-      <figure>
-        <div class="float-wrap-img-l">
-          <img src='images/dev_clpsm_logo_256.png' alt='clpsm logo' style='width: auto;'>
-        </div>
-      </figure>
+      <!-- <figure> -->
+        <!-- <div class="float-wrap-img-l"> -->
+          <img src='./img/code/clpsm-logo-01.png' alt='clpsm logo' class='mg-b-30'>
+        <!-- </div> -->
+      <!-- </figure> -->
       
       <p>
         Assistive design tool written in bash to send any number of parapraphs to the clipboard as a quick solution for any design prototype. Uses xclip as the only dependency, and loops through 5 paragraphs to generate infinite filler text for your rock-star design needs.
@@ -186,7 +204,7 @@
 
       <figure>
         <div class="cont-img-inl">
-          <img src='images/dev_clpsm_rec.gif' alt='recording of clpsm in action'>
+          <img src='./img/code/dev_clpsm_rec.gif' alt='recording of clpsm in action'>
         </div>
       </figure>
 
@@ -197,7 +215,7 @@
     <!-- GFV -->
     <section>
 
-      <h2>GFV - JQuery Form Validation</h2>
+      <h3>GFV - JQuery Form Validation</h3>
 
       <p>
         Unhappy with form validation on our landing pages at Element-360 I created an extension with JQuery, exclusively to extend the capabilities of Gravity Forms. In watching behaviour analysis recordings I found a large number of people clicking the CTA to immediately receive information. This results in a page reload with error messages appended to the required fields - not an optimal user experience.
@@ -205,7 +223,7 @@
 
       <figure>
         <div class="cont-img-inl">
-          <img class="fl-l img-inl" src="images/web_form_validation_gif_02.gif" alt="gravity forms standard page refresh validation"><img class="fl-r img-inl" src="images/web_form_validation_gif_01.gif" alt="My custom on page validation for gravity forms">
+          <img class="fl-l img-inl" src="./img/code/web_form_validation_gif_02.gif" alt="gravity forms standard page refresh validation"><img class="fl-r img-inl" src="./img/code/web_form_validation_gif_01.gif" alt="My custom on page validation for gravity forms">
         </div>
       </figure>
 
@@ -230,14 +248,14 @@
     <!-- Thalia -->
     <section>
 
-      <h2>thaliamae.com</h2>
+      <h3>thaliamae.com</h3>
 
       <p>
         Memorial gallery site &amp; support thank-you for my four-legged best friend.
       </p>
 
       <figure>
-        <img src="images/web_site_thalia_01_c.png" alt="Screenshot of thalaimae.com, PHP memorial site for my pup.">
+        <img src="./img/code/web_site_thalia_01_c.png" alt="Screenshot of thalaimae.com, PHP memorial site for my pup.">
       </figure>
 
       <p>
@@ -252,14 +270,14 @@
     <!-- Adwords -->
     <section>
 
-      <h2>Adwords Display Ads</h2>
+      <h3>Adwords Display Ads</h3>
 
       <p>
         Whew, look at that compression nightmare of a collage.. I've made hundreds of ads for many diverse ad campaigns for the GDN as well as Zillow. Headlines and CTA's are chosen from text ad PPC performance in Adwords, and coupled with unique branding styles from each individual client.
       </p>
 
       <figure>
-        <img src="images/web_ads_adwords_02_c.png" alt="a collage of image ads for the google display network and Zillow">
+        <img src="./img/code/web_ads_adwords_02_c.png" alt="a collage of image ads for the google display network and Zillow">
       </figure>
 
       <p>
@@ -271,14 +289,14 @@
     <!-- Silvermuse.net -->
     <section>
 
-      <h2>silvermuse.net</h2>
+      <h3>silvermuse.net</h3>
 
       <p>
         The professional website of a close friend and colleague Claudette Silver - a custom Wordpress theme with a stripped down, minimal, yet still stylish and fresh feel.
       </p>
 
       <figure>
-        <img src="images/web_site_silvermuse_01_c.png" alt="Screenshots of silvermuse.net, a website I created to display the work and services of a close friend and colleague Claudette Silver">
+        <img src="./img/code/web_site_silvermuse_01_c.png" alt="Screenshots of silvermuse.net, a website I created to display the work and services of a close friend and colleague Claudette Silver">
       </figure>
 
       <p>
@@ -294,14 +312,14 @@
     <!-- 3MI Design -->
     <section>
 
-      <h2>3midesign.com</h2>
+      <h3>3midesign.com</h3>
 
       <p>
         I created this portfolio website as a collective showcase of the work of two colleagues and myself for various freelance design and development projects we had taken on. I hadn't been working on much web design at the time so it was fun to develop with no restrictions and have an excuse to try and learn some new things along the way.
       </p>
 
       <figure>
-        <img src="images/web_site_3mi_01_c.png" alt="Screenshots of 3midesign.com, a design and development collective of which I was a part - including designing the website in full">
+        <img src="./img/code/web_site_3mi_01_c.png" alt="Screenshots of 3midesign.com, a design and development collective of which I was a part - including designing the website in full">
       </figure>
 
       <p>
@@ -313,14 +331,14 @@
     <!-- Email Development -->
     <section>
 
-      <h2>Email Development</h2>
+      <h3>Email Development</h3>
 
       <p>
         I've designed and coded fully responsive and modular html email newsletters within Campaign Monitor and Mailchimp that saw triple digit increases in click-through-rates compared to previous agencies' deployments. It's truly a dark art, but I've certainly learned a great deal fighting the contraints of "modern" email clients.
       </p>
 
       <figure>
-        <img src="images/web_email_the_grove_01_c.png">
+        <img src="./img/code/web_email_the_grove_01_c.png">
       </figure>
 
     </section>
@@ -328,13 +346,17 @@
   </main>
 
   <div id='loader' class='loader show pos-fixed pos-all-0' style='background: #5FE6BA;'>
-    <h3 class='pos-abs-center text-center'>loader</h3>
+    <h3 class='pos-abs-center text-center'>loading-ding-dong</h3>
   </div>
 
   <script src="./js/bonkr-loader.js"></script>
   <script src="./js/bonkr-dialog.js"></script>
   <script src="./js/nav.js"></script>
   <script src="./js/main.js"></script>
+  <script>
+    nav.links.i = 2
+    nav.links.cycle()
+  </script>
 
 </body>
 </html>
