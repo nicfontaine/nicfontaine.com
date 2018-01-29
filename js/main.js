@@ -72,3 +72,31 @@ document.addEventListener('mousemove', function() {
     }, 300)
   }  
 })
+
+//
+// Slideshow, Simple
+//
+
+if (document.getElementsByClassName('slideshow') !== undefined) {
+  let cont = document.getElementsByClassName('slideshow')
+  for (var i=0; i<cont.length; i++) {
+    let slides = cont[i].getElementsByTagName('img')
+    let s = 0;
+
+    (function advance() {
+      if (s-1 > 0) {
+        slides[s-1].classList.remove('show')
+      }
+      s++
+      if (s >= slides.length) {
+        s=0
+        slides[slides.length-1].classList.remove('show') // Hide last
+      } else {
+        slides[s].classList.add('show') // Show next
+      }
+      setTimeout(function() {
+        advance()
+      }, 4000)
+    })()
+  }
+}

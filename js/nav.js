@@ -34,6 +34,7 @@ var nav = {
           nav.links.i = domNav.navLi.length-1
         }
       }
+      console.log('cycle ' + nav.links.i)
       // console.log(nav.links.i)
       domNav.navA[nav.links.i].focus()
       // Clear .cycled from all
@@ -45,6 +46,7 @@ var nav = {
     }
   },
   navSwitch: function(override) {
+    // console.log('navSwitch()')
     if (page.w > page.mSize) {
       let n = domNav.nav[0]
       let m = domNav.main[0]
@@ -68,7 +70,7 @@ var nav = {
         m.removeAttribute('tabindex')
         // Reset focus & .cycled to top
         // (Note) maybe should do current page index
-        nav.links.i = 0
+        // nav.links.i = 0
         nav.links.cycle()
         // domNav.navA[nav.links.i].focus()
       }
@@ -85,10 +87,10 @@ var nav = {
           toNav()
         }
       }
+      // Log focused foc.side
+      this.foc.side = this.foc.side === domNav.nav[0] ? domNav.main[0] : domNav.nav[0]
     }
 
-    // Log focused foc.side
-    this.foc.side = this.foc.side === domNav.nav[0] ? domNav.main[0] : domNav.nav[0]
     
     // Set focus to target element. Otherwise, document.activeElement === body
     // this.foc.side.tabIndex = '-1'
@@ -97,12 +99,13 @@ var nav = {
   }
 }
 
-domNav.main[0].addEventListener('mouseover', function(e) {
-  nav.navSwitch('main')
-})
-domNav.nav[0].addEventListener('mouseover', function(e) {
-  nav.navSwitch('nav')
-})
+// (NOTE) Messing with cycled index mgmt or something
+// domNav.main[0].addEventListener('mouseover', function(e) {
+//   nav.navSwitch('main')
+// })
+// domNav.nav[0].addEventListener('mouseover', function(e) {
+//   nav.navSwitch('nav')
+// })
 
 document.addEventListener('keydown', function(e) {
 

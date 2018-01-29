@@ -103,12 +103,12 @@ h1.underline, h2.underline, h3.underline, h4.underline, h5.underline, h6.underli
   text-decoration: none;
 }
 
-h1 { font-size: 3.2rem; margin-bottom: 1.74rem; }
-h2 { font-size: 2.7rem; margin-bottom: 1.74rem; }
-h3 { font-size: 2rem; margin-bottom: 1.6rem; }
+h1 { font-size: 3.4rem; margin-bottom: 1.74rem; }
+h2 { font-size: 2.8rem; margin-bottom: 1.74rem; }
+h3 { font-size: 2.2rem; margin-bottom: 1.6rem; }
 h4 { font-size: 1.7rem; margin-bottom: 1.4rem;}
-h5 { font-size: 1.2rem; margin-bottom: 1.25rem; }
-h6 { font-size: 1rem; margin-bottom: 1.1rem; }
+h5 { font-size: 1.3rem; margin-bottom: 1.25rem; }
+h6 { font-size: 1.1rem; margin-bottom: 1.1rem; }
 
 hr {
   border: none;
@@ -120,8 +120,8 @@ a { text-decoration: underline; font-weight: bold; position: relative; }
 a, a:active, a:visited, a:hover { color: inherit;  }
 
 /* Don't mess with <a> in nav, they'll be styled independently */
-main a:hover, main a:focus { text-decoration: none; }
-main a:hover:before, main a:focus:before {
+main p a:hover, main p a:focus { text-decoration: none; }
+main p a:hover:before, main p a:focus:before {
   position: absolute;
   content: '';
   width: 100%;
@@ -185,6 +185,10 @@ svg {
   height: auto; }
 
 iframe { border: none; }
+
+figure.frame {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
 
 /*** Tables ***/
 table {
