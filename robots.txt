@@ -2,4 +2,8 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
+Noindex: /dev
+Noindex: /archive
+Noindex: /2016
+Noindex: /piwik
+Noindex: /sitemap.xml

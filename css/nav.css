@@ -11,14 +11,15 @@ nav {
   /*Initial Nav Focused*/
   /*z-index: 3;*/
   /*box-shadow: 0 0 30px rgba(10,30,20,0.3);*/
-  overflow-x: hidden;pos-abs
+  overflow-x: hidden;
+  overflow-y: hidden;
 } 
 
 .nav-txtr {
   position: fixed;
   right: 0; left: 0; top: 0; bottom: 0;
-  background: url('./../img/txtr-leaves-dead-03.jpg') repeat center center; 
-  background: url('./../img/pattern-geometry-01.png') repeat center center; 
+  /*background: url('./../img/txtr-leaves-dead-03.jpg') repeat center center; */
+  background: url('./../img/pattern-geometry-01-c.png') repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
