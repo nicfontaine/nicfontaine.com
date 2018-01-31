@@ -1,5 +1,8 @@
 const dom = {
-  linker: document.getElementsByClassName('linker')
+  linker: document.getElementsByClassName('linker'),
+  scroll: {
+    toTop: document.getElementById('btn-to-top')
+  }
 }
 
 // Page related vars & values
@@ -99,4 +102,20 @@ if (document.getElementsByClassName('slideshow') !== undefined) {
       }, 4000)
     })()
   }
+}
+
+//
+// Scroll to top
+//
+
+if (dom.scroll.toTop != undefined) {
+  dom.scroll.toTop.addEventListener('click', function(e) {
+    e.preventDefault()
+    Velocity(document.getElementById('heading-01'), 'scroll', { duration: 500, offset: -300, easing: 'easeOutCubic' } )
+  })
+  dom.scroll.toTop.addEventListener('touchstart', function(e) {
+    e.preventDefault()
+    e.stopPropagation()
+    Velocity(document.getElementById('heading-01'), 'scroll', { duration: 500, offset: -300, easing: 'easeOutCubic' } )
+  },{passive:false})
 }

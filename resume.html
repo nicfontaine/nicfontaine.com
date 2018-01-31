@@ -21,6 +21,13 @@
   <link href="https://fonts.googleapis.com/css?family=Jaldi:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Assistant:400,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
+  <style>
+    .loader {
+      z-index: 500; pointer-events: none; opacity: 0; transition: all 0.3s; position: fixed; overflow: hidden; overflow-y: auto; top: 0; right: 0; bottom: 0; left: 0; }
+    .loader.show { opacity: 1; pointer-events: auto; }
+    .loader > * { color: rgb(247, 251, 111); font-family: sans-serif; }
+    .loader h3 { position: absolute; right: 0; left: 0; margin: 0 auto; top: 50%; transform: translateY(-50%); text-align: center; padding: 0; font-size: 1.5rem; }
+  </style>
 
 </head>
 <noscript>
@@ -220,14 +227,22 @@
 
   </main>
 
-  <div id='loader' class='loader show pos-fixed pos-all-0' style='background: #5FE6BA;'>
-    <h3 class='pos-abs-center text-center'>loading-ding-dong</h3>
+  <!-- To Top -->
+  <div id='btn-to-top' class='btn-to-top'>
+    <div class='btn-to-top-icon'>&lambda;</div>
+    <div class='btn-to-top-text-l'>To</div>
+    <div class='btn-to-top-text-r'>Top</div>
   </div>
 
-  <script src="./js/bonkr-loader.js"></script>
-  <script src="./js/bonkr-dialog.js"></script>
-  <script src="./js/nav.js"></script>
-  <script src="./js/main.js"></script>
+  <!-- Minez -->
+  <script src="./js/bonkr-loader.min.js"></script>
+  <script src="./js/bonkr-dialog.min.js"></script>
+  <script src="./js/nav.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <!-- Ain't Minez -->
+  <script src="./js/lib/scrolldir.auto.min.js"></script>
+  <script src="./js/lib/velocity.min.js"></script>
+
   <script>
     nav.links.i = 4
     nav.links.cycle()

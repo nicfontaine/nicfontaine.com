@@ -22,29 +22,15 @@
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet">
   <style>
     .loader {
-      z-index: 500;
-      /*background: #fff;*/
-      pointer-events: none;
-      opacity: 0;
-      transition: all 0.3s;
-      position: fixed;
-      overflow: hidden;
-      overflow-y: auto;
-      top: 0; right: 0; bottom: 0; left: 0; }
-    .loader.show {
-      opacity: 1;
-      pointer-events: auto; }
-    .loader > * {
-      color: rgb(247, 251, 111);
-      font-family: sans-serif; }
-    .loader h3 {
-      position: absolute;
-      right: 0; left: 0;
-      margin: 0 auto;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: center;
-      font-size: 1.5rem;}
+      z-index: 500; pointer-events: none; opacity: 0; transition: all 0.3s; position: fixed; overflow: hidden; overflow-y: auto; top: 0; right: 0; bottom: 0; left: 0; }
+    .loader.show { opacity: 1; pointer-events: auto; }
+    .loader > * { color: rgb(247, 251, 111); font-family: sans-serif; }
+    .loader h3 { position: absolute; right: 0; left: 0; margin: 0 auto; top: 50%; transform: translateY(-50%); text-align: center; padding: 0; font-size: 1.5rem; }
+    .nav-txtr { position: fixed; right: 0; left: 0; top: 0; bottom: 0; background: url('./../img/pattern-geometry-01-c.png') repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
+    }
+    @media (max-width: 750px) {
+      .dialog-01 { display: none; }
+    }
   </style>
 
   <script>
@@ -230,6 +216,13 @@
 
   </main>
 
+  <!-- To Top -->
+  <a href='#' id='btn-to-top' class='btn-to-top'>
+    <div class='btn-to-top-icon'>&lambda;</div>
+    <div class='btn-to-top-text-l'>To</div>
+    <div class='btn-to-top-text-r'>Top</div>
+  </a>
+
   <!-- Loader -->
   <div id='loader' class='loader show' style='background: #5FE6BA;'>
     <div class='nav-txtr'></div>
@@ -237,7 +230,7 @@
   </div>
   
   <!-- Dialog 01 Intro -->
-<!--   <div class='dialog active center' role='dialog'>
+  <div class='dialog active center dialog-01' role='dialog'>
     <div class='dialog-outer'>
       <div class='dialog-inner pd-a-4 pd-b-6 w-mx-650'>
         <header role='banner'>
@@ -250,16 +243,12 @@
             This, my new site, is <strong>in development</strong> <em>(like right now, now).</em>
           </p>
 
-          <p>
-            Sub-pages aren't available yet as I'm still laying out the navigation &amp; homepage content.
-          </p>
-
           <h5>Navigation</h5>
 
           <ul>
             <li>No mouse/trackpad</li>
             <li><strong>Arrow keys</strong> switch panels, scroll, &amp; change navigation links</li>
-            <li><strong>Enter</strong> for navigating to sub-pages (not working atm)</li>
+            <li><strong>Enter</strong> for navigating to sub-pages</li>
             <li><strong>Esc</strong> to close this dialog</li>
           </ul>
 
@@ -267,12 +256,17 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
+  <!-- Minez -->
   <script src="./js/bonkr-loader.min.js"></script>
   <script src="./js/bonkr-dialog.min.js"></script>
   <script src="./js/nav.min.js"></script>
   <script src="./js/main.min.js"></script>
+  <!-- Ain't Minez -->
+  <script src="./js/lib/scrolldir.auto.min.js"></script>
+  <script src="./js/lib/velocity.min.js"></script>
+
   <script>
     nav.links.i = 0
     nav.links.cycle()

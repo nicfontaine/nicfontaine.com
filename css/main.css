@@ -150,3 +150,77 @@ main .slideshow img:first-child, main .slideshow img.show:first-child {
   position: relative;
   opacity: 1;
 }
+
+.btn-to-top {
+  position: fixed;
+  bottom: 18px;
+  right: 15px;
+  height: 70px;
+  width: 70px;
+  background: rgb(82, 93, 176);
+  background: rgb(237, 79, 90);
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  box-shadow: 0 3px 13px rgba(61, 132, 165, 0.68);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  border: 4px solid rgb(215, 70, 79);
+  transform: translateX(150px);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-to-top:before {
+  content: '';
+  position: absolute;
+  transform: translateX(-37px);
+  width: 70px;
+  height: 70px;
+  background: rgb(215, 70, 79);
+}
+
+.btn-to-top:hover .btn-to-top:active, .btn-to-top:visited, .btn-to-top:focus {
+  background: rgb(237, 79, 90);
+}
+
+.btn-to-top > * {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-to-top-icon {
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 45px;
+  color: #fff;
+}
+
+.btn-to-top-text-l {
+  left: 5px;
+  text-align: left;
+  color: rgba(255,255,255,0.6);
+  font-weight: normal;
+  font-size: 0.72rem;
+  font-style: italic;
+}
+
+.btn-to-top-text-r {
+  right: 1px;
+  text-align: right;
+  color: rgba(255,255,255,0.6);
+  font-weight: normal;
+  font-size: 0.72rem;
+  font-style: italic;
+}
+
+[data-scrolldir='up'] .btn-to-top {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translateX(0);
+}
