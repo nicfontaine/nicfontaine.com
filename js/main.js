@@ -111,11 +111,11 @@ if (document.getElementsByClassName('slideshow') !== undefined) {
 if (dom.scroll.toTop != undefined) {
   dom.scroll.toTop.addEventListener('click', function(e) {
     e.preventDefault()
-    Velocity(document.getElementById('heading-01'), 'scroll', { duration: 500, offset: -300, easing: 'easeOutCubic' } )
+    Velocity(document.getElementsByTagName('body')[0], 'scroll', { duration: 500, offset: -300, easing: 'easeOutCubic' } )
   })
   dom.scroll.toTop.addEventListener('touchstart', function(e) {
     e.preventDefault()
     e.stopPropagation()
-    Velocity(document.getElementById('heading-01'), 'scroll', { duration: 500, offset: -300, easing: 'easeOutCubic' } )
+    Velocity(document.getElementsByTagName('body')[0], 'scroll', { duration: 500, offset: -300, easing: 'easeOutCubic' } )
   },{passive:false})
 }
