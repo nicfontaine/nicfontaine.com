@@ -57,11 +57,11 @@ if (dom.linker.length > 0) {
 }
 
 // Hide cursor after delay
-var cursor = {
-  visible: true,
-  timer: undefined
-}
-document.addEventListener('mousemove', function() {
+// var cursor = {
+//   visible: true,
+//   timer: undefined
+// }
+/*document.addEventListener('mousemove', function() {
   let h = document.getElementsByTagName('html')[0]
   if (!cursor.visible) {
     cursor.visible = true
@@ -74,7 +74,7 @@ document.addEventListener('mousemove', function() {
       cursor.visible = false
     }, 300)
   }  
-})
+})*/
 
 //
 // Slideshow, Simple
