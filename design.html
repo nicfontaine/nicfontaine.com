@@ -85,7 +85,7 @@
     <!-- Doughnut -->
     <section class='mg-t-6'>
 
-      <h3 id='doughnut'>Doughnut Layers <a href='#doughnut' class='linker' tabindex='-1' title='paragraph anchor link'></a></h3>
+      <h3 id='doughnut'>Doughnut Layers <a href='#doughnut' class='linker' tabindex='-1' title='paragraph anchor link'>&nbsp;</a></h3>
 
       <figure class='frame rnd-7'>
         <img src='./img/design/doughnut-slice-c.png' alt='layered, vector doughnut slice study'>
@@ -335,7 +335,7 @@
   <script src="./js/nav.min.js"></script>
   <script src="./js/main.min.js"></script>
   <!-- Ain't Minez -->
-  <script src="./js/lib/scrolldir.auto.min.js"></script>
+  <!-- <script src="./js/lib/scrolldir.auto.min.js"></script> -->
   <script src="./js/lib/velocity.min.js"></script>
 
   <script>
@@ -344,20 +344,29 @@
   </script>
 
   <!-- Matomo -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//nicfontaine.com/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+
+    function embedTrackingCode() {
+       var u="//nicfontaine.com/piwik/";
+       _paq.push(["setTrackerUrl", u+"piwik.php"]);
+       _paq.push(["setSiteId", "1"]);
+
+       var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+       g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);    
+    }
+
+    if (window.addEventListener) { 
+      window.addEventListener("load", embedTrackingCode, false); 
+    } else if (window.attachEvent) { 
+      window.attachEvent("onload",embedTrackingCode); 
+    } else {
+      embedTrackingCode();
+    }
+  </script>
+  <!-- End Matomo Code -->
 
 </body>
 </html>

@@ -33,6 +33,10 @@
     }
   </style>
 
+  <style>
+    .btn-to-top { display: none !important; }
+  </style>
+
   <script>
     var cc = function() {
     var l01 = document.createElement('link'); var l02 = document.createElement('link');
@@ -159,7 +163,7 @@
       </p>
 
       <p>
-        Before <em>SF</em>, I was in <em>Asheville, NC</em> designing landing pages &amp; display ads for PPC campaigns / running AB testing at <a href='https://element-360.com' target='_blank'>Element-360</a>, and designing for games, animation, and branding under various freelance contracts.
+        Before <em>SF</em>, I was in <em>Asheville, NC</em> designing landing pages &amp; display ads for PPC campaigns / running AB testing at <a href='https://element-360.com' target='_blank'>Element-360</a> &mdash; as well as designing for games, animation, and branding as a freelance contractor.
       </p>
 
       <p>
@@ -274,7 +278,7 @@
   <!-- Ain't Minez -->
 
   <!-- Keep track of scroll direction, for back-to-top -->
-  <script src="./js/lib/scrolldir.auto.min.js"></script>
+  <!-- <script src="./js/lib/scrolldir.auto.min.js"></script> -->
   <!-- Animate scroll back-to-top -->
   <script src="./js/lib/velocity.min.js"></script>
 
@@ -286,16 +290,25 @@
   <!-- Matomo -->
   <script type="text/javascript">
     var _paq = _paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//nicfontaine.com/piwik/";
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-    })();
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+
+    function embedTrackingCode() {
+       var u="//nicfontaine.com/piwik/";
+       _paq.push(["setTrackerUrl", u+"piwik.php"]);
+       _paq.push(["setSiteId", "1"]);
+
+       var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+       g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);    
+    }
+
+    if (window.addEventListener) { 
+      window.addEventListener("load", embedTrackingCode, false); 
+    } else if (window.attachEvent) { 
+      window.attachEvent("onload",embedTrackingCode); 
+    } else {
+      embedTrackingCode();
+    }
   </script>
   <!-- End Matomo Code -->
 

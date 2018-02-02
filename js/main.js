@@ -108,6 +108,18 @@ if (document.getElementsByClassName('slideshow') !== undefined) {
 // Scroll to top
 //
 
+window.addEventListener('scroll', function() {
+  if (domNav.html.scrollTop > 0) {
+    if (!dom.scroll.toTop.classList.contains('show')) {
+      dom.scroll.toTop.classList.add('show')
+    }
+  } else {
+    if (dom.scroll.toTop.classList.contains('show')) {
+      dom.scroll.toTop.classList.remove('show')
+    }
+  }
+})
+
 if (dom.scroll.toTop != undefined) {
   dom.scroll.toTop.addEventListener('click', function(e) {
     e.preventDefault()

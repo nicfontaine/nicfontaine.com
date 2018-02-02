@@ -196,6 +196,7 @@ main.off figure.slideshow {
   transition: all 0.3s ease-out;
   cursor: pointer;
   overflow: hidden;
+  display: none;
 }
 
 .btn-to-top:before {
@@ -241,6 +242,13 @@ main.off figure.slideshow {
   font-weight: normal;
   font-size: 0.72rem;
   font-style: italic;
+}
+
+.btn-to-top.show {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translateX(0);
 }
 
 [data-scrolldir='up'] .btn-to-top {

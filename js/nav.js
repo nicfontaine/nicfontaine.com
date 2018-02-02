@@ -22,7 +22,6 @@ var nav = {
   },
   // Switch focus & on/off classes btw nav & main
   toggle: function(override) {
-    console.log('nav.toggle()')
     if (page.w > page.mSize) {
       let n = domNav.nav[0]
       let m = domNav.main[0]
@@ -70,7 +69,6 @@ var nav = {
     i: 0,
     // Loop through nav links & focus. direction based on arg
     cycle: function(countDir) {
-      console.log('nav.links.cycle()')
       if (countDir === 'next') {
         nav.links.i++
         if (nav.links.i > domNav.navLi.length-1) {
@@ -98,13 +96,11 @@ var nav = {
 
 // Swap focus on nav/main via mouseenter on each
 domNav.main[0].addEventListener('mouseenter', function(e) {
-  console.log('mouseenter main')
   if (nav.foc.side === domNav.nav[0]) {
     nav.toggle('main')
   }
 })
 domNav.nav[0].addEventListener('mouseenter', function(e) {
-  console.log('mouseenter nav')
   if (nav.foc.side === domNav.main[0]) {
     nav.toggle('nav')
     // Make focus 'home' index, so it's not confusing
