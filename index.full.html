@@ -10,28 +10,24 @@
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="canonical" href="https://nicfontaine.com">
 
-  <!-- Stylesheets -->
-  <!-- <link rel="stylesheet" href="./css/bonkr.min.css">
-  <link rel="stylesheet" href="./css/nav.min.css">
-  <link rel="stylesheet" href="./css/main.min.css">
-  <link rel="stylesheet" href="./css/mobile.min.css"> -->
-
   <!-- Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Jaldi:700" rel="stylesheet"> -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Assistant:400,800" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet">
   <style>
     .loader {
-      z-index: 500;
-      background: #fff;
-      pointer-events: none;
-      opacity: 0;
-      transition: all 0.3s;
-      position: fixed;
-      top: 0; right: 0; bottom: 0; left: 0; }
-    .loader.show {
-      opacity: 1;
-      pointer-events: auto; }
+      z-index: 500; pointer-events: none; opacity: 0; transition: all 0.3s; position: fixed; overflow: hidden; overflow-y: auto; top: 0; right: 0; bottom: 0; left: 0; }
+    .loader.show { opacity: 1; pointer-events: auto; }
+    .loader > * { color: rgb(247, 251, 111); font-family: sans-serif; }
+    .loader h3 { position: absolute; right: 0; left: 0; margin: 0 auto; top: 50%; transform: translateY(-50%); text-align: center; padding: 0; font-size: 1.5rem; }
+    .nav-txtr { position: fixed; right: 0; left: 0; top: 0; bottom: 0; background: url('./../img/pattern-geometry-01-c.png') repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
+    }
+    @media (max-width: 750px) {
+      .dialog-01 { display: none; }
+    }
+  </style>
+
+  <style>
+    .btn-to-top { display: none !important; }
   </style>
 
   <script>
@@ -43,7 +39,6 @@
     l03.rel = 'stylesheet'; l03.href = './css/main.min.css';
     l04.rel = 'stylesheet'; l04.href = './css/mobile.min.css';
     var h = document.getElementsByTagName('head')[0];
-    // h.parentNode.insertBefore(l, h);
     h.appendChild(l01);
     h.appendChild(l02);
     h.appendChild(l03);
@@ -105,7 +100,7 @@
   </nav>
 
   <!-- Right, Content -->
-  <main class='pos-rel'>
+  <main class='pos-rel off'>
 
     <section>
       <h1 class='mg-b-0 mg-t-6' id='heading-01'>Nic Fontaine</h1>
@@ -160,7 +155,7 @@
       </p>
 
       <p>
-        Before <em>SF</em>, I was in <em>Asheville, NC</em> designing landing pages &amp; display ads for PPC campaigns / running AB testing at <a href='https://element-360.com' target='_blank'>Element-360</a>, and designing for games, animation, and branding under various freelance contracts.
+        Before <em>SF</em>, I was in <em>Asheville, NC</em> designing landing pages &amp; display ads for PPC campaigns / running AB testing at <a href='https://element-360.com' target='_blank'>Element-360</a> &mdash; as well as designing for games, animation, and branding as a freelance contractor.
       </p>
 
       <p>
@@ -217,14 +212,21 @@
 
   </main>
 
+  <!-- To Top -->
+  <a href='#' id='btn-to-top' class='btn-to-top'>
+    <div class='btn-to-top-icon'>&lambda;</div>
+    <div class='btn-to-top-text-l'>To</div>
+    <div class='btn-to-top-text-r'>Top</div>
+  </a>
+
   <!-- Loader -->
   <div id='loader' class='loader show' style='background: #5FE6BA;'>
     <div class='nav-txtr'></div>
-    <h3 class='pos-abs-center text-center'>loading-ding-dong..<span class='blinking'>.</span></h3>
+    <h3 class='text-center'>loading-ding-dong..<span class='blinking'>.</span></h3>
   </div>
   
   <!-- Dialog 01 Intro -->
-<!--   <div class='dialog active center' role='dialog'>
+  <!-- <div class='dialog active center dialog-01' role='dialog'>
     <div class='dialog-outer'>
       <div class='dialog-inner pd-a-4 pd-b-6 w-mx-650'>
         <header role='banner'>
@@ -237,16 +239,12 @@
             This, my new site, is <strong>in development</strong> <em>(like right now, now).</em>
           </p>
 
-          <p>
-            Sub-pages aren't available yet as I'm still laying out the navigation &amp; homepage content.
-          </p>
-
           <h5>Navigation</h5>
 
           <ul>
             <li>No mouse/trackpad</li>
             <li><strong>Arrow keys</strong> switch panels, scroll, &amp; change navigation links</li>
-            <li><strong>Enter</strong> for navigating to sub-pages (not working atm)</li>
+            <li><strong>Enter</strong> for navigating to sub-pages</li>
             <li><strong>Esc</strong> to close this dialog</li>
           </ul>
 
@@ -256,13 +254,55 @@
     </div>
   </div> -->
 
+  <!-- Minez -->
+
+  <!-- Handle loader -->
   <script src="./js/bonkr-loader.min.js"></script>
+  <!-- Handle dialogs & their buttons -->
   <script src="./js/bonkr-dialog.min.js"></script>
-  <script src="./js/nav.min.js"></script>
+  <!-- Handle navigation switching -->
+  <script src="./js/nav.js"></script>
+  <!-- Handle nav fallback on mobile, slideshow, scroll to top -->
   <script src="./js/main.min.js"></script>
+  <!-- Preload sub-page images to cache during index pageview -->
+  <script src="./js/preload.js"></script>
+
+  <!-- Ain't Minez -->
+
+  <!-- Keep track of scroll direction, for back-to-top -->
+  <!-- <script src="./js/lib/scrolldir.auto.min.js"></script> -->
+  <!-- Animate scroll back-to-top -->
+  <script src="./js/lib/velocity.min.js"></script>
+
   <script>
     nav.links.i = 0
     nav.links.cycle()
   </script>
+
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+
+    function embedTrackingCode() {
+       var u="//nicfontaine.com/piwik/";
+       _paq.push(["setTrackerUrl", u+"piwik.php"]);
+       _paq.push(["setSiteId", "1"]);
+
+       var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+       g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);    
+    }
+
+    if (window.addEventListener) { 
+      window.addEventListener("load", embedTrackingCode, false); 
+    } else if (window.attachEvent) { 
+      window.attachEvent("onload",embedTrackingCode); 
+    } else {
+      embedTrackingCode();
+    }
+  </script>
+  <!-- End Matomo Code -->
+
 </body>
 </html>

@@ -24,7 +24,8 @@ var page = {
       domNav.nav[0].classList.add('on')
       domNav.main[0].classList.add('off')
     }
-  }
+  },
+  atTop: true
 }
 page.checkSize()
 
@@ -110,12 +111,14 @@ if (document.getElementsByClassName('slideshow') !== undefined) {
 
 window.addEventListener('scroll', function() {
   if (domNav.html.scrollTop > 0) {
-    if (!dom.scroll.toTop.classList.contains('show')) {
+    if (page.atTop) {
       dom.scroll.toTop.classList.add('show')
+      page.atTop = false
     }
   } else {
-    if (dom.scroll.toTop.classList.contains('show')) {
+    if (!page.atTop) {
       dom.scroll.toTop.classList.remove('show')
+      page.atTop = true
     }
   }
 })
