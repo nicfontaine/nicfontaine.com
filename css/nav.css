@@ -96,10 +96,14 @@ nav.off ul li a:before, nav.off ul li.cycled a:before {
   background: #171717;
 }
 
+nav.off ul li.active a:before {
+ background: #111; 
+}
+
 /* Active Link cycled & hover before after elements styling */
 nav ul li.active a:after {
   position: absolute;
-  content: '';
+  /* content: ''; */
   opacity: 1;
   background: rgba(255,255,255,0.25);
   height: 8px;
@@ -125,7 +129,7 @@ nav ul li.active:before {
 }
 
 nav ul li.active.cycled:before {
-  background: #cf7edb;
+  /* background: #cf7edb; */
 }
 
 nav ul li.active a:hover:after, nav ul li.active.cycled a:after {
@@ -133,7 +137,8 @@ nav ul li.active a:hover:after, nav ul li.active.cycled a:after {
 }
 
 nav ul li.active a:before {
-  opacity: 0;
+  /* opacity: 0; */
+  background: #ffbb6e;
   /*background: red;*/
 }
 
@@ -257,7 +262,7 @@ nav ul li.active a:before {
 nav.on ul li .nav-tip {
   position: absolute;
   right: 13px;
-  bottom: 30px;
+  bottom: 21px;
   line-height: 0;
   color: rgba(255,255,255,0.6);
   font-size: 16px;

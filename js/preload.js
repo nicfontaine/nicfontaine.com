@@ -45,6 +45,6 @@ var preL = {
 window.addEventListener('load', function() {
 	setTimeout(function() {
 		preL.load()
-		console.log('pre-loading sub-page images')
+		console.log('pre-loading sub-page images complete')
 	},preL.delay)
 })

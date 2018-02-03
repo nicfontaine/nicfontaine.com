@@ -77,22 +77,22 @@
 
       <li class='nav-li'>
         <a href='./design' class='nav-link'>D<span class='ltr-rot ltr-rot-02-01'>e</span>si<span class='ltr-rot ltr-rot-02-02'>g</span>n</a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit to visit</div>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit to visit</div>
       </li>
 
       <li class='nav-li'>
         <a href='./interactive' class='nav-link'>I<span class='ltr-rot ltr-rot-02-01'>n</span>t<span class='ltr-rot ltr-rot-02-01'>e</span>r<span class='ltr-rot ltr-rot-04'>a</span><span class='ltr-rot ltr-rot-01-01'>c</span>tiv<span class='ltr-rot ltr-rot-01-01'>e</span></a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
       </li>
 
       <li class='nav-li'>
         <a href='./contact' class='nav-link'><span class='ltr-rot ltr-rot-04-01'>C</span>ont<span class='ltr-rot ltr-rot-04-02'>a</span>ct</a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
       </li>
 
       <li class='nav-li'>
         <a href='./resume' class='nav-link'>R<span class='ltr-rot ltr-rot-01-01'>e</span>s<span class='ltr-rot ltr-rot-01-02'>u</span>me</a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span> to view</div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
       </li>
 
     </ul>
@@ -109,7 +109,7 @@
     <section class='symbol-bg-01'>
 
       <figure class='flt-r mg-l-6 mg-b-4' style='max-width: 380px;'>
-        <img src='./img/nf-headshot-explode-small-c.jpg'>
+        <img data-src='./img/nf-headshot-explode-small-c.jpg' class='lz' id='img-lz-01' src='./img/nf-headshot-explode-small-pl.gif'>
       </figure>
 
       <p class='text-block-corner-left'>
@@ -126,7 +126,7 @@
       <h3>Wait, there's no <span style='text-decoration: underline'>k</span> in your name?</h3>
 
       <figure class='flt-l mg-t-5 mg-r-4 w-mx-200'>
-        <img src='./img/nf-school-small-01-c.jpg' style='box-shadow: -20px -20px 0 rgba(30,180,120,0.3)'>
+        <img data-src='./img/nf-school-small-01-c.jpg' class='lz' id='img-lz-02' src='./img/nf-school-small-01-pl.gif' style='box-shadow: -20px -20px 0 rgba(30,180,120,0.3)'>
       </figure>
 
       <p>
@@ -205,7 +205,7 @@
       </p>
 
       <figure>
-        <img src='./img/screen-jp-01-c.png'>
+        <img data-src='./img/screen-jp-01-c.png' class='lz' id='img-lz-03' src='./img/screen-jp-01-pl.gif'>
       </figure>
 
     </section>
@@ -277,6 +277,14 @@
   <script>
     nav.links.i = 0
     nav.links.cycle()
+    // Lazy load images with full res data-src(s)
+    window.addEventListener('load', function() {
+      let lz = document.getElementsByClassName('lz')
+      for (var i=0; i<lz.length; i++) {
+        let src = lz[i].getAttribute('data-src')
+        lz[i].src = src
+      }
+    })
   </script>
 
   <!-- Matomo -->
