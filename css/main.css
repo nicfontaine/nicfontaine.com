@@ -24,7 +24,7 @@ h2 { font-size: 4em; }
 main h3 { font-size: 2.9rem; margin-bottom: 2rem;}
 h1, h2, h3, h4, h5, h6 {
   padding-right: 50px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 main p, main ul, main ol {
@@ -36,6 +36,14 @@ main p, main ul, main ol {
   left: initial;
   right: 0;
   transform: none;
+  font-size: 2.8rem;
+  z-index: 3;
+  top: 1.76rem;
+  right: 2.35rem;
+}
+
+.mg-t-6 .linker {
+  top:  1.8rem;
 }
 
 /*(NOTE) This needs some queries so it doesn't overflow & move text beneath down */

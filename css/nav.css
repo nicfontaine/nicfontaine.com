@@ -341,6 +341,7 @@ main section {
   max-width: 800px;
   margin: 0 auto;
   overflow-y: auto;
+  position: relative;
 }
 
 main.on section {
@@ -483,6 +484,10 @@ main img, main video {
 
 main.on img, main.on video {
   opacity: 1;
+}
+
+main .symbol-bg-01 {
+  overflow-y: visible;
 }
 
 main .symbol-bg-01:after {

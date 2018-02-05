@@ -34,6 +34,10 @@
     font-size: 1.1rem;
   }
 
+  main * {
+    transition: none;
+  }
+
   section {
     padding: 1rem 1rem;
   }
@@ -217,7 +221,8 @@
   h1 { font-size: 4rem; }
   h2 { font-size: 3rem; }
   #heading-01 { margin-top: 1rem; }
-  main .heading-split-bar { padding: 2rem; margin-bottom: 1.5rem; }
+  main .heading-split-bar { padding: 1rem; margin-bottom: 1.5rem; }
+  .heading-split-bar h2 { padding-right: 1rem; }
 
   main .symbol-bg-01:after {
     font-size: 150vw;
@@ -239,6 +244,15 @@
 
   .btn-to-top {
     display: block;
+  }
+
+  .linker {
+    right: 1rem;
+    top: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    padding-right:  35px;
   }
 
 }
@@ -289,4 +303,10 @@
     top: 47%;
   }
 
+}
+
+@media (max-width: 350px) {
+  nav {
+    overflow-x: auto;
+  }
 }
