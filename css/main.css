@@ -25,12 +25,13 @@ main h3 { font-size: 2.9rem; margin-bottom: 2rem;}
 h1, h2, h3, h4, h5, h6 {
   padding-right: 50px;
   word-break: break-word;
+  font-family: 'Work Sans', sans-serif;
 }
 
-main p, main ul, main ol {
+/*main p, main ul, main ol {
   font-weight: 400;
   font-family: 'Assistant';
-}
+}*/
 
 .linker {
   left: initial;

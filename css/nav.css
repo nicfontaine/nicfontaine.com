@@ -44,7 +44,7 @@ nav, main {
 
 nav ul li a, nav.on ul li a {
   color: #f7fb6f;
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 
 nav.off ul li a {
@@ -332,7 +332,8 @@ main {
   /*flex: 1;*/
   overflow-y: auto;
   z-index: 2;
-  font-family: 'Work Sans';
+  /*font-family: 'Work Sans', Arial, sans-serif;*/
+  font-family: 'Assistant', Arial, sans-serif;
   font-size: 1.2em;
 }
 
@@ -350,7 +351,7 @@ main.on section {
 }
 
 main section, main article {
-  transition: all 0.3s;
+  transition: opacity 0.3s;
 }
 
 main.on {
@@ -469,7 +470,7 @@ nav.off .nav-instr-nav {
 
 main.off p, main.off ul li, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6 {
   color: #aaa;
-  transition: all 0.3s;
+  transition: colorl 0.3s;
 }
 
 main figure {
@@ -479,7 +480,7 @@ main figure {
 
 main img, main video {
   opacity: 0.12;
-  transition: all 0.4s;
+  transition: opacity 0.4s;
   position: relative;
 }
 
