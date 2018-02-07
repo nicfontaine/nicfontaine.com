@@ -34,7 +34,7 @@
   <style>
     .loader { display: none !important;  }
     nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
-    main, main p, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6 { color: #333; }
+    main, main p, main ul, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off ul, main.off ul li { color: #333; }
     main img { opacity: 1; }
     main section { opacity: 1; transition: none; }
     .dialog, .dialog.active, .dialog-outer, .dialog-inner { display: none; pointer-events: none; }
@@ -50,7 +50,11 @@
   <!-- Left, Nav -->
   <nav role='navigation' class='on pos-rel'>
 
-    <div id='nav-link-home' class='nav-li'><a href='./' class='nav-link'>HO<br>ME</a></div>
+    <div id='nav-link-home' class='nav-li'>
+      <a href='./'>
+        <span class='nav-link'>HO<br>ME</span>
+      </a>
+    </div>
 
     <ul class='pos-abs-center text-center noselect'>
 
@@ -81,6 +85,59 @@
 
   <!-- Right, Content -->
   <main class='pos-rel off'>
+
+    <!-- Bonkr -->
+    <section>
+
+      <h3 id='bonkr'>BONKR</h3>
+      <a href='#bonkr' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+
+      <blockquote>
+
+        <p>
+          <strong>B</strong>oilerplate - <strong>O</strong>pinionated, <strong>N</strong>a<strong>K</strong>ed, <strong>R</strong>esponsive
+        </p>
+
+      </blockquote>
+
+      <figure class='flt-r mg-l-4 mg-b-4 mg-t-4 w-mx-450 frame' style='background-color: #fff;'>
+        <img src="./img/interactive/bonkr-screen-01-c.png" alt="css boilerplate">  
+      </figure>
+
+      <p>
+        Normalized CSS boilerplate with a focus on style-agnostic usability, layout system, and responsive flexibility.
+      </p>
+
+      <p>
+        The simple black &amp; grey colour system is all contained in a group, so is easy to disable to minimize conflict.
+      </p>
+
+      <p>
+        It's the base stylesheet for this site.
+      </p>
+
+      <p>
+        <a href='https://github.com/ngpfontaine/bonkr' target='_blank'>Github &nbsp; &rarr;</a>
+      </p>
+
+      <p>
+        <a href='https://nicfontaine.com/dev/bonkr' target='_blank'>Live Example &nbsp; &rarr;</a>
+      </p>
+
+      <h4 class='flt-clr'>Features</h4>
+
+      <p>
+        <ul>
+          <li>B&amp;W with hover, focus, etc state changes</li>
+          <li>Helper classes for border-radius, display modes, width</li>
+          <li><code>rem</code> based margin &amp; padding system</li>
+          <li>Base layout styling for semantic elements</li>
+          <li>Basic loader overlay on <code>onload</code> event</li>
+          <li>Dialog modal with focus change, <code>ESC</code> to close, open/close btns</li>
+        </ul>
+      </p>
+
+    </section>
 
     <!-- Zoom Scheduling -->
     <section>

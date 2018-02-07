@@ -34,7 +34,7 @@
   <style>
     .loader { display: none !important;  }
     nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
-    main, main p, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6 { color: #333; }
+    main, main p, main ul, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off ul, main.off ul li { color: #333; }
     main img { opacity: 1; }
     main section { opacity: 1; transition: none; }
     .dialog, .dialog.active, .dialog-outer, .dialog-inner { display: none; pointer-events: none; }
@@ -50,7 +50,11 @@
   <nav role='navigation' class='on pos-rel'>
     <div class='nav-txtr'></div>
 
-    <div id='nav-link-home' class='nav-li'><a href='./' class='nav-link'>HO<br>ME</a></div>
+    <div id='nav-link-home' class='nav-li'>
+      <a href='./'>
+        <span class='nav-link'>HO<br>ME</span>
+      </a>
+    </div>
 
     <ul class='pos-abs-center text-center noselect'>
 
@@ -102,6 +106,13 @@
         <strong><em>My diverse background enables me to architect custom, holistic solutions to each project that cater to the unique and evolving needs of both client &amp; end-user.</em></strong>
       </p>
 
+      <p>
+        <a href='./img/nic-fontaine-resume-201802.pdf' target='_blank' title='pdf link'>Resume as PDF &nbsp; &rarr;</a>
+      </p>
+      <p>
+        <a href='https://github.com/ngpfontaine/resume' target='_blank' title='github link'>On Github &nbsp; &rarr;</a>
+      </p>
+
     </section>
 
     <section>
@@ -137,8 +148,8 @@
 
       <h5>Marketing &amp; Testing</h5>
       <ul>
-        <li>Google Analytics</li>
-        <li>Adwords, Tag Manager</li>
+        <li>Google Analytics, Matomo(Piwik)</li>
+        <li>Adwords, Tag Manager, Search Console</li>
         <li>Mailchimp, Campaign Monitor</li>
         <li>Salesforce, Hubspot, Insightly</li>
         <li>Visual Website Optimizer</li>
