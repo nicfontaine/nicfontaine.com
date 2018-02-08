@@ -470,7 +470,16 @@ nav.off .nav-instr-nav {
 
 main.off p, main.off ul li, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6 {
   color: #aaa;
-  transition: colorl 0.3s;
+  transition: color 0.3s;
+}
+
+code {
+  transition: all 0.3s;
+}
+
+main.off code {
+  background: #ddd;
+  border-left-color: #ccc;
 }
 
 main figure {
