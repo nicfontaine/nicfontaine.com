@@ -15,15 +15,15 @@ var page = {
     this.w = window.innerWidth
     this.h = window.innerHeight
     // Totally remove nav/main on/off classes if m size
-    if (this.w < this.mSize) {
-      domNav.nav[0].classList.add('on')
-      domNav.nav[0].classList.remove('off')
-      domNav.main[0].classList.add('on')
-      domNav.main[0].classList.remove('off')
-    } else { // Add back starting on/off if > m size
-      domNav.nav[0].classList.add('on')
-      domNav.main[0].classList.add('off')
-    }
+    // if (this.w <= this.mSize) {
+    //   domNav.nav[0].classList.add('on')
+    //   domNav.nav[0].classList.remove('off')
+    //   domNav.main[0].classList.add('on')
+    //   domNav.main[0].classList.remove('off')
+    // } else { // Add back starting on/off if > m size
+    //   domNav.nav[0].classList.add('on')
+    //   domNav.main[0].classList.add('off')
+    // }
   },
   atTop: true
 }
@@ -43,7 +43,7 @@ window.addEventListener('resize', function() {
 // Remove default anchor functionality for a.linker(s)
 // Instead, add event to append to url so history isn't changed
 // If JS is disabled, regular href will fire
-if (dom.linker.length > 0) {
+/*if (dom.linker.length > 0) {
   Array.from(dom.linker).forEach((l,i) => {
     let href = l.getAttribute('href')
     l.addEventListener('click', function(e) {
@@ -55,7 +55,7 @@ if (dom.linker.length > 0) {
       e.stopPropagation()
     },{passive:false})
   })
-}
+}*/
 
 // Hide cursor after delay
 // var cursor = {

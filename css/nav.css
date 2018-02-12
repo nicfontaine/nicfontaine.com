@@ -44,7 +44,7 @@ nav, main {
 
 nav ul li a, nav.on ul li a {
   color: #f7fb6f;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 
 nav.off ul li a {
