@@ -10,10 +10,8 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="canonical" href="https://nicfontaine.com">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Assistant:400,800|Work+Sans:500,700" rel="stylesheet">
   <style>
+    html { font-family: sans-serif; }
     .loader {
       z-index: 500; pointer-events: none; opacity: 0; transition: all 0.3s; position: fixed; overflow: hidden; overflow-y: hidden; top: 0; right: 0; bottom: 0; left: 0; }
     .loader.show { opacity: 1; pointer-events: auto; }
@@ -21,14 +19,59 @@
     .loader h3 { position: absolute; right: 0; left: 0; margin: 0 auto; top: 50%; transform: translateY(-50%); text-align: center; padding: 0; font-size: 1.5rem; }
     .nav-txtr { position: fixed; right: 0; left: 0; top: 0; bottom: 0; background: url('./../img/pattern-geometry-01-c.png') repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
     }
+    .btn-to-top { display: none !important; }
     @media (max-width: 750px) {
       .dialog-01 { display: none; }
-			.loader, .loader.show { display: none; opacity: 0; pointer-events: auto; }
+      .loader, .loader.show { display: none; opacity: 0; pointer-events: auto; }
+      /* Below is copied from mobile.css. basic layout styles */
+      nav, nav.on, nav.off, main, main.on, main.off {
+        animation: none;
+        transition: none;
+      }
+      main, main.on, main.off {
+        position: relative;
+      }
+      nav, nav.on, nav.off {
+        position: fixed !important;
+        height: auto;
+        left: initial;
+        margin-left: 0;
+        top: initial;
+        bottom: 0;
+        right: 0; left: 0;
+        box-shadow: 0 3px 9px rgba(108, 85, 119, 0.3);
+        z-index: 5;
+      }
+      nav ul {
+        position: relative !important;
+        top: initial !important;
+        transform: none !important;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        padding-right: 25px;
+        margin-left: 10px !important;
+        justify-content: space-between;
+      }
+      nav ul li, nav ul li a {
+        height: auto;
+        margin: 0;
+        left: initial;
+        top: initial;
+        transform: none;
+      }
+      nav ul li a {
+        padding: 1rem 10px 1.5rem;
+        width: 100%;
+        text-transform: uppercase;
+        margin: 0 auto;
+        font-size: 25px;
+        letter-spacing: -2px;
+      }
+      nav .nav-txtr {
+        display: none;
+      }
     }
-  </style>
-
-  <style>
-    .btn-to-top { display: none !important; }
   </style>
 
   <script>
@@ -56,6 +99,8 @@
     <link href='./css/main.min.css' rel='stylesheet'>
     <link href='./css/mobile.min.css' rel='stylesheet'>
   </noscript>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,800|Work+Sans:500,700" rel="stylesheet">
 </head>
 
 <noscript>

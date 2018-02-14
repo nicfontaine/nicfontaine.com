@@ -11,9 +11,12 @@
   }
 
   nav, nav.on, nav.off, main, main.on, main.off {
-    position: relative;
     animation: none;
     transition: none;
+  }
+
+  main, main.on, main.off {
+    position: relative;
   }
 
   nav, nav.on, nav.off {
@@ -28,20 +31,6 @@
     z-index: 5;
   }
 
-  main {
-    /* padding-top: 60px; */
-    padding-bottom: 60px;
-    font-size: 1.1rem;
-  }
-
-  main * {
-    transition: none;
-  }
-
-  section {
-    padding: 1rem 1rem;
-  }
-
   nav ul {
     position: relative !important;
     top: initial !important;
@@ -51,7 +40,6 @@
     flex-direction: row;
     padding-right: 25px;
     margin-left: 10px !important;
-    /*flex-grow: 1;*/
     justify-content: space-between;
   }
 
@@ -73,7 +61,6 @@
 
   nav ul li, nav ul li:last-child {
     padding: 0;
-    /*flex: 1;*/
   }
 
   nav ul li, nav ul li.active, nav ul li.active.cycled {
@@ -170,6 +157,20 @@
 
   nav .nav-txtr {
     display: none;
+  }
+
+  main {
+    /* padding-top: 60px; */
+    padding-bottom: 60px;
+    font-size: 1.1rem;
+  }
+
+  main * {
+    transition: none;
+  }
+
+  section {
+    padding: 1rem 1rem;
   }
 
   main section, main.on section, main.off section, main article, main.on article, main.off article {
