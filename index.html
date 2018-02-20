@@ -74,6 +74,7 @@
     }
   </style>
 
+  <!-- Load CSS async -->
   <script>
     var cc = function() {
     var l01 = document.createElement('link'); var l02 = document.createElement('link');
@@ -93,12 +94,15 @@
     if (raf) raf(cc);
     else window.addEventListener('load', cc);
   </script>
+
+  <!-- Load CSS fallback if no JS -->
   <noscript>
     <link href='./css/bonkr.min.css' rel='stylesheet'>
     <link href='./css/nav.min.css' rel='stylesheet'>
     <link href='./css/main.min.css' rel='stylesheet'>
     <link href='./css/mobile.min.css' rel='stylesheet'>
   </noscript>
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Assistant:400,800|Work+Sans:500,700" rel="stylesheet">
 </head>
@@ -133,23 +137,19 @@
     <ul class='pos-abs-center text-center noselect'>
 
       <li class='nav-li'>
-        <a href='./design' class='nav-link'>D<span class='ltr-rot ltr-rot-02-01'>e</span>si<span class='ltr-rot ltr-rot-02-02'>g</span>n</a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit to visit</div>
+        <a href='./design' class='nav-link'>Design</a>
       </li>
 
       <li class='nav-li'>
-        <a href='./interactive' class='nav-link'>I<span class='ltr-rot ltr-rot-02-01'>n</span>t<span class='ltr-rot ltr-rot-02-01'>e</span>r<span class='ltr-rot ltr-rot-04'>a</span><span class='ltr-rot ltr-rot-01-01'>c</span>tiv<span class='ltr-rot ltr-rot-01-01'>e</span></a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+        <a href='./interactive' class='nav-link'>Interactive</a>
       </li>
 
       <li class='nav-li'>
-        <a href='./contact' class='nav-link'><span class='ltr-rot ltr-rot-04-01'>C</span>ont<span class='ltr-rot ltr-rot-04-02'>a</span>ct</a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+        <a href='./contact' class='nav-link'>Contact</a>
       </li>
 
       <li class='nav-li'>
-        <a href='./resume' class='nav-link'>R<span class='ltr-rot ltr-rot-01-01'>e</span>s<span class='ltr-rot ltr-rot-01-02'>u</span>me</a>
-        <div class='nav-tip nav-tip-r'><span>&gt;</span></div><div class='nav-tip nav-tip-ent'><span>&crarr;</span> to visit</div>
+        <a href='./resume' class='nav-link'>Resume</a>
       </li>
 
     </ul>
@@ -225,8 +225,8 @@
 
       <ul>
         <li><strong>Linux, Node/Php, Vanilla JS, HTML, CSS</strong> &mdash; deploying responsive, lightweight, user-friendly web-apps</li>
-        <li><strong>Unity3D, Photoshop, &amp; C#</strong> &mdash; crafting logical interfaces for dashboards, in-game HUDs, and VR</li>
-        <li><strong>Pen &amp; Paper, Sketch, Invision, &amp; more</strong> &mdash; wireframing user experience, prototypes, and designing assets</li>
+        <li><strong>Unity3D &amp; C#</strong> &mdash; crafting logical interfaces for dashboards, in-game HUDs, and VR</li>
+        <li><strong>Pen &amp; Paper, Photoshop, Invision, &amp; more</strong> &mdash; wireframing user experience, prototypes, and designing assets</li>
       </ul>
 
     </section>
@@ -236,11 +236,17 @@
       <h3>'Not' Work</h3>
 
       <ul>
-        <li>Weird little projects for things I'll use everyday &mdash; digital, wood, wtvr..</li>
-        <li>Cycling, trail-running, &amp; backpacking in the Bay area</li>
+        <li>Cycling, trail-running, &amp; <a href='https://www.instagram.com/p/BfGpUaBB8DD/?taken-by=bigrigfontaine' target='_blank'>backpacking</a> in the Bay area</li>
+        <li>Woodworking, <a href='https://www.instagram.com/p/7VyfM1Epyz/?taken-by=bigrigfontaine' target='_blank'>motorcycle</a> &amp; <a href='https://www.instagram.com/p/BarrYQED0_6/?taken-by=bigrigfontaine' target='_blank'>bike</a> maintenance, and digital <a href='https://github.com/ngpfontaine'>projects</a></li>
         <li>Linux, espresso, keyboards, veganism, crypto.. <i>(fedora fully tipped)</i></li>
         <li><strong>Games</strong>, currently &mdash; Unbox, Breath of the Wild, Rocket League, Overwatch</li>
-        <li><strong>Books</strong>, currently &mdash; Coyote America, The Design of Everyday Things, The Wheel of Time Companion, YDKJS ES6 &amp; Beyond</li>
+        <li><strong>Books</strong> (currently)</li>
+        <ul>
+          <li><a href='https://www.goodreads.com/book/show/10852343-stormdancer' target='_blank'>Stormdancer</a></li>
+          <li><a href='https://www.jnd.org/books/the-design-of-everyday-things.html' target='_blank'>The Design of Everyday Things</a></li>
+          <li><a href='https://www.goodreads.com/book/show/23847904-the-wheel-of-time-companion' target='_blank'>The Wheel of Time Companion</a></li>
+          <li><a href='https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond' target='_blank'>YDKJS ES6 &amp; Beyond</a></li>
+        </ul>
       </ul>
 
     </section>

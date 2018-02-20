@@ -15,6 +15,7 @@ var preL = {
 		'./img/design/drawing-minion-med-c.jpg'
 	],
 	interactive: [
+		'./img/interactive/bonkr-screen-01-c.png',
 		'./img/interactive/web-session-scheduling-01.png',
 		'./img/interactive/web-session-scheduling-02.png',
 		'./img/interactive/web-session-scheduling-03.png',
