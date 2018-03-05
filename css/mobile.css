@@ -1,5 +1,5 @@
 /*Basically reset nav/main & .on .off styling to basic pos relative, no flex*/
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 
   body, body.d-flx {
     display: initial;
@@ -155,6 +155,14 @@
     background: rgba(0,0,0,0.2);
   }
 
+  #nav-link-home .nav-link {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   nav .nav-txtr {
     display: none;
   }
@@ -162,7 +170,7 @@
   main {
     /* padding-top: 60px; */
     padding-bottom: 60px;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
   }
 
   main * {
@@ -187,6 +195,7 @@
 
   nav {
     overflow: hidden;
+    padding-left: 60px;
   }
 
   main {
