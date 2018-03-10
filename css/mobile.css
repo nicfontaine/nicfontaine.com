@@ -1,5 +1,5 @@
 /*Basically reset nav/main & .on .off styling to basic pos relative, no flex*/
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   body, body.d-flx {
     display: initial;
@@ -40,7 +40,7 @@
     flex-direction: row;
     padding-right: 25px;
     margin-left: 10px !important;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   nav ul li, nav ul li a {
@@ -76,12 +76,16 @@
     font-size: 25px;
     letter-spacing: -2px;
   }
+
+  nav ul li a:hover {
+    font-size: 5vw;
+  }
   
   nav ul li.active a {
     cursor: pointer; 
   }
 
-  nav.on ul li a:before, nav.on ul li.active a:before {
+  nav ul li a:before, nav ul li.active a:before {
     content: '';
     position: absolute;
     width: 80%;
@@ -101,7 +105,7 @@
     background: #cf7edb;
   }
 
-  nav.on ul li a:hover:before, nav.on ul li.active a:hover:before {
+  nav ul li a:hover:before, nav ul li.active a:hover:before {
     box-shadow: -10px 8px 0 rgba(0,0,0,0.05);
     width: 80%;
     left: auto;
@@ -303,6 +307,10 @@
     left: 30%;
     transform: translate(-50%,-50%);
     top: 47%;
+  }
+
+  .btn-to-top {
+    bottom: 71px;;
   }
 
 }

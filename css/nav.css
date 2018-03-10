@@ -1,56 +1,4 @@
-nav {
-  background: #5fe6ba;
-}
-
-nav ul li a, nav.on ul li a {
-  color: #f7fb6f;
-  transition: all 0.3s;
-  background: none;
-}
-
-nav ul li a, nav ul li a:hover, nav ul li a:active, nav ul li a:visited {
-  display: table;
-  margin: 0 auto;
-  position: relative;
-  text-decoration: none;
-  font-size: 7.5vw;
-  line-height: 1em;
-  font-family: 'Assistant', sans-serif;
-  font-weight: 800;
-  background: none;
-}
-
-#nav-link-home {
-  position: absolute;
-  top: 40px;
-  right: 60px;
-  width: 0;
-  width: 80px;
-  word-wrap: break-word;
-  font-size: 2em;
-  line-height: 1.3;
-  color: rgb(136, 126, 234);
-  box-sizing: content-box;
-  border: none;
-}
-
-#nav-link-home a:before {
-  display: none;
-}
-
-#nav-link-home a {
-  text-decoration: none;
-  background: transparent;
-  display: block;
-  padding: 4px 10px;
-}
-
-nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
-  background: #cf7edb;
-}
-
-
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 
   body {
     overflow-x: hidden;
@@ -99,20 +47,6 @@ nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
     right: 0; left: 0;
     top: 50%;
     transform: translateY(-50%);
-  }
-
-  nav ul li a:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    bottom: -2px;
-    left: -33px;
-    height: 45px;
-    background: #63c3e9;
-    z-index: -1;
-    transform: skewX(-40deg);
-    transition: all 0.2s;
-    pointer-events: none;
   }
 
   nav.on {
@@ -165,31 +99,8 @@ nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
     transition: all 0.3s;
   }
 
-  nav ul li.active.cycled:before {
-    /* background: #cf7edb; */
-  }
-
   nav ul li.active a:hover:after, nav ul li.active.cycled a:after {
     background: rgba(255,255,255,0.4);
-  }
-
-  nav ul li.active a:before {
-    /* opacity: 0; */
-    background: #ffbb6e;
-    /*background: red;*/
-  }
-
-  nav ul li.active, nav.off ul li.active, nav ul li.active.cycled {
-    /*background: #171717;*/
-  }
-
-  /*nav ul li.active.cycled {
-    background: #ff5ea8;
-  }*/
-
-
-  nav ul li.active:before {
-    /*opacity: 0;*/
   }
 
   nav ul li {
@@ -203,6 +114,34 @@ nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
     top: 50%;
     transform: translateY(-50%);
     position: relative;
+  }
+
+  nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
+    background: #cf7edb;
+  }
+
+  nav ul li a:before {
+    bottom: -2px;
+    left: -33px;
+    height: 45px;
+  }
+
+  nav ul li a, nav ul li a:hover, nav ul li a:active, nav ul li a:visited {
+    font-size: 7.5vw;
+  }
+
+  nav ul li.cycled a:before, nav ul li a:hover:before {
+    height: 45px;
+    left: 100px;
+    box-shadow: -10px 8px 0 rgba(0,0,0,0.05);
+    width: 180%;
+  }
+
+  #nav-link-home {
+    top: 40px;
+    right: 60px;
+    width: 80px;
+    font-size: 2em;
   }
 
   #nav-link-home.cycled {
@@ -219,6 +158,16 @@ nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
 
   nav.off #nav-link-home.cycled {
     background: transparent;
+  }
+
+  #nav-link-home a:before {
+    display: none;
+  }
+
+  #nav-link-home a {
+    text-decoration: none;
+    background: transparent;
+    padding: 4px 10px;
   }
 
   nav ul li a:focus {
@@ -293,13 +242,6 @@ nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
 
   nav.off ul li .nav-tip {
     opacity: 0;
-  }
-
-  nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
-    left: 100px;
-    box-shadow: -10px 8px 0 rgba(0,0,0,0.05);
-    width: 180%;
-    height: 45px;
   }
 
   /*********************/
@@ -481,10 +423,14 @@ nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
     overflow-y: visible;
   }
 
+  main.off .heading-rot-l:before {
+    background: rgba(0,0,0,0.1);
+  }
+
 }
 /*** Media Queries To Keep Main From Overflowing ***/
 /*** max-width / 2.45 ***/
-@media (max-width: 2500px) {
+/*@media (max-width: 2500px) {
   main section { max-width: 1121px; }
 }
 @media (max-width: 2400px) {
@@ -537,7 +483,7 @@ nav.on ul li.cycled a:before, nav.on ul li a:hover:before {
 }
 @media (max-width: 800px) {
   main section { max-width: 341px; }
-}
+}*/
 /*@media (max-width: 700px) {
   main section { max-width: 296px; }
 }*/

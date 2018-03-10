@@ -78,16 +78,14 @@
   <script>
     var cc = function() {
     var l01 = document.createElement('link'); var l02 = document.createElement('link');
-    var l03 = document.createElement('link'); var l04 = document.createElement('link');
+    var l03 = document.createElement('link');
     l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
-    l02.rel = 'stylesheet'; l02.href = './css/nav.min.css';
-    l03.rel = 'stylesheet'; l03.href = './css/main.min.css';
-    l04.rel = 'stylesheet'; l04.href = './css/mobile.min.css';
+    l02.rel = 'stylesheet'; l03.href = './css/main.min.css';
+    l03.rel = 'stylesheet'; l02.href = './css/nav.min.css';
     var h = document.getElementsByTagName('head')[0];
     h.appendChild(l01);
     h.appendChild(l02);
     h.appendChild(l03);
-    h.appendChild(l04);
     };
     var raf = requestAnimationFrame || mozRequestAnimationFrame ||
     webkitRequestAnimationFrame || msRequestAnimationFrame;
@@ -219,17 +217,26 @@
         I graduated from UNC Asheville in 2012, and grew up in <em>Tallahassee, FL</em>.
       </p>
 
-      <hr>
-
-      <h4><em>Most of my current time is spent in:</em></h4>
-
-      <ul>
-        <li><strong>Linux, Node/Php, Vanilla JS, HTML, CSS</strong> &mdash; deploying responsive, lightweight, user-friendly web-apps</li>
-        <li><strong>Unity3D &amp; C#</strong> &mdash; crafting logical interfaces for dashboards, in-game HUDs, and VR</li>
-        <li><strong>Pen &amp; Paper, Photoshop, Invision, &amp; more</strong> &mdash; wireframing user experience, prototypes, and designing assets</li>
-      </ul>
+      <!-- <hr> -->
 
     </section>
+
+    <article class="pd-t-4 pd-b-4">
+      <section>
+      <h4 class="heading-rot-l"><em>WORK TIME 2018</em></h4>
+      <!-- <ul style="list-style: none;"> -->
+        <div style="padding-left: 80px;">
+        <p><strong>Linux, Node/Php, ES6, HTML5, CSS3</strong><br>
+        Deploying responsive, lightweight, user-friendly web-apps</p>
+        <p><strong>Unity3D &amp; C#</strong><br>
+        Crafting logical interfaces for dashboards, in-game HUDs, and VR</p>
+        <p><strong>Pen &amp; Paper, Photoshop, Invision, &amp; more</strong><br>
+        Wireframing user experience, prototypes, and designing assets</p>
+      </div>
+
+      </section>
+    </article>
+
 
     <section>
 
@@ -250,7 +257,7 @@
         <li><strong>Books</strong> (currently)</li>
         <ul>
           <li><a href='https://www.goodreads.com/book/show/10852343-stormdancer' target='_blank'>Stormdancer</a></li>
-          <li><a href='https://www.jnd.org/books/the-design-of-everyday-things.html' target='_blank'>The Design of Everyday Things</a></li>
+          <li><a href='https://www.jnd.org/books/the-design-of-everyday-things.html' target='_blank'>Emotional Design: why we love (or hate) everyday things</a></li>
           <li><a href='https://www.goodreads.com/book/show/23847904-the-wheel-of-time-companion' target='_blank'>The Wheel of Time Companion</a></li>
           <li><a href='https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond' target='_blank'>YDKJS ES6 &amp; Beyond</a></li>
         </ul>
@@ -263,11 +270,7 @@
       <h3>Creative Abstract</h3>
 
       <p>
-        I have strong convictions on design and user-experience. I want to challenge conventions, push my technological base, and identify personally with every project on which I work; while growing creatively from each new experience.
-      </p>
-
-      <p>
-        In my free time I prefer to prod the potential of my capabilites applied to new and old technologies. One of my favourite themes is exploration; while giving the user enough information to engage with a product, allow them to modify and sometimes break to fit their unique needs. 
+        I have strong convictions on design and user-experience. Coming from a background of late nights spent in powerful native applications, I prefer a direct, heavy-handed appproach to software design &mdash; that is, building out, around the most frequent actions of the user, as opposed to pulling in an opinionated front-end library as a templated project base.
       </p>
 
       <p>
@@ -275,7 +278,7 @@
       </p>
 
       <figure>
-        <img data-src='./img/screen-jp-01-c.png' class='lz' id='img-lz-03' src='./img/screen-jp-01-pl.gif'>
+        <img data-src='./img/screen-jp-01-c.png' class='lz' id='img-lz-03' src='./img/screen-jp-01-pl.gif' alt="Chaos Theory in Jeep screenshot from Jurassic Park">
       </figure>
 
     </section>
