@@ -104,16 +104,17 @@
       </div>
 
       <p>
-        Normalized CSS boilerplate with a focus on style-agnostic usability, layout system, and responsive flexibility.
+        Bonkr is a normalized CSS boilerplate with a focus on <strong>style-agnostic</strong> usability, a simple <strong>layout system</strong>, and <strong>responsive flexibility</strong>. It's created as a starter-template with default component proportions &amp; weight and some basic styling that won't conflict with yours, + some nice (and independant) features like dialogs and a loader.
       </p>
 
       <p>
-        The simple black &amp; grey colour system is all contained in a group, so is easy to disable to minimize conflict.
+        You won't find any <strong>colours</strong>, <strong>embedded fonts</strong>, or <strong>navigation</strong> here &mdash; just a beautiful blank-slate for your content.
       </p>
 
       <p>
-        It's the base stylesheet for this site.
+        <em>It's also the base stylesheet for this site.</em>
       </p>
+
       <div class="flt-clr"></div>
       
       <figure class='flt-l screen-rot screen-rot-r mg-l-4 mg-b-4 mg-t-4 w-mx-450' style='background-color: #fff;'>
@@ -142,25 +143,39 @@
       <h3 id='zoom-scheduler'>Zoom Scheduler</h3>
       <a href='#zoom-scheduler' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
 
+      <blockquote class="flt-r mg-l-6">
+      <h4>Tech</h4>
+      <ul class="mg-b-0">
+        <li>Node</li>
+        <li>Express</li>
+        <li>Passport</li>
+        <li>Handlebars</li>
+        <li>Moment</li>
+        <li>Bluebird</li>
+        <li>Zoom RestAPI</li>
+      </ul>
+      </blockquote>
+
       <p>
-        A small session-scheduling webapp created to connect a group of learners, over a few-week timespan, to multiple Zoom accounts for simulation delivery. Built on NodeJS with Express to manage views, and using the ZOOM RestAPI to create and cancel meetings. Without the need for a full database, sign-up contact info &amp; zoom url are entered into a JSON file organized by date.
+        A small session-scheduling webapp created to connect a group of learners, over a few-week timespan, to multiple Zoom accounts for simulation delivery. Without the need for a full database, sign-up contact and meeting infoinfo are entered into a JSON file organized by date.
       </p>
 
-      <figure class='rnd-7 screen-rot screen-rot-r'>
-        <img src="./img/interactive/web-session-scheduling-01.png" alt="scheduling application">  
-      </figure>
-
       <p>
-        Nodemailer is used to send booking confirmation emails, and are set to send a reminder before the scheduled session time. Booking emails contain cancellation links that clear the Zoom meeting entry, reminder-email flag, and booking slot.
+        Upon booking, a confirmation email is sent and a pre-session reminder is set. Booking emails contain cancellation links that clear the Zoom meeting entry, reminder email, and booking slot.
       </p>
-
-      <figure class='rnd-7 screen-rot screen-rot-l'>
-        <img src="./img/interactive/web-session-scheduling-02.png" alt="scheduling application">  
-      </figure>
 
       <p>
         It's quick, light, and easy to re-skin for new clients' pilot deliveries.
       </p>
+
+      <figure class='rnd-7 screen-rot screen-rot-r flt-clr'>
+        <img src="./img/interactive/web-session-scheduling-01.png" alt="scheduling application">  
+      </figure>
+
+
+      <figure class='rnd-7 screen-rot screen-rot-l'>
+        <img src="./img/interactive/web-session-scheduling-02.png" alt="scheduling application">  
+      </figure>
 
       <figure class='screen-rot screen-rot-r rnd-7'>
         <img src="./img/interactive/web-session-scheduling-03.png" alt="scheduling application">  
@@ -173,8 +188,8 @@
     <!-- IHL -->
     <section>
 
-      <h3 id='ian-haney-lopez'>ianhaney<wbr>lopez<wbr>.com</h3>
-      <a href='#ian-haney-lopez' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+      <h3 id='ianhaneylopez'>ianhaney<wbr>lopez<wbr>.com</h3>
+      <a href='#ianhaneylopez' class='linker' tabindex='-1' title='anchor link ianhaneylopez.com'>&para;</a>
 
       <p>
         As a chaired law professor at Berkeley, socio-political author, and regular media pundit Ian needed a simple and accessible Wordpress site to showcase his writings, appearances, events, and social media. With wealth of content and search, he'd long outgrown the staff page at Berkeley so I had a great start with which to work. I designed a custom, responsive Wordpress theme for the site and still manage technical &amp; content updates.
@@ -185,7 +200,7 @@
       </figure>
 
       <p>
-        I feel the site does a good job of cleanly hosting his work in a unique and memorable fashion while neither falling short and coming off as a basic blog theme or pushing too much design for the collegiate/political world.
+        I feel the site effectively hosts his work in a unique and memorable fashion; while neither falling short and coming off as a basic blog theme or pushing too much design for the collegiate/political world.
       </p>
 
       <p>
@@ -195,6 +210,18 @@
     </section>
 
     <section class='divider'><hr></section>
+
+    <!-- Frank Rohter -->
+    <section>
+
+      <h3 id="frankrohter">frank<wbr>rohter<wbr>.com</h3>
+      <a href='#frankrohter' class='linker' tabindex='-1' title='anchor link frankrohter.com'>&para;</a>
+
+      <p>
+        Dr. Rohter is a [********] &mdash; <em>and also my grandfather</em>. After publishing three books and appearing in numerous printed publications &amp; live interviews, he needed a content-focused site for a growing collection of articles on aging, education, and politics. The simple portfolio is created in PHP for easy templating and contact functionality.
+      </p>
+
+    </section>
 
     <!-- Metrognome -->
     <section>
@@ -286,7 +313,7 @@
       </p>
       
       <p>
-        Assistive design tool written in both bash &amp; node to send any number of parapraphs to the clipboard as a quick solution for any design prototype. Using only one dependency for each &mdash; it loops through 5 paragraphs to generate infinite filler text, has a flag for <em>short</em> paragraphs, as well as preformatted <code>&lt;p&gt;</code> wrapped paragraphs, all for your rock-star design needs.
+        Assistive design tool written in both bash &amp; node to send any number of parapraphs to the clipboard as a quick solution for any design prototype. Using only one dependency for each &mdash; it loops through 5 paragraphs to generate infinite filler text, has a flag for <em>short</em> paragraphs, as well as preformatted <code>&lt;p&gt;</code> wrapped paragraphs.
       </p>
 
       <figure>
@@ -438,7 +465,7 @@
       </p>
 
       <p>
-        It's truly a dark art, but I've certainly learned a great deal fighting the contraints of "modern" email clients, and tested my creative approaches to layout limitations.
+        It's truly a dark art, but I've certainly learned a great deal fighting the contraints of <em>"modern"</em> email clients, and tested my creative approaches to layout limitations.
       </p>
 
     </section>
