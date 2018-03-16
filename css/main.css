@@ -90,7 +90,7 @@ figure {
 }
 
 figure.flt-l, figure.flt-r {
-  margin-top: initial;
+  /* margin-top: initial; */
 }
 
 figure.frame {
@@ -101,6 +101,8 @@ figure.frame {
   perspective: 1300px;
   background: transparent;
   position: relative;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .screen-rot-r {
@@ -114,16 +116,17 @@ figure.frame {
 .screen-rot img {
   box-shadow: 4px 2px 16px rgba(0,0,0,.2);
   border-radius: 10px;
+  border: 7px solid #333;
 }
 
 .screen-rot-l img {
- transform: rotate3d(1,1,-1,70deg) scale(0.7,0.7);
- /*transform: rotate3d(1,1,-1,70deg);*/
+ transform: rotate3d(1,1,-1,40deg) scale(0.9,0.9);
+ /*transform: rotate3d(1,1,-1,40deg);*/
 }
 
 .screen-rot-r img {
- transform: rotate3d(1,-1,1,70deg) scale(0.7,0.7);
- /*transform: rotate3d(1,-1,1,70deg);*/
+ transform: rotate3d(1,-1,1,40deg) scale(0.9,0.9);
+ /*transform: rotate3d(1,-1,1,40deg);*/
 }
 
 .screen-rot:before {
@@ -136,22 +139,23 @@ figure.frame {
   bottom: 0;
   z-index: -1;
   border-radius: 10px;
+  transition: all 0.3s;
 }
 
 .screen-rot-l:before {
-  transform: rotate3d(1,1,-1,70deg) translate(-29px,21px) scale(0.7,0.7);
-  /*transform: rotate3d(1,1,-1,70deg) translate(-29px,21px);*/
+  transform: rotate3d(1,1,-1,40deg) translate(-15px,11px) scale(0.9,0.9);
+  /*transform: rotate3d(1,1,-1,40deg) translate(-29px,21px);*/
 }
 
 .screen-rot-r:before {
-  transform: rotate3d(1,-1,1,70deg) translate(29px,21px) scale(0.7,0.7);
-  /*transform: rotate3d(1,-1,1,70deg) translate(29px,21px);*/
+  transform: rotate3d(1,-1,1,40deg) translate(15px,11px) scale(0.9,0.9);
+  /*transform: rotate3d(1,-1,1,40deg) translate(29px,21px);*/
 }
 
 .screen-rot:after {
   content: '';
   position: absolute;
-  background: linear-gradient(rgba(255,255,255,0.3),transparent);
+  background: linear-gradient(rgba(255,255,255,0.2),transparent);
   right: 0;
   left: 0;
   top: 0;
@@ -161,20 +165,20 @@ figure.frame {
 }
 
 .screen-rot-l:after {
-  transform: rotate3d(1,1,-1,70deg) scale(0.35,0.7) translateX(-50%);
-  /*transform: rotate3d(1,1,-1,70deg) scale(0.5,1) translateX(-50%);*/
+  transform: rotate3d(1,1,-1,40deg) scale(0.45,0.9) translateX(-50%);
+  /*transform: rotate3d(1,1,-1,40deg) scale(0.5,1) translateX(-50%);*/
 }
 
 .screen-rot-r:after {
-  transform: rotate3d(1,-1,1,70deg) scale(0.35,0.7) translateX(50%);
-  /*transform: rotate3d(1,-1,1,70deg) scale(0.5,1) translateX(50%);*/
+  transform: rotate3d(1,-1,1,40deg) scale(0.45,0.9) translateX(50%);
+  /*transform: rotate3d(1,-1,1,40deg) scale(0.5,1) translateX(50%);*/
 }
 
 .slideshow {
   position: relative;
 }
 
-main .slideshow img {
+main .slideshow img, main.on .slideshow img {
   opacity: 0;
   transition: opacity 0.7s;
   position: absolute;
@@ -186,7 +190,7 @@ main .slideshow img:first-child, main .slideshow img.show:first-child {
   opacity: 1;
 }
 
-main .slideshow img.show {
+main .slideshow img.show, main.on .slideshow img.show {
   opacity: 1;
   z-index: 2;
 }

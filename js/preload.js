@@ -16,12 +16,15 @@ var preL = {
 	],
 	interactive: [
 		'./img/interactive/bonks-logo-c.png'
+		'./img/interactive/bonkr-screen-01-c.png',
 		'./img/interactive/bonkr-screen-02-c.png',
-		'./img/interactive/web-session-scheduling-01.png',
+		'./img/interactive/bonkr-screen-03-c.png',
 		'./img/interactive/web-session-scheduling-02.png',
 		'./img/interactive/web-session-scheduling-03.png',
 		'./img/interactive/site-ian-haney-lopez-c.jpg',
 		'./img/interactive/site-start-page-01-c.png',
+		'./img/interactive/frankrohter-screen-01-c.png',
+		'./img/interactive/frankrohter-screen-02-c.png',
 		'./img/interactive/logo-clpsm-01.png',
 		'./img/interactive/clpsm-rec.gif',
 		'./img/interactive/gfv-gif-02.gif',

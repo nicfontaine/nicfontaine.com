@@ -427,6 +427,10 @@
     background: rgba(0,0,0,0.1);
   }
 
+  main.off .screen-rot:before {
+    background: transparent;
+  }
+
 }
 /*** Media Queries To Keep Main From Overflowing ***/
 /*** max-width / 2.45 ***/
