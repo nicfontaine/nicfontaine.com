@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+main {
+  font-family: 'Assistant', Arial, sans-serif;
+}
+
 main h2 {
   background: none;
 }
