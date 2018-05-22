@@ -94,20 +94,31 @@ var nav = {
   }
 }
 
+// (Note) Save as a reference so can remove if "touchstart" in window
 // Swap focus on nav/main via mouseenter on each
-domNav.main[0].addEventListener('mouseenter', function(e) {
+function mouseMain() {
   if (nav.foc.side === domNav.nav[0]) {
     nav.toggle('main')
   }
-})
-domNav.nav[0].addEventListener('mouseenter', function(e) {
+}
+function mouseNav() {
   if (nav.foc.side === domNav.main[0]) {
     nav.toggle('nav')
-    // Make focus 'home' index, so it's not confusing
-    nav.links.i = 0
+    nav.links.i = 0  // Make focus 'home' index, so it's not confusing
     nav.links.cycle()
   }
-})
+}
+
+// Computer with touchscreen
+if ("touchstart" in window) {
+  domNav.nav[0].classList.add('on')
+  domNav.nav[0].classList.remove('off')
+  domNav.main[0].classList.add('on')
+  domNav.main[0].classList.remove('off')
+} else {
+  domNav.main[0].addEventListener('mouseenter', mouseMain)
+  domNav.nav[0].addEventListener('mouseenter', mouseNav)
+}
 
 var cursor = {
   visible: true

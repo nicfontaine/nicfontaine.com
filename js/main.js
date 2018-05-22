@@ -122,7 +122,6 @@ window.addEventListener('scroll', function() {
     }
   }
 })
-
 if (dom.scroll.toTop != undefined) {
   dom.scroll.toTop.addEventListener('click', function(e) {
     e.preventDefault()
