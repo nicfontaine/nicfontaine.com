@@ -110,12 +110,14 @@ function mouseNav() {
 }
 
 // Computer with touchscreen
-if ("touchstart" in window) {
+if ("ontouchstart" in window) {
+  console.log("touchstart in window. add .on rm .off")
   domNav.nav[0].classList.add('on')
   domNav.nav[0].classList.remove('off')
   domNav.main[0].classList.add('on')
   domNav.main[0].classList.remove('off')
 } else {
+  console.log("no touchstart in window. add mouse events")
   domNav.main[0].addEventListener('mouseenter', mouseMain)
   domNav.nav[0].addEventListener('mouseenter', mouseNav)
 }
