@@ -80,8 +80,8 @@
     var l01 = document.createElement('link'); var l02 = document.createElement('link');
     var l03 = document.createElement('link');
     l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
-    l02.rel = 'stylesheet'; l03.href = './css/main.min.css';
-    l03.rel = 'stylesheet'; l02.href = './css/nav.min.css';
+    l02.rel = 'stylesheet'; l03.href = './css/main.css';
+    l03.rel = 'stylesheet'; l02.href = './css/nav.css';
     var h = document.getElementsByTagName('head')[0];
     h.appendChild(l01);
     h.appendChild(l02);
@@ -128,7 +128,8 @@
 
     <div id='nav-link-home' class='nav-li'>
       <a href='./'>
-        <span class='nav-link'>HO<br>ME</span>
+        <!-- <span class='nav-link'>HO<br>ME</span> -->
+        <img class="nav-link" src="./img/av-ballpit-01.jpg" alt="headshot in ballpit">
       </a>
     </div>
 
@@ -180,7 +181,7 @@
 
       <h3>Wait, there's no <span style='text-decoration: underline'>k</span> in your name?</h3>
 
-      <figure class='flt-l mg-t-5 mg-r-4 w-mx-200'>
+      <figure class='flt-l mg-t-5 mg-r-6 w-mx-200'>
         <img data-src='./img/nf-school-small-01-c.jpg' class='lz' id='img-lz-02' src='./img/nf-school-small-01-pl.gif' style='box-shadow: -20px -20px 0 rgba(30,180,120,0.3)'>
       </figure>
 
@@ -339,29 +340,20 @@
     </div>
   </div> -->
 
-  <!-- Minez -->
-
   <!-- Handle loader -->
   <script src="./js/bonkr-loader.min.js"></script>
   <!-- Handle dialogs & their buttons -->
   <!-- <script src="./js/bonkr-dialog.min.js"></script> -->
   <!-- Handle navigation switching -->
-  <script src="./js/nav.min.js"></script>
+  <script src="./js/nav.js"></script>
   <!-- Handle nav fallback on mobile, slideshow, scroll to top -->
   <script src="./js/main.min.js"></script>
   <!-- Preload sub-page images to cache during index pageview -->
   <script src="./js/preload.min.js"></script>
 
-  <!-- Ain't Minez -->
-
-  <!-- Keep track of scroll direction, for back-to-top -->
-  <!-- <script src="./js/lib/scrolldir.auto.min.js"></script> -->
-  <!-- Animate scroll back-to-top -->
-  <!-- <script src="./js/lib/velocity.min.js"></script> -->
-
   <script>
     nav.links.i = 0
-    nav.links.cycle()
+    // nav.links.cycle()
     // Lazy load images with full res data-src(s)
     window.addEventListener('load', function() {
       let lz = document.getElementsByClassName('lz')

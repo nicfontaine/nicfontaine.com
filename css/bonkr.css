@@ -116,7 +116,7 @@ a { text-decoration: underline; font-weight: bold; position: relative; }
 a, a:active, a:visited, a:hover { color: inherit;  }
 
 a:hover, a:focus { text-decoration: none; }
-a:hover:before, a:focus:before {
+/*a:hover:before, a:focus:before {
   position: absolute;
   content: '';
   width: 100%;
@@ -125,7 +125,7 @@ a:hover:before, a:focus:before {
   background: #ccc;
   bottom: 0;
   z-index: -1;
-}
+}*/
 
 a:focus { background: #eee; }
 

@@ -94,7 +94,16 @@ var nav = {
   }
 }
 
-// (Note) Save as a reference so can remove if "touchstart" in window
+// Loop nav links
+Array.from(domNav.navLi).forEach((el,i) => {
+  // Keep nav links index updated via mouseover
+  (function(li,ind) {
+    li.addEventListener("mouseover", function(e) {
+      nav.links.i = i
+    })
+  })(el,i)
+})
+
 // Swap focus on nav/main via mouseenter on each
 function mouseMain() {
   if (nav.foc.side === domNav.nav[0]) {

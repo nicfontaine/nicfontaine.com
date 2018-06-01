@@ -369,7 +369,8 @@ nav {
 }
 
 nav ul li a, nav.on ul li a {
-  color: #f7fb6f;
+  /*color: #f7fb6f;*/
+  color: #eff35d; /* Lil richer */
   transition: all 0.3s;
   background: none;
 }
@@ -408,9 +409,24 @@ nav ul li.active a:before {
 #nav-link-home {
   position: absolute;
   word-wrap: break-word;
-  color: rgb(136, 126, 234);
+  /*color: rgb(136, 126, 234);*/
   box-sizing: content-box;
-  border: none;
+  text-align: center;
+  /*border: none;*/
+}
+
+#nav-link-home:before {
+  color: rgba(255,255,255,0.8);
+  content: "HO\AME";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  right: 0; left: 0;
+  opacity: 0;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 1.7rem;
 }
 
 #nav-link-home a {
