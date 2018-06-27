@@ -588,9 +588,12 @@ nav ul li.active a:before {
     bottom: 0;
     transform: none;
     text-align: center;
-    width: 60px;
+    width: 52px;
     padding: 0;
-    /*left: 60px;*/
+  }
+
+  #nav-link-home:before {
+    opacity: 1;
   }
 
   #nav-link-home a {
@@ -608,6 +611,7 @@ nav ul li.active a:before {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    height: 100%;
   }
 
   nav .nav-txtr {
