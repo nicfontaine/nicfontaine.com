@@ -159,6 +159,10 @@
     border: 5px solid #dc79fb;
   }
 
+  #nav-link-home:before {
+    opacity: 0;
+  }
+
   #nav-link-home:hover:before {
     opacity: 1;
   }

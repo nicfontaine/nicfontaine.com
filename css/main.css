@@ -412,6 +412,7 @@ nav ul li.active a:before {
   /*color: rgb(136, 126, 234);*/
   box-sizing: content-box;
   text-align: center;
+  z-index: 10;
   /*border: none;*/
 }
 
@@ -423,7 +424,7 @@ nav ul li.active a:before {
   transform: translateY(-50%);
   z-index: 10;
   right: 0; left: 0;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   font-weight: 700;
   font-size: 1.7rem;
