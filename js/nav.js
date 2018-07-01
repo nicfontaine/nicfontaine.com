@@ -11,14 +11,14 @@ const domNav = {
 
 domNav.navA[0].focus()
 // domNav.navLi[0].classList.add('cycled')
-domNav.main[0].classList.add('off')
+// domNav.main[0].classList.add('off')
 
 // (NOTE) should reset main.scrollTop, but not working
 
 // Handle main/menu navigation
 var nav = {
   foc: {
-    side: domNav.nav[0], // Store which foc.side we're on. NAV || MAIN
+    side: undefined, // Store which foc.side we're on. NAV || MAIN
   },
   // Switch focus & on/off classes btw nav & main
   toggle: function(override) {
@@ -27,6 +27,7 @@ var nav = {
       let m = domNav.main[0]
       // Toggle
       function toMain() {
+        nav.foc.side = domNav.main[0]
         m.classList.remove('off')
         m.classList.add('on')
         n.classList.remove('on')
@@ -34,9 +35,9 @@ var nav = {
         n.removeAttribute('tabindex')
         m.tabIndex = '-1'
         m.focus()
-        nav.foc.side = domNav.main[0]
       }
       function toNav() {
+        nav.foc.side = domNav.nav[0]
         m.classList.remove('on')
         m.classList.add('off')
         n.classList.remove('off')
@@ -44,7 +45,6 @@ var nav = {
         n.tabIndex = '-1'
         n.focus()
         m.removeAttribute('tabindex')
-        nav.foc.side = domNav.nav[0]
         // nav.links.cycle()
         // domNav.navA[nav.links.i].focus()
       }
@@ -54,13 +54,14 @@ var nav = {
         } else if (override === 'nav') {
           toNav()
         }
-      } else {
-        if (this.foc.side === domNav.nav[0]) { // Switch to Main
-          toMain() 
-        } else { // Switch to Nav
-          toNav()
-        }
       }
+      //  else {
+      //   if (this.foc.side === domNav.nav[0]) { // Switch to Main
+      //     toMain() 
+      //   } else { // Switch to Nav
+      //     toNav()
+      //   }
+      // }
       // Log focused foc.side
       // this.foc.side = this.foc.side === domNav.nav[0] ? domNav.main[0] : domNav.nav[0]
     }
@@ -106,12 +107,13 @@ Array.from(domNav.navLi).forEach((el,i) => {
 
 // Swap focus on nav/main via mouseenter on each
 function mouseMain() {
-  if (nav.foc.side === domNav.nav[0]) {
+  // Prevent firing a million times
+  if (nav.foc.side === domNav.nav[0] || nav.foc.side === undefined) {
     nav.toggle('main')
   }
 }
 function mouseNav() {
-  if (nav.foc.side === domNav.main[0]) {
+  if (nav.foc.side === domNav.main[0] || nav.foc.side === undefined) {
     nav.toggle('nav')
     nav.links.i = 0  // Make focus 'home' index, so it's not confusing
     nav.links.cycle()
@@ -120,13 +122,13 @@ function mouseNav() {
 
 // Computer with touchscreen
 if ("ontouchstart" in window) {
-  console.log("touchstart in window. add .on rm .off")
+  console.log("'ontouchstart' in window. add .on rm .off")
   domNav.nav[0].classList.add('on')
   domNav.nav[0].classList.remove('off')
   domNav.main[0].classList.add('on')
   domNav.main[0].classList.remove('off')
 } else {
-  console.log("no touchstart in window. add mouse events")
+  console.log("no 'ontouchstart' in window. add mouse events")
   domNav.main[0].addEventListener('mouseenter', mouseMain)
   domNav.nav[0].addEventListener('mouseenter', mouseNav)
 }
