@@ -400,7 +400,7 @@
 
   /* Inactive lighten */
 
-  main.off p, main.off ul li, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off a.btn {
+  main.off p, main.off ul li, main.off a, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off a.btn {
     color: #aaa;
     transition: color 0.3s;
   }
