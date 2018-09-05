@@ -81,7 +81,7 @@
     var l03 = document.createElement('link');
     l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
     l02.rel = 'stylesheet'; l03.href = './css/main.min.css';
-    l03.rel = 'stylesheet'; l02.href = './css/nav.min.css';
+    l03.rel = 'stylesheet'; l02.href = './css/nav.css';
     var h = document.getElementsByTagName('head')[0];
     h.appendChild(l01);
     h.appendChild(l02);
@@ -96,29 +96,30 @@
   <!-- Load CSS fallback if no JS -->
   <noscript>
     <link href='./css/bonkr.min.css' rel='stylesheet'>
-    <link href='./css/nav.min.css' rel='stylesheet'>
     <link href='./css/main.min.css' rel='stylesheet'>
+    <link href='./css/nav.css' rel='stylesheet'>
     <link href='./css/mobile.min.css' rel='stylesheet'>
   </noscript>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Assistant:400,800|Work+Sans:500,700" rel="stylesheet">
-</head>
 
-<noscript>
-  <style>
-    .loader { display: none !important;  }
-    nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
-    main, main p, main ul, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off ul, main.off ul li { color: #333; }
-    main img { opacity: 1; }
-    main section { opacity: 1; transition: none; }
-    .dialog, .dialog.active, .dialog-outer, .dialog-inner { display: none; pointer-events: none; }
-    .nav-tip { display: none !important; }
-    nav ul li a:hover:before { left: 100px; background: #9e91f2; background: #cf7edb; box-shadow: -10px 8px 0 rgba(0,0,0,0.05); width: 180%;
-    }
-    /*(NOTE) Add hover style for nav links*/
-  </style>
-</noscript>
+  <noscript>
+    <style>
+      .loader { display: none !important;  }
+      nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
+      main, main p, main ul, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off ul, main.off ul li { color: #333; }
+      main img { opacity: 1; }
+      main section { opacity: 1; transition: none; }
+      .dialog, .dialog.active, .dialog-outer, .dialog-inner { display: none; pointer-events: none; }
+      .nav-tip { display: none !important; }
+      nav ul li a:hover:before { left: 100px; background: #9e91f2; background: #cf7edb; box-shadow: -10px 8px 0 rgba(0,0,0,0.05); width: 180%;
+      }
+      /*(NOTE) Add hover style for nav links*/
+    </style>
+  </noscript>
+
+</head>
 
 <body class='pos-abs pos-all-0 d-flx flx-row' tabindex='-1'>
 
@@ -164,7 +165,7 @@
     <section class='symbol-bg-01'>
 
       <figure class='flt-r mg-l-6 mg-b-4' style='max-width: 380px;'>
-        <img data-src='./img/nf-headshot-explode-small-c.jpg' class='lz' id='img-lz-01' src='./img/nf-headshot-explode-small-pl.gif'>
+        <img data-src='./img/nf-headshot-explode-small-c.jpg' class='lz' id='img-lz-01' src='./img/nf-headshot-explode-small-pl.gif' alt="Boom headshot">
       </figure>
 
       <p class='text-block-corner-left'>
@@ -181,7 +182,7 @@
       <h3>Wait, there's no <span style='text-decoration: underline'>k</span> in your name?</h3>
 
       <figure class='flt-l mg-t-5 mg-r-6 w-mx-200'>
-        <img data-src='./img/nf-school-small-01-c.jpg' class='lz' id='img-lz-02' src='./img/nf-school-small-01-pl.gif' style='box-shadow: -20px -20px 0 rgba(30,180,120,0.3)'>
+        <img data-src='./img/nf-school-small-01-c.jpg' class='lz' id='img-lz-02' src='./img/nf-school-small-01-pl.gif' alt="Kindergarten Photo" style='box-shadow: -20px -20px 0 rgba(30,180,120,0.3)'>
       </figure>
 
       <p>
@@ -255,7 +256,7 @@
         <li><strong>Books</strong> (recently)</li>
         <ul>
           <li><a href='https://www.goodreads.com/book/show/26114463-nevernight' target='_blank'>Nevernight <em>(The Nevernight Chronicles)</em></a></li>
-          <li><a href="https://www.goodreads.com/book/show/43889.Wizard_s_First_Rule" target="_blank">Wizard's First Rule <em>(The Sword of Truth Series)<em></a></li>
+          <li><a href="https://www.goodreads.com/book/show/43889.Wizard_s_First_Rule" target="_blank">Wizard's First Rule <em>(The Sword of Truth Series)</em></a></li>
           <li><a href='https://www.goodreads.com/series/71097-the-lotus-wars' target='_blank'>The Lotus Wars</a></li>
           <li><a href='https://www.jnd.org/books/the-design-of-everyday-things.html' target='_blank'>Emotional Design: why we love (or hate) everyday things</a></li>
         </ul>
@@ -303,7 +304,15 @@
 
     </section>
 
+    <!-- Shrinkbar -->
+    <div class="shrinkbar maximize main" id="shrinkbar-main">
+      <span class="larr">&larr;</span>
+      Maximize
+      <span class="rarr">&rarr;</span>
+    </div>
+
   </main>
+
 
   <!-- To Top -->
   <a href='#' id='btn-to-top' class='btn-to-top'>
@@ -352,7 +361,7 @@
   <!-- Handle dialogs & their buttons -->
   <!-- <script src="./js/bonkr-dialog.min.js"></script> -->
   <!-- Handle navigation switching -->
-  <script src="./js/nav.min.js"></script>
+  <script src="./js/nav.js"></script>
   <!-- Handle nav fallback on mobile, slideshow, scroll to top -->
   <script src="./js/main.min.js"></script>
   <!-- Preload sub-page images to cache during index pageview -->

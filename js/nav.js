@@ -6,7 +6,8 @@ const domNav = {
   main: document.getElementsByTagName('main'),
   nav: document.getElementsByTagName('nav'),
   navLi: document.getElementsByClassName('nav-li'),
-  navA: document.getElementsByClassName('nav-link')
+  navA: document.getElementsByClassName('nav-link'),
+  shrinkBarMain: document.getElementById("shrinkbar-main")
 }
 
 domNav.navA[0].focus()
@@ -94,6 +95,17 @@ var nav = {
     }
   }
 }
+
+var shrink = {
+  toggle: function(side) {
+    side.classList.toggle("shrink")
+  }
+}
+
+domNav.shrinkBarMain.addEventListener("click", function() {
+  shrink.toggle(domNav.nav[0])
+  this.classList.toggle("expand")
+})
 
 // Loop nav links
 Array.from(domNav.navLi).forEach((el,i) => {

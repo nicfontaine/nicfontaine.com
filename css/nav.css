@@ -1,7 +1,7 @@
 @media (min-width: 900px) {
 
   body {
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
   }
 
   nav {
@@ -33,8 +33,9 @@
 
   nav, main {
     animation: none;
-    transition: background 0.3s, color 0.3s, opacity 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, color 0.3s, opacity 0.3s, box-shadow 0.3s, flex 0.2s;
     transform-origin: 50% 100%;
+    flex: 1;
     /*transform-origin: 50% 50%;*/
   }
 
@@ -42,11 +43,55 @@
     color: rgb(50,50,50);
   }
 
-  nav ul {
-    position: absolute;
+  nav.shrink, main.shrink {
+    flex: 0.2;
+  }
+
+  nav.shrink > div, nav.shrink > ul, main.shrink section, main.shrink article {
+    opacity: 0;
+  }
+
+  .shrinkbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    padding: 1rem 1.5rem;
     right: 0; left: 0;
+    text-align: center;
+    transition: opacity 0.3s, left 0.2s, right 0.2s;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .shrinkbar.main {
+    display: block;
+    background: rgba(255,255,255,0.87);
+    border-bottom: 1px solid #f2f2f2;
+    box-shadow: 0 4px 6px rgba(10,20,30,0.08);
+    left: 50%;
+  }
+
+  .shrinkbar.main.expand {
+    left: 17%;
+  }
+
+  .shrinkbar .larr {
+    position: absolute;
+    left: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .shrinkbar .rarr {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .off .shrinkbar {
+    opacity: 0;
+    pointer-events: none;
   }
 
   nav.on {
@@ -59,8 +104,8 @@
 
   nav.off {
     background: #222;
-    animation: nav-switch-bounce-off 0.3s linear;
-    animation-fill-mode: forwards;
+    /*animation: nav-switch-bounce-off 0.3s linear;*/
+    /*animation-fill-mode: forwards;*/
   }
 
   nav.off ul li a:before, nav.off ul li.cycled a:before {
@@ -69,6 +114,13 @@
 
   nav.off ul li.active a:before {
    background: #111; 
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0; left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   /* Active Link cycled & hover before after elements styling */
