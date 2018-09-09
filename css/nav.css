@@ -537,6 +537,10 @@
     transition: color 0.3s;
   }
 
+  main.off a.linker {
+    opacity: 0;
+  }
+
   code {
     transition: all 0.3s;
   }

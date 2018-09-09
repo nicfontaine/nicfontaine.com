@@ -11,6 +11,11 @@ body {
   line-height: 1.7em;
 }
 
+a:hover {
+  text-decoration: underline;
+  background: rgba(0,0,0,0.08);
+}
+
 a:focus {
   outline: none;
 }
@@ -32,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-.linker {
+a.linker {
   left: initial;
   right: 0;
   transform: none;
@@ -41,6 +46,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 1.76rem;
   right: 2.35rem;
   font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  background: none;
+}
+
+a.linker:hover {
 }
 
 .mg-t-6 .linker {
