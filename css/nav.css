@@ -43,50 +43,129 @@
     color: rgb(50,50,50);
   }
 
-  nav.shrink, main.shrink {
-    flex: 0.2;
+  main.expand section {
+    max-width: 1100px;
   }
 
-  nav.shrink > div, nav.shrink > ul, main.shrink section, main.shrink article {
+  nav.shrink {
+    pointer-events: none;
+    flex: 0 0 200px;
+  }
+
+  nav.shrink > div, nav.shrink > ul {
     opacity: 0;
   }
 
   .shrinkbar {
     display: block;
     position: fixed;
-    top: 0;
     padding: 1rem 1.5rem;
-    right: 0; left: 0;
     text-align: center;
-    transition: opacity 0.3s, left 0.2s, right 0.2s;
+    transition: opacity 0.3s 0.1s, left 0.2s, right 0.2s, top 0.2s;
     pointer-events: auto;
     cursor: pointer;
   }
 
   .shrinkbar.main {
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
     display: block;
-    background: rgba(255,255,255,0.87);
-    border-bottom: 1px solid #f2f2f2;
-    box-shadow: 0 4px 6px rgba(10,20,30,0.08);
+    background: rgba(247,247,247,0.87);
+    /*border-bottom: 1px solid #f2f2f2;*/
+    /*box-shadow: 0 4px 6px rgba(10,20,30,0.08);*/
+    top: 0;
+    transition: none;
+    right: 0;
     left: 50%;
+    color: rgba(0,0,0,0.5);
   }
 
-  .shrinkbar.main.expand {
-    left: 17%;
+  .shrinkbar.main:hover {
+    color: rgba(0,0,0,0.9);
+    /*background: linear-gradient(to right, #ffffff 0%,#f3f3f3 10%,#f2f2f2 89%,#ffffff 100%);*/
+    background: #eee;
+  }
+
+  main.expand .shrinkbar.main {
+    opacity: 0;
+    pointer-events: none;
+    /*left: 17%;*/
+    top: -100px;
+  }
+
+  nav.shrink .shrinkbar.nav {
+    opacity: 1;
+    pointer-events: auto;
+    left: 0;
+  }
+
+  .shrinkbar.nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+    color: rgba(190,98,214,0.7);
+    padding: 0;
+    width: 200px;
+    left: -10rem;
+    transition: background 0.2s
+  }
+
+  .shrinkbar.nav:hover {
+    color: rgba(190,98,214,0.93);
+    background: #5fe6ba;
+  }
+
+  .shrinkbar.nav .inner {
+    transform: rotate(-90deg);
+    top: 50%;
+    right: 3rem;
+    position: absolute;
+    transform-origin: 50% 50%;
+    pointer-events: none;
+    font-size: 1.3rem;
+  }
+
+  nav.shrink .shrinkbar.nav .inner {
+    left: -9px;
+  }
+
+  .shrinkbar .larr, .shrinkbar .rarr {
+    position: absolute;
+    font-size: 2rem;
+    top: 40%;
+    transform: translateY(-50%)
   }
 
   .shrinkbar .larr {
-    position: absolute;
     left: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .shrinkbar .rarr {
-    position: absolute;
     right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
+  }
+
+  .shrinkbar.nav .tarr, .shrinkbar.nav .barr {
+    position: absolute;
+    font-size: 2rem;
+    left: 53px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .shrinkbar .tarr {
+    top: 2rem;
+  }
+
+  .shrinkbar .barr {
+    bottom: 2rem;
+  }
+
+  .shrinkbar.nav:hover .tarr, .shrinkbar.nav:hover .barr {
+    color: rgba(0,0,0,0.3);
+    font-weight: bold;
   }
 
   .off .shrinkbar {
@@ -336,6 +415,7 @@
 
   main section, main article {
     transition: opacity 0.3s;
+    /*overflow-x: hidden;*/
   }
 
   main.on {

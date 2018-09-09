@@ -7,7 +7,8 @@ const domNav = {
   nav: document.getElementsByTagName('nav'),
   navLi: document.getElementsByClassName('nav-li'),
   navA: document.getElementsByClassName('nav-link'),
-  shrinkBarMain: document.getElementById("shrinkbar-main")
+  shrinkBarMain: document.getElementById("shrinkbar-main"),
+  shrinkBarNav: document.getElementById("shrinkbar-nav"),
 }
 
 domNav.navA[0].focus()
@@ -96,15 +97,30 @@ var nav = {
   }
 }
 
-var shrink = {
+var expand = {
   toggle: function(side) {
-    side.classList.toggle("shrink")
+    domNav.main[0].classList.toggle("expand")
+    domNav.nav[0].classList.toggle("shrink")
   }
 }
 
 domNav.shrinkBarMain.addEventListener("click", function() {
-  shrink.toggle(domNav.nav[0])
-  this.classList.toggle("expand")
+  expand.toggle(domNav.nav[0])
+  if ("touchstart" in window) {
+  } else {
+    domNav.main[0].removeEventListener('mouseenter', mouseMain)
+    domNav.nav[0].removeEventListener('mouseenter', mouseNav)
+  }
+})
+
+domNav.shrinkBarNav.addEventListener("click", function() {
+  expand.toggle(domNav.nav[0])
+  nav.toggle("nav")
+  if ("touchstart" in window) {
+  } else {
+    domNav.main[0].addEventListener('mouseenter', mouseMain)
+    domNav.nav[0].addEventListener('mouseenter', mouseNav)
+  }
 })
 
 // Loop nav links
@@ -134,13 +150,13 @@ function mouseNav() {
 
 // Computer with touchscreen
 if ("ontouchstart" in window) {
-  console.log("'ontouchstart' in window. add .on rm .off")
+  // console.log("'ontouchstart' in window. add .on rm .off")
   domNav.nav[0].classList.add('on')
   domNav.nav[0].classList.remove('off')
   domNav.main[0].classList.add('on')
   domNav.main[0].classList.remove('off')
 } else {
-  console.log("no 'ontouchstart' in window. add mouse events")
+  // console.log("no 'ontouchstart' in window. add mouse events")
   domNav.main[0].addEventListener('mouseenter', mouseMain)
   domNav.nav[0].addEventListener('mouseenter', mouseNav)
 }

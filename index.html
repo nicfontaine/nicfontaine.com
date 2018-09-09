@@ -80,8 +80,8 @@
     var l01 = document.createElement('link'); var l02 = document.createElement('link');
     var l03 = document.createElement('link');
     l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
-    l02.rel = 'stylesheet'; l03.href = './css/main.min.css';
-    l03.rel = 'stylesheet'; l02.href = './css/nav.css';
+    l02.rel = 'stylesheet'; l02.href = './css/main.min.css';
+    l03.rel = 'stylesheet'; l03.href = './css/nav.min.css';
     var h = document.getElementsByTagName('head')[0];
     h.appendChild(l01);
     h.appendChild(l02);
@@ -97,8 +97,7 @@
   <noscript>
     <link href='./css/bonkr.min.css' rel='stylesheet'>
     <link href='./css/main.min.css' rel='stylesheet'>
-    <link href='./css/nav.css' rel='stylesheet'>
-    <link href='./css/mobile.min.css' rel='stylesheet'>
+    <link href='./css/nav.min.css' rel='stylesheet'>
   </noscript>
 
   <!-- Fonts -->
@@ -152,6 +151,15 @@
       </li>
 
     </ul>
+
+    <!-- Shrinkbar Nav -->
+    <div class="shrinkbar minimize nav" id="shrinkbar-nav">
+      <span class="tarr">&rarr;</span>
+      <div class="inner">
+        Navigation
+      </div>
+      <span class="barr">&rarr;</span>
+    </div>
 
   </nav>
 
@@ -256,9 +264,8 @@
         <li><strong>Books</strong> (recently)</li>
         <ul>
           <li><a href='https://www.goodreads.com/book/show/26114463-nevernight' target='_blank'>Nevernight <em>(The Nevernight Chronicles)</em></a></li>
-          <li><a href="https://www.goodreads.com/book/show/43889.Wizard_s_First_Rule" target="_blank">Wizard's First Rule <em>(The Sword of Truth Series)</em></a></li>
+          <li><a href='https://www.goodreads.com/book/show/984598.Masters_of_Deception' target='_blank'>Masters of Deception: The Gang that Ruled Cyberspace</a></li>
           <li><a href='https://www.goodreads.com/series/71097-the-lotus-wars' target='_blank'>The Lotus Wars</a></li>
-          <li><a href='https://www.jnd.org/books/the-design-of-everyday-things.html' target='_blank'>Emotional Design: why we love (or hate) everyday things</a></li>
         </ul>
       </ul>
 
@@ -304,10 +311,10 @@
 
     </section>
 
-    <!-- Shrinkbar -->
+    <!-- Shrinkbar Main -->
     <div class="shrinkbar maximize main" id="shrinkbar-main">
       <span class="larr">&larr;</span>
-      Maximize
+      Maximize View
       <span class="rarr">&rarr;</span>
     </div>
 
@@ -361,7 +368,7 @@
   <!-- Handle dialogs & their buttons -->
   <!-- <script src="./js/bonkr-dialog.min.js"></script> -->
   <!-- Handle navigation switching -->
-  <script src="./js/nav.js"></script>
+  <script src="./js/nav.min.js"></script>
   <!-- Handle nav fallback on mobile, slideshow, scroll to top -->
   <script src="./js/main.min.js"></script>
   <!-- Preload sub-page images to cache during index pageview -->
