@@ -235,7 +235,7 @@
   }
 
   nav ul li {
-    height: 134px;
+    /*height: 134px;*/
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 9px;
@@ -577,6 +577,12 @@
     background: transparent;
   }
 
+}
+
+@media (min-width: 1950px) {
+  main.expand section {
+    max-width: 1500px;
+  }
 }
 /*** Media Queries To Keep Main From Overflowing ***/
 /*** max-width / 2.45 ***/
