@@ -12,11 +12,11 @@ var preloader = {
 		"./img/design/drawing-concepts-02-c.jpg",
 		"./img/design/painting-ddom-01-c.jpg",
 		"./img/design/logo-live-360-sheet-main-c.jpg",
-		"/img/design/logo-exercises-01-c.png",
+		"./img/design/logo-exercises-01-c.png",
 		"./img/design/drawing-minion-med-c.jpg"
 	],
 	interactive: [
-		"./img/interactive/bonks-logo-c.png",
+		"./img/interactive/bonkr-logo-c.png",
 		"./img/interactive/bonkr-screen-01-c.png",
 		"./img/interactive/bonkr-screen-02-c.png",
 		"./img/interactive/bonkr-screen-03-c.png",

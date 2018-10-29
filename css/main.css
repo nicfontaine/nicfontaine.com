@@ -34,7 +34,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .shrinkbar {
-  display: none;
+  display: block;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 a.linker {

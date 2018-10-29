@@ -57,8 +57,7 @@
   }
 
   .shrinkbar {
-    display: block;
-    position: fixed;
+    opacity: 1;
     padding: 1rem 1.5rem;
     text-align: center;
     transition: opacity 0.3s 0.1s, left 0.2s, right 0.2s, top 0.2s;
@@ -169,7 +168,7 @@
   }
 
   .off .shrinkbar {
-    opacity: 0;
+    opacity: 0.3;
     pointer-events: none;
   }
 
@@ -242,8 +241,8 @@
   }
 
   nav ul li a {
-    top: 50%;
-    transform: translateY(-50%);
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
     position: relative;
   }
 
@@ -321,7 +320,7 @@
   }
 
   nav ul li.active a {
-    cursor: initial;
+    cursor: default;
   }
 
   nav.off ul li.active a:after {
