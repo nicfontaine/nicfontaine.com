@@ -17,7 +17,7 @@
     .loader.show { opacity: 1; pointer-events: auto; }
     .loader > * { color: rgb(247, 251, 111); font-family: sans-serif; }
     .loader h3 { position: absolute; right: 0; left: 0; margin: 0 auto; top: 50%; transform: translateY(-50%); text-align: center; padding: 0; font-size: 1.5rem; }
-    .nav-txtr { position: fixed; right: 0; left: 0; top: 0; bottom: 0; background: url('./img/pattern-geometry-01-c.png') repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
+    .nav-txtr { position: absolute; right: 0; left: 0; top: 0; bottom: 0; background: repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
     }
     .btn-to-top { display: none !important; }
     @media (max-width: 750px) {
@@ -124,7 +124,7 @@
 
   <!-- Left, Nav -->
   <nav role='navigation' class='on pos-rel'>
-    <div class='nav-txtr'></div>
+    <div class='nav-txtr' id="nav-txtr"></div>
 
     <div id='nav-link-home' class='nav-li'>
       <a href='./'>
@@ -360,17 +360,28 @@
   </div> -->
 
   <!-- Handle loader -->
-  <script src="./js/bonkr-loader.min.js"></script>
-  <!-- Handle dialogs & their buttons -->
-  <!-- <script src="./js/bonkr-dialog.min.js"></script> -->
+  <script>
+    const loader = {
+      cont: document.getElementById('loader'),
+      offset: 500,
+      kill: function() {
+        setTimeout(function() {
+          loader.cont.classList.remove('show')
+          window.removeEventListener('load', loader.kill)
+        },loader.offset)
+      }
+    }
+
+    if (loader.cont !== null) {
+      window.addEventListener('load', loader.kill)
+    }
+  </script>
   <!-- Handle navigation switching -->
   <script src="./js/nav.min.js"></script>
-  <!-- Handle nav fallback on mobile, slideshow, scroll to top -->
-  <script src="./js/main.min.js"></script>
   <!-- Preload sub-page images to cache during index pageview -->
-  <script src="./js/preload.min.js"></script>
+  <script src="./js/preload.min.js" defer></script>
 
-  <script>
+  <script defer>
     nav.links.i = 0
     // nav.links.cycle()
     // Lazy load images with full res data-src(s)
@@ -380,11 +391,12 @@
         let src = lz[i].getAttribute('data-src')
         lz[i].src = src
       }
+      document.getElementById("nav-txtr").style.backgroundImage = "url('./img/pattern-geometry-01-c.png')"
     })
   </script>
 
   <!-- Matomo -->
-  <script type="text/javascript">
+  <script type="text/javascript" defer>
     var _paq = _paq || [];
     _paq.push(["trackPageView"]);
     _paq.push(["enableLinkTracking"]);
@@ -407,6 +419,9 @@
     }
   </script>
   <!-- End Matomo Code -->
+  <style>
+
+  </style>
 
 </body>
 </html>

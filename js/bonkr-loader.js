@@ -1,5 +1,5 @@
 const loader = {
-  cont: document.getElementById('bonkr-loader'),
+  cont: document.getElementById('loader'),
   offset: 500,
   kill: function() {
     setTimeout(function() {

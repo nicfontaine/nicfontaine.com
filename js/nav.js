@@ -1,5 +1,35 @@
 // (BUG) onload, main shows top. but if scrolled down - on hover it will flash to the point at which it is scrolled
 
+const dom = {
+  linker: document.getElementsByClassName('linker'),
+  scroll: {
+    toTop: document.getElementById('btn-to-top')
+  }
+}
+
+// Page related vars & values
+var page = {
+  w: window.innerWidth,
+  h: window.innerHeight,
+  mSize: 750,
+  resizeTimer: undefined,
+  checkSize: function() {
+    this.w = window.innerWidth
+    this.h = window.innerHeight
+  },
+  atTop: true
+}
+page.checkSize()
+
+//
+// Keep track of window size, through resize
+window.addEventListener('resize', function() {
+  clearTimeout(page.resizeTimer)
+  page.resizeTimer = setTimeout(function() {
+    page.checkSize()
+  }, 250)
+})
+
 // Immutable domNav References
 const domNav = {
   html: document.getElementsByTagName('html')[0],
