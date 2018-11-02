@@ -1,0 +1,26 @@
+{
+  "short_name": "Nic Fontaine",
+  "name": "Portfolio of Nic Fontaine",
+  "icons": [
+    {
+      "src": "./img/icon/nf-icon-av-48x.jpg",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./img/icon/nf-icon-av-96x.jpg",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./img/icon/nf-icon-av-192x.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#5fe6ba",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#53CAA3"
+}
