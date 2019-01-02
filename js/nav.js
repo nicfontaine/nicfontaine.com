@@ -157,8 +157,12 @@ domNav.shrinkBarNav.addEventListener("click", function() {
 Array.from(domNav.navLi).forEach((el,i) => {
   // Keep nav links index updated via mouseover
   (function(li,ind) {
+    // Grab index on load by looking for .active
+    if (el.classList.contains("active")) {
+      nav.links.i = ind
+    }
     li.addEventListener("mouseover", function(e) {
-      nav.links.i = i
+      nav.links.i = ind
     })
   })(el,i)
 })
