@@ -564,9 +564,23 @@
 }
 
 @media (min-width: 1950px) {
+
+  main {
+    flex: 1.25;
+  }
+
+  .shrinkbar.main {
+    left: 44.55%;
+  }
+
   main.expand section {
     max-width: 1500px;
   }
+
+  main section {
+    max-width: 1100px;
+  }
+
 }
 /*** Media Queries To Keep Main From Overflowing ***/
 /*** max-width / 2.45 ***/
