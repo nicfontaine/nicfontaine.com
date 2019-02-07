@@ -241,6 +241,10 @@ article {
   transition: all 0.3s;
 }
 
+.show-only-desktop {
+  display: none;
+}
+
 @media (min-width: 900px) {
 
   main.on .slideshow img.show {
@@ -259,6 +263,10 @@ article {
 
   main.off figure.slideshow {
     background: transparent;
+  }
+
+  .show-only-desktop {
+    display: block;
   }
 
   .show-only-mobile {
@@ -385,7 +393,12 @@ nav {
   background: #5fe6ba;
 }
 
-nav ul li a, nav.on ul li a {
+nav ul {
+  margin-left: 0;
+  padding-right: 10px;
+}
+
+nav ul li a, nav.on ul li a, nav.off ul li a {
   /*color: #f7fb6f;*/
   color: #eff35d; /* Lil richer */
   transition: all 0.3s;
@@ -494,8 +507,6 @@ nav ul li.active a:before {
     margin-bottom: 0;
     display: flex;
     flex-direction: row;
-    padding-right: 25px;
-    margin-left: 10px !important;
     justify-content: space-around;
   }
 
@@ -530,7 +541,7 @@ nav ul li.active a:before {
     text-transform: uppercase;
     margin: 0 auto;
     font-size: 25px;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
   }
 
   nav ul li a:hover {
@@ -545,7 +556,7 @@ nav ul li.active a:before {
     content: '';
     position: absolute;
     width: 80%;
-    bottom: 15px;
+    bottom: 18px;
     left: auto;
     right: -10px;
     height: 19px;
@@ -731,7 +742,7 @@ nav ul li.active a:before {
 @media (max-width: 520px) {
 
   nav ul li a {
-    font-size: 18px;
+    font-size: 19px;
     padding: 1rem 3px 1.5rem;
   }
 
