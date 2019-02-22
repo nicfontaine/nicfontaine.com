@@ -431,6 +431,7 @@ main.on .symbol-bg-01:after {
 
 nav {
   background: #5fe6ba;
+  background: #48efb8; /* Lil richer */
 }
 
 nav ul {
@@ -441,6 +442,7 @@ nav ul {
 nav ul li a, nav.on ul li a, nav.off ul li a {
   /*color: #f7fb6f;*/
   color: #eff35d; /* Lil richer */
+  color: #f6fb53; /* Even more */
   transition: all 0.3s;
   background: none;
 }
