@@ -4,6 +4,11 @@
 
 		var preloader = {
 			design: [
+				"./img/m-styleguide-01-c.png",
+				"./img/m-styleguide-02-c.png",
+				"./img/m-styleguide-03-c.png",
+				"./img/m-styleguide-04-c.png",
+				"./img/m-styleguide-05-c.png",
 				"./img/design/doughnut-slice-c.png",
 				"./img/design/bunker-blast-slide-01.jpg",
 				"./img/design/bunker-blast-slide-02.jpg",
