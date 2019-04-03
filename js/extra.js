@@ -4,26 +4,39 @@
 
 if (document.getElementsByClassName('slideshow') !== undefined) {
   let cont = document.getElementsByClassName('slideshow')
+
   for (var i=0; i<cont.length; i++) {
     let slides = cont[i].getElementsByTagName('img')
-    let s = 0;
 
-    (function advance() {
-      if (s-1 > 0) {
-        slides[s-1].classList.remove('show')
+    let hide = function() {
+      for (var j=1; j<slides.length; j++) {
+        slides[j].classList.remove("show")
       }
-      s++
-      if (s >= slides.length) {
-        s=0
-        slides[slides.length-1].classList.remove('show') // Hide last
-      } else {
-        slides[s].classList.add('show') // Show next
-      }
-      setTimeout(function() {
-        advance()
-      }, 4000)
-    })()
+    }
+
+    let n = 0;
+
+    setTimeout(function() {
+      (function advance(s, slideGroup, hideSet) {
+
+        if (s+1 < slides.length) {
+          s++
+        } else {
+          hideSet()
+          s=0
+          // (NOTE) Last one looks bad, with all others transitioning
+        }
+
+        slideGroup[s].classList.add("show")
+
+        setTimeout(function() {
+          advance(s, slideGroup, hideSet)
+        }, 4000)
+      })(n, slides, hide)
+    },4000)
+
   }
+
 }
 
 //
