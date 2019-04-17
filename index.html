@@ -61,6 +61,7 @@
     .btn-to-top { display: none !important; }
     h1, h2, h3, h4, h5, h6 { padding-right: 0 !important; }
     @media (max-width: 750px) {
+      main h3 { padding-top: 1rem !important; }
       .dialog-01 { display: none; }
       .loader, .loader.show { display: none; opacity: 0; pointer-events: auto; }
       /* Below is copied from mobile.css. basic layout styles */
@@ -119,7 +120,7 @@
 
   <noscript>
     <style>
-      .loader { display: none !important;  }
+      .loader, .shrinkbar { display: none !important;  }
       nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
       main, main p, main ul, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off ul, main.off ul li { color: #333; }
       main img { opacity: 1; }
@@ -383,7 +384,7 @@
   <script>
     const loader = {
       cont: document.getElementById('loader'),
-      offset: 500,
+      offset: 0,
       kill: function() {
         setTimeout(function() {
           loader.cont.classList.remove('show')
@@ -393,7 +394,7 @@
     }
 
     if (loader.cont !== null) {
-      window.addEventListener('load', loader.kill)
+      // window.addEventListener('load', loader.kill)
     }
   </script>
   <!-- Handle navigation switching -->

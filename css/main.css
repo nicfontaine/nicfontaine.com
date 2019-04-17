@@ -754,7 +754,7 @@ nav ul li.active a:before {
 
   h1 { font-size: 4rem; }
   h2 { font-size: 3rem; }
-  #heading-01 { margin-top: 1rem; }
+  #heading-01 { margin-top: 1rem !important; }
   main .heading-split-bar { padding: 1rem; margin-bottom: 1.5rem; }
   .heading-split-bar h2 { padding-right: 1rem; }
 
