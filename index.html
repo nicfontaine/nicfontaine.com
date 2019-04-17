@@ -22,6 +22,32 @@
   href="./fonts/work-sans-v3-latin-500.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" 
   href="./fonts/work-sans-v3-latin-700.woff2" crossorigin>
+
+  <!-- Load CSS async -->
+  <script>
+    var cc = function() {
+    var l01 = document.createElement('link'); var l02 = document.createElement('link');
+    var l03 = document.createElement('link');
+    l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
+    l02.rel = 'stylesheet'; l02.href = './css/main.min.css';
+    l03.rel = 'stylesheet'; l03.href = './css/nav.min.css';
+    var h = document.getElementsByTagName('head')[0];
+    h.appendChild(l01);
+    h.appendChild(l02);
+    h.appendChild(l03);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+    webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cc);
+    else window.addEventListener('load', cc);
+  </script>
+
+  <!-- Load CSS fallback if no JS -->
+  <noscript>
+    <link href='./css/bonkr.min.css' rel='stylesheet'>
+    <link href='./css/main.min.css' rel='stylesheet'>
+    <link href='./css/nav.min.css' rel='stylesheet'>
+  </noscript>
   
   <style>
     html { font-family: sans-serif; }
@@ -33,7 +59,7 @@
     .nav-txtr { position: absolute; right: 0; left: 0; top: 0; bottom: 0; background: repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
     }
     .btn-to-top { display: none !important; }
-    h1, h2, h3, h4, h5, h6 { padding-right: 0; }
+    h1, h2, h3, h4, h5, h6 { padding-right: 0 !important; }
     @media (max-width: 750px) {
       .dialog-01 { display: none; }
       .loader, .loader.show { display: none; opacity: 0; pointer-events: auto; }
@@ -87,32 +113,6 @@
       }
     }
   </style>
-
-  <!-- Load CSS async -->
-  <script>
-    var cc = function() {
-    var l01 = document.createElement('link'); var l02 = document.createElement('link');
-    var l03 = document.createElement('link');
-    l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
-    l02.rel = 'stylesheet'; l02.href = './css/main.min.css';
-    l03.rel = 'stylesheet'; l03.href = './css/nav.min.css';
-    var h = document.getElementsByTagName('head')[0];
-    h.appendChild(l01);
-    h.appendChild(l02);
-    h.appendChild(l03);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-    webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) raf(cc);
-    else window.addEventListener('load', cc);
-  </script>
-
-  <!-- Load CSS fallback if no JS -->
-  <noscript>
-    <link href='./css/bonkr.min.css' rel='stylesheet'>
-    <link href='./css/main.min.css' rel='stylesheet'>
-    <link href='./css/nav.min.css' rel='stylesheet'>
-  </noscript>
 
   <!-- Fonts -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Assistant:400,800|Work+Sans:500,700" rel="stylesheet"> -->
