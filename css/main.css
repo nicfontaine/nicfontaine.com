@@ -500,7 +500,7 @@ nav ul li.active a:before {
 
 #nav-link-home:before {
   color: rgba(255,255,255,0.8);
-  content: "HO\AME";
+  content: "HOME";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
