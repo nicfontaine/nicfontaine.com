@@ -7,32 +7,16 @@ if (document.getElementsByClassName('slideshow') !== undefined) {
 
   for (var i=0; i<cont.length; i++) {
     let slides = cont[i].getElementsByTagName('img')
-
-    let hide = function() {
-      for (var j=1; j<slides.length; j++) {
-        slides[j].classList.remove("show")
-      }
-    }
-
     let n = 0;
-
     setTimeout(function() {
-      (function advance(s, slideGroup, hideSet) {
-
-        if (s+1 < slides.length) {
-          s++
-        } else {
-          hideSet()
-          s=0
-          // (NOTE) Last one looks bad, with all others transitioning
-        }
-
+      (function advance(s, slideGroup) {
+        slideGroup[s].classList.remove("show")
+        s = (s+1)%slides.length
         slideGroup[s].classList.add("show")
-
         setTimeout(function() {
-          advance(s, slideGroup, hideSet)
+          advance(s, slideGroup)
         }, 4000)
-      })(n, slides, hide)
+      })(n, slides)
     },4000)
 
   }

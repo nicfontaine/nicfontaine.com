@@ -13,44 +13,15 @@
   <link rel="apple-touch-icon" href="./img/icon/nf-icon-av-192x.jpg">
   <link rel="canonical" href="https://nicfontaine.com">
 
-  <!-- Fonts -->
-  <link rel="preload" as="font" type="font/woff2" 
-  href="./fonts/assistant-v2-latin-800.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" 
-  href="./fonts/assistant-v2-latin-regular.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" 
-  href="./fonts/work-sans-v3-latin-500.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" 
-  href="./fonts/work-sans-v3-latin-700.woff2" crossorigin>
-
-  <!-- Load CSS async -->
-  <script>
-    var cc = function() {
-    var l01 = document.createElement('link'); var l02 = document.createElement('link');
-    var l03 = document.createElement('link');
-    l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
-    l02.rel = 'stylesheet'; l02.href = './css/main.min.css';
-    l03.rel = 'stylesheet'; l03.href = './css/nav.min.css';
-    var h = document.getElementsByTagName('head')[0];
-    h.appendChild(l01);
-    h.appendChild(l02);
-    h.appendChild(l03);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-    webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) raf(cc);
-    else window.addEventListener('load', cc);
-  </script>
-
-  <!-- Load CSS fallback if no JS -->
-  <noscript>
-    <link href='./css/bonkr.min.css' rel='stylesheet'>
-    <link href='./css/main.min.css' rel='stylesheet'>
-    <link href='./css/nav.min.css' rel='stylesheet'>
-  </noscript>
-  
   <style>
     html { font-family: sans-serif; }
+    html, body { width: 100%; overflow-x: hidden; }
+    body { margin: 0; }
+    main, nav { transition: all 0; }
+    @media (min-width: 900px) {
+      main, nav { flex: 1; }
+    }
+    nav { background: #48efb8; }
     .loader {
       z-index: 500; pointer-events: none; opacity: 0; transition: all 0.3s; position: fixed; overflow: hidden; overflow-y: hidden; top: 0; right: 0; bottom: 0; left: 0; }
     .loader.show { opacity: 1; pointer-events: auto; }
@@ -60,6 +31,12 @@
     }
     .btn-to-top { display: none !important; }
     h1, h2, h3, h4, h5, h6 { padding-right: 0 !important; }
+    .d-flx { display: flex; }
+    .flx-row { flex-direction: row; }
+    .pos-all-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .pos-abs { position: absolute; }
+    nav ul li { list-style: none; }
+    nav ul li a, nav.off ul li a, nav.on ul li a { color: #f6fb53; }
     @media (max-width: 750px) {
       main h3 { padding-top: 1rem !important; }
       .dialog-01 { display: none; }
@@ -114,6 +91,42 @@
       }
     }
   </style>
+
+  <!-- Fonts -->
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/assistant-v2-latin-800.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/assistant-v2-latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/work-sans-v3-latin-500.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/work-sans-v3-latin-700.woff2" crossorigin>
+
+  <!-- Load CSS async -->
+  <script>
+    var cc = function() {
+    var l01 = document.createElement('link'); var l02 = document.createElement('link');
+    var l03 = document.createElement('link');
+    l01.rel = 'stylesheet'; l01.href = './css/bonkr.min.css';
+    l02.rel = 'stylesheet'; l02.href = './css/main.min.css';
+    l03.rel = 'stylesheet'; l03.href = './css/nav.min.css';
+    var h = document.getElementsByTagName('head')[0];
+    h.appendChild(l01);
+    h.appendChild(l02);
+    h.appendChild(l03);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+    webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cc);
+    else window.addEventListener('load', cc);
+  </script>
+
+  <!-- Load CSS fallback if no JS -->
+  <noscript>
+    <link href='./css/bonkr.min.css' rel='stylesheet'>
+    <link href='./css/main.min.css' rel='stylesheet'>
+    <link href='./css/nav.min.css' rel='stylesheet'>
+  </noscript>
 
   <!-- Fonts -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Assistant:400,800|Work+Sans:500,700" rel="stylesheet"> -->
