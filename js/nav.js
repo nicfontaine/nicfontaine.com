@@ -184,16 +184,24 @@ function mouseNav() {
 
 // Computer with touchscreen
 if ("ontouchstart" in window) {
-  // console.log("'ontouchstart' in window. add .on rm .off")
   domNav.nav[0].classList.add('on')
   domNav.nav[0].classList.remove('off')
   domNav.main[0].classList.add('on')
   domNav.main[0].classList.remove('off')
+  // console.log("'ontouchstart' in window. add .on rm .off")
 } else {
-  // console.log("no 'ontouchstart' in window. add mouse events")
   domNav.main[0].addEventListener('mouseenter', mouseMain)
   domNav.nav[0].addEventListener('mouseenter', mouseNav)
+  // console.log("no 'ontouchstart' in window. add mouse events")
 }
+
+// Option to disable nav transition. May want to add UI
+// domNav.nav[0].classList.add('on')
+// domNav.nav[0].classList.remove('off')
+// domNav.main[0].classList.add('on')
+// domNav.main[0].classList.remove('off')
+// domNav.main[0].addEventListener('mouseenter', mouseMain)
+// domNav.nav[0].addEventListener('mouseenter', mouseNav)
 
 var cursor = {
   visible: true
