@@ -5,8 +5,8 @@
   }
 
   nav {
-    margin-left: -60px;
-    padding-left: 60px;
+    /*margin-left: -60px;
+    padding-left: 60px;*/
     overflow-x: hidden;
     overflow-y: hidden;
   } 
@@ -33,7 +33,7 @@
 
   nav.shrink {
     pointer-events: none;
-    flex: 0 0 200px;
+    flex: 0 0 140px;
   }
 
   nav.shrink > div, nav.shrink > ul {
@@ -42,6 +42,7 @@
 
   .shrinkbar {
     opacity: 1;
+    z-index: 10;
     padding: 1rem 1.5rem;
     text-align: center;
     transition: opacity 0.3s 0.1s, left 0.2s, right 0.2s, top 0.2s;
@@ -92,7 +93,7 @@
     font-weight: bold;
     color: rgba(190,98,214,0.7);
     padding: 0;
-    width: 200px;
+    width: 140px;
     left: -10rem;
     transition: background 0.2s
   }
@@ -105,15 +106,21 @@
   .shrinkbar.nav .inner {
     transform: rotate(-90deg);
     top: 50%;
-    right: 3rem;
+    right: 0;
     position: absolute;
     transform-origin: 50% 50%;
     pointer-events: none;
     font-size: 1.3rem;
   }
 
+  nav .shrinkbar.nav .inner {
+    left: -7px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
   nav.shrink .shrinkbar.nav .inner {
-    left: -9px;
+    opacity: 1;
   }
 
   .shrinkbar .larr, .shrinkbar .rarr {
@@ -277,7 +284,7 @@
     opacity: 0;
   }
 
-  #nav-link-home:hover:before {
+  #nav-link-home:hover:before, #nav-link-home.cycled:before {
     opacity: 1;
   }
 

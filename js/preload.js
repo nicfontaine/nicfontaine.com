@@ -4,7 +4,7 @@
 
 		var preloader = {
 			design: [
-				"./img/design/burrito-project-logo-01.png",
+				"./img/design/burrito-project-logo-2048-black-05-c.png",
 				"./img/design/experience-download-page-c.png",
 				"./img/m-styleguide-01-c.png",
 				"./img/m-styleguide-02-c.png",

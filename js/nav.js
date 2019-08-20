@@ -128,14 +128,14 @@ var nav = {
 }
 
 var expand = {
-  toggle: function(side) {
+  toggle: function() {
     domNav.main[0].classList.toggle("expand")
     domNav.nav[0].classList.toggle("shrink")
   }
 }
 
 domNav.shrinkBarMain.addEventListener("click", function() {
-  expand.toggle(domNav.nav[0])
+  expand.toggle()
   if ("touchstart" in window) {
   } else {
     domNav.main[0].removeEventListener('mouseenter', mouseMain)
@@ -144,7 +144,7 @@ domNav.shrinkBarMain.addEventListener("click", function() {
 })
 
 domNav.shrinkBarNav.addEventListener("click", function() {
-  expand.toggle(domNav.nav[0])
+  expand.toggle()
   nav.toggle("nav")
   if ("touchstart" in window) {
   } else {
@@ -222,12 +222,26 @@ document.addEventListener('keydown', function(e) {
     domNav.html.classList.add('c-no')
     // Key LEFT, switch if focused on <main>
     if (e.keyCode === 37 && nav.foc.side === domNav.main[0]) {
-      nav.toggle('nav')
-      nav.links.cycle()
+      mouseNav()
+      // Main expanded, toggle
+      if (domNav.main[0].classList.contains("expand")) {
+        expand.toggle()
+      }
+      // Focus nav
+      else {
+        nav.toggle('nav')
+        nav.links.cycle()
+      }
     }
     // Key RIGHT, switch if focused on <nav>
-    if (e.keyCode === 39 && nav.foc.side === domNav.nav[0]) {
+    else if (e.keyCode === 39 && nav.foc.side === domNav.nav[0]) {
+      mouseMain()
       nav.toggle('main')
+    }
+    // Key RIGHT, main is focused so maximize expand
+    else if (e.keyCode === 39 && nav.foc.side === domNav.main[0]) {
+      mouseMain()
+      expand.toggle()
     }
   }
 
