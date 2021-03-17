@@ -36,7 +36,7 @@ const domNav = {
   main: document.getElementsByTagName('main'),
   nav: document.getElementsByTagName('nav'),
   navLi: document.getElementsByClassName('nav-li'),
-  navA: document.getElementsByClassName('nav-link'),
+  navA: document.getElementsByClassName('nav-link-event'),
   shrinkBarMain: document.getElementById("shrinkbar-main"),
   shrinkBarNav: document.getElementById("shrinkbar-nav"),
 }
@@ -50,7 +50,7 @@ domNav.navA[0].focus()
 // Handle main/menu navigation
 var nav = {
   foc: {
-    side: undefined, // Store which foc.side we're on. NAV || MAIN
+    side: domNav.nav[0], // Store which foc.side we're on. NAV || MAIN
   },
   // Switch focus & on/off classes btw nav & main
   toggle: function(override) {
