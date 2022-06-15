@@ -18,9 +18,9 @@
 
   nav, main {
     animation: none;
-    transition: background-color 0.3s, color 0.3s, opacity 0.3s, box-shadow 0.3s;
-    /* transform-origin: 50% 100%; */
-    /* flex: 1; */
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s, box-shadow 0.3s, flex 0.3s;
+    transform-origin: 50% 100%;
+    flex: 1;
   }
 
   nav.off ul li a {

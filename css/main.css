@@ -104,7 +104,8 @@ a.linker:hover {
 /*(NOTE) This needs some queries so it doesn't overflow & move text beneath down */
 .text-block-corner-left {
   max-width: 510px;
-  margin-top: 422px;
+  /* margin-top: 422px; */
+  margin-top: 200px;
   padding-left: 110px;
   padding-left: 25%;
   text-align: justify;
