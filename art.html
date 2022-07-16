@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Nic Fontaine</title>
+  <meta name="description" content="Javascript web application development, front-end web design, and email marketing">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#53CAA3">
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./img/icon/nf-icon-av-192x.jpg">
+  <link rel="canonical" href="https://nicfontaine.com/interactive">
+
+  <!-- Fonts -->
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/assistant-v2-latin-800.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/assistant-v2-latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/work-sans-v3-latin-500.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" 
+  href="./fonts/work-sans-v3-latin-700.woff2" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/bonkr.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="./css/nav.min.css">
+
+  <!-- Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Assistant:400,800|Work+Sans:500,700" rel="stylesheet"> -->
+  <style>
+    .loader {
+      z-index: 500; pointer-events: none; opacity: 0; transition: all 0.3s; position: fixed; overflow: hidden; overflow-y: auto; top: 0; right: 0; bottom: 0; left: 0; }
+    .loader.show { opacity: 1; pointer-events: auto; }
+    .loader > * { color: rgb(247, 251, 111); font-family: sans-serif; }
+    .loader h3 { position: absolute; right: 0; left: 0; margin: 0 auto; top: 50%; transform: translateY(-50%); text-align: center; padding: 0; font-size: 1.5rem; }
+    .nav-txtr { position: absolute; right: 0; left: 0; top: 0; bottom: 0; background: url('./img/pattern-geometry-01-c.png') repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
+    }
+    main section { padding-top: 0; }
+  </style>
+
+</head>
+<noscript>
+  <style>
+    .loader, .shrinkbar { display: none !important;  }
+    nav, nav.on, main { flex: 1 !important; transition-property: none; transition: none; animation: none; }
+    main, main p, main ul, main h1, main h2, main h3, main h4, main h5, main h6, main.off, main.off p, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off ul, main.off ul li { color: #333; }
+    main img { opacity: 1; }
+    main section { opacity: 1; transition: none; }
+    .dialog, .dialog.active, .dialog-outer, .dialog-inner { display: none; pointer-events: none; }
+    .nav-tip { display: none !important; }
+    nav ul li a:hover:before { left: 100px; background: #9e91f2; background: #cf7edb; box-shadow: -10px 8px 0 rgba(0,0,0,0.05); width: 180%;
+    }
+    /*(NOTE) Add hover style for nav links*/
+  </style>
+</noscript>
+<body class='pos-abs pos-all-0 d-flx flx-row' tabindex='-1'>
+
+  <!-- Left, Nav -->
+  <nav role='navigation' class='on pos-rel'>
+    <div class='nav-txtr'></div>
+
+    <div id='nav-link-home' class='nav-li'>
+      <a href='https://nicfontaine.com' class="nav-link-event">
+        <img class="nav-link" src="./img/av-ballpit-small-01-c.jpg">
+      </a>
+    </div>
+
+    <ul class='text-center noselect'>
+
+      <li class='nav-li'>
+        <a href='./projects' class='nav-link nav-link-event'>Projects</a>
+      </li>
+
+      <li class='nav-li active'>
+        <a href='./art' class='nav-link nav-link-event'>Artwork</a>
+      </li>
+
+      <li class='nav-li'>
+        <a href='./contact' class='nav-link nav-link-event'>Contact</a>
+      </li>
+
+      <li class='nav-li'>
+        <a href='./resume' class='nav-link nav-link-event'>Resume</a>
+      </li>
+
+    </ul>
+
+    <!-- Shrinkbar Nav -->
+    <div class="shrinkbar minimize nav" id="shrinkbar-nav">
+      <span class="tarr">&rarr;</span>
+      <div class="inner">
+        Navigation
+      </div>
+      <span class="barr">&rarr;</span>
+    </div>
+
+  </nav>
+
+  <!-- Right, Content -->
+  <main class='pos-rel on'>
+
+    <section class="show-only-desktop"></section>
+
+    <!-- Burrito Project Logo -->
+    <section>
+    
+      <h3 id='burrito-project-logo' class='noselect'>Burrito Project SF Logo</h3>
+      <a href='#burrito-project-logo' class='linker' title='paragraph anchor link'>&para;</a>
+    
+      <figure class='w-full rnd-7'>
+        <a href="./img/art/burrito-project-logo-2048-black-05-c.png" target="_blank"><img
+            src='./img/art/burrito-project-logo-2048-black-05-c.png' class="rnd-7"></a>
+      </figure>
+    
+      <p>
+        Burrito Project SF is a nonprofit group that prepares and distributes hundreds of vegan burritos, monthly or
+        biweekly, to shelters and amongst the ever-evolving landscape of people living on the street; or just in need, in
+        San Francisco.
+      </p>
+    
+      <p>
+        As part of the organizational team, I currently run distribution for deliveries, volunteer signups, and deliver as
+        well. I was asked to design the new logo, and was excited to refresh the look as well as give some of my own style.
+        I made sure to highlight notable city landmarks, the simple &amp; self-subsistent delivery method of a bike, and a
+        stack of fat burritos. It's effectively casual, communicative, and recognizable -- and something I'd wear on a shirt
+        at the end of the day.
+      </p>
+    
+      <p>
+        <a href='https://burritoprojectsf.org/' target='_blank' title='Burrito Project SF'>Burrito Project SF &nbsp;
+          &rarr;</a>
+      </p>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+
+    <!-- Turtle Links -->
+    <section>
+    
+      <h3 id='turtle-links'>Turtle Links</h3>
+      <a href='#turtle-links' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+    
+      <p>
+        A 3D animated pilot on which I worked for The Littlest Golfer, Inc. From storyboarding to character animation to
+        compositing &mdash; I, in a team of 3, worked to bring Putter, Sandy, Steve, Stinky, and Mulligan to life in a fun
+        and educational golf-centered story.
+      </p>
+    
+      <figure style='background-color: #fff;' class='frame mg-b-8 rnd-7'>
+        <img src="./img/art/tlg-turtle-links-2d-01-c.png"
+          alt='Character and prop modeling for Turtle Links - an animated short'>
+      </figure>
+    
+      <p>
+        In creating the logo, I made sure to incorporate the flag &amp; hole as well as a flying ball as images while
+        keeping the typography large, blocky, and fun &mdash; <em>perfect for the 4-10 age demographic.</em> It's simple,
+        but I love the vintage yet not dated feel to the entire concept.
+      </p>
+    
+      <figure class='rnd-7'>
+        <img src='./img/art/tlg-turtle-links-3d-01-c.png'
+          alt='Vector design and poster promo for Turtle Links - an animated short'>
+      </figure>
+    
+      <!-- <figure>
+            <a target="_blank" href="https://www.youtube.com/watch?v=ojJFZF8tUSM"><img src="./img/art/art_turtle_links_vid_c.png" alt="turtle links video image link"></a>
+          </figure> -->
+    
+      <p>
+        Working off of the established illustrations for Sandy and Putter, and developing the look for a new character -
+        Steve the Weasel, I sculpted and painted in Zbrush, retopo'd, and imported, rigged, and shaded in Modo for
+        animation. I also modeled a few props for the show as well as toy designs including a few stylized golf carts,
+        course shop, and more.
+      </p>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+
+    <!-- Doughnut -->
+    <section>
+    
+      <h3 id='doughnut' class='noselect'>Doughnut Layers</h3>
+      <a href='#doughnut' class='linker' title='paragraph anchor link'>&para;</a>
+    
+      <figure class='frame rnd-7 mg-b-8'>
+        <img src='./img/art/doughnut-slice-c.png' alt='layered, vector doughnut slice study'>
+      </figure>
+    
+      <p>
+        Vector doughnut study done in Inkscape. Inspiration from contemporary, non-traditional tattoo &amp; sticker art.
+      </p>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+
+    <!-- Crywolf -->
+    <section>
+    
+      <h3 id='crywolf'>Crywolf Text Animation</h3>
+      <a href='#crywolf' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+    
+      <p>
+        A fun project for a music video of a good friend of mine - Justin Phillips. Lyric video style done in After Effects.
+      </p>
+    
+      <figure>
+        <video autoplay loop class='w-full'>
+          <source src="./img/art/crywolf_runaway_03.webm" type="video/webm" />
+          Your browser does not support the video tag
+        </video>
+      </figure>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+    
+    <!-- DDOM -->
+    <section>
+    
+      <h3 id='dont-dread-on-me'>Don't Dread On Me</h3>
+      <a href='#dont-dread-on-me' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+    
+      <p>
+        Visual development for a game a friend and I were dreaming up one afternoon. "A runaway dread tries to escape the
+        perils of a degenerate dead-head's flat, along the way discovering untapped potential as he embraces the fetid
+        squalor from which he grew."
+      </p>
+    
+      <p>
+        <em>...Or you know, a grungy 2D infinite runner.</em>
+      </p>
+    
+      <figure>
+        <img src="./img/art/painting-ddom-01-c.jpg">
+      </figure>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+
+    <!-- Live 360 -->
+    <section>
+    
+      <h3 id='live-360'>Live 360</h3>
+      <a href='#live-360' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+    
+      <p>
+        Logo development for a new Broker Agency out of Charleston, South Carolina.
+      </p>
+    
+      <figure class='frame'>
+        <img src="./img/art/logo-live-360-sheet-main-c.jpg"
+          alt='Logo sample sheet of various styles and colours centering around "live" and "360"'>
+      </figure>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+    
+    <!-- Logo Exercises -->
+    <section>
+    
+      <h3 id='logo-exercises'>Logo Exercises</h3>
+      <a href='#logo-exercises' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+    
+      <figure class='frame rnd-7'>
+        <img src="./img/art/logo-exercises-01-c.png"
+          alt="2 logo designs, one - green universe swirl, and two - red map pin with text banner in front">
+      </figure>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+    
+    <!-- Minion Sketch -->
+    <section>
+    
+      <h3 id='valentines-minion'>Valentine's Minion Sketch</h3>
+      <a href='#valentines-minion' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+    
+      <figure class='flt-r mg-l-4 mg-b-4 w-mx-500 frame'>
+        <img src="./img/art/drawing-minion-med-c.jpg"
+          alt="black and white photoshop of a minion with 'im crazy about you text'">
+      </figure>
+    
+      <p>
+        Trust me - I never want to see another minion again either, but I can't help but like this old sketch.
+      </p>
+    
+    </section>
+    
+    <!-- Graphite Concept -->
+    <section style="overflow: visible; display: none">
+    
+      <h3 id='graphite-concept'>Graphite Concept Sketches</h3>
+      <a href='#graphite-concept' class='linker' tabindex='-1' title='paragraph anchor link'>&para;</a>
+    
+      <p>
+        From tattoo ideas to game concepts, I always enjoy getting ideas out on paper in my sketchbook first.
+      </p>
+    
+      <figure class="slideshow">
+        <img src="./img/art/drawing-concepts-02-c.jpg">
+        <img src="./img/art/drawing-concepts-01-c.jpg">
+      </figure>
+    
+    </section>
+    
+    <section class='divider'>
+      <hr>
+    </section>
+
+    <!-- Shrinkbar Main -->
+    <div class="shrinkbar maximize main" id="shrinkbar-main">
+      <span class="larr">&larr;</span>
+      Maximize View
+      <span class="rarr">&rarr;</span>
+    </div>
+
+  </main>
+
+  <!-- To Top -->
+  <div id='btn-to-top' class='btn-to-top'>
+    <div class='btn-to-top-icon'>&lambda;</div>
+    <div class='btn-to-top-text-l'>To</div>
+    <div class='btn-to-top-text-r'>Top</div>
+  </div>
+
+  <!-- Loader -->
+  <!-- <div id='loader' class='loader show pos-fixed pos-all-0' style='background: #5FE6BA;'>
+    <div class='nav-txtr'></div>
+    <h3 class='pos-abs-center text-center'>loading-ding-dong..<span class='blinking'>.</span></h3>
+  </div> -->
+
+  <!-- Minez -->
+  <script src="./js/bonkr-loader.min.js"></script>
+  <script src="./js/bonkr-dialog.min.js"></script>
+  <script src="./js/nav.min.js"></script>
+  <script src="./js/extra.min.js"></script>
+  <!-- Ain't Minez -->
+  <script src="./js/lib/velocity.min.js"></script>
+
+</body>
+</html>
