@@ -30,6 +30,8 @@
 				"./img/projects/art-designer-07-c.png",
 				"./img/projects/art-designer-08-c.png",
 				"./img/projects/art-designer-09-c.png",
+				"./img/projects/art-designer-10-c.png",
+				"./img/projects/art-designer-11-c.png",
 				"./img/projects/experience-download-page-c.png",
 				"./img/projects/m-styleguide-01-c.png",
 				"./img/projects/m-styleguide-02-c.png",

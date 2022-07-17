@@ -166,6 +166,7 @@ figure.flt-l, figure.flt-r {
 
 figure.frame {
   background: #fff;
+  border: 1px solid #ccc;
 }
 
 .screen-rot {
@@ -314,6 +315,7 @@ article {
 
   main.off figure.slideshow {
     background: transparent;
+    border: 1px solid transparent;
   }
 
   .show-only-desktop {
