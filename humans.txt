@@ -3,11 +3,11 @@
 
 # TEAM
 
-  Nic Fontaine @ngpfontaine
+  Nic Fontaine @nicfontaine
 
 # THANKS
 
-  Janet Reno, Heffer Wolf, Ty Pennington
+  Heffer Wolf, Guy Fieri, Coleslaw
 
 # TECHNOLOGY COLOPHON
 

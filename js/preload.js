@@ -13,7 +13,12 @@
 				"./img/art/painting-ddom-01-c.jpg",
 				"./img/art/logo-live-360-sheet-main-c.jpg",
 				"./img/art/logo-exercises-01-c.png",
-				"./img/art/drawing-minion-med-c.jpg"
+				"./img/art/drawing-minion-med-c.jpg",
+				"./img/art/bunker-blast-slide-01.jpg",
+				"./img/art/bunker-blast-slide-02.jpg",
+				"./img/art/bunker-blast-slide-03.jpg",
+				"./img/art/bunker-blast-slide-04.jpg",
+				"./img/art/bunker-blast-slide-05.jpg"
 			],
 			projects: [
 				"./img/projects/art-designer-01-c.png",
@@ -25,11 +30,6 @@
 				"./img/projects/art-designer-07-c.png",
 				"./img/projects/art-designer-08-c.png",
 				"./img/projects/art-designer-09-c.png",
-				"./img/projects/bunker-blast-slide-01.jpg",
-				"./img/projects/bunker-blast-slide-02.jpg",
-				"./img/projects/bunker-blast-slide-03.jpg",
-				"./img/projects/bunker-blast-slide-04.jpg",
-				"./img/projects/bunker-blast-slide-05.jpg",
 				"./img/projects/experience-download-page-c.png",
 				"./img/projects/m-styleguide-01-c.png",
 				"./img/projects/m-styleguide-02-c.png",
