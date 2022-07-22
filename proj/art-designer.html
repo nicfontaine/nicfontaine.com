@@ -39,6 +39,9 @@
     .nav-txtr { position: absolute; right: 0; left: 0; top: 0; bottom: 0; background: url('./../img/pattern-geometry-01-c.png') repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: initial; background-position: 0 0; opacity: 0.23; transition: all 0.2s;
     }
     main section { padding-top: 0; }
+    main.expand section {
+      max-width: 1200px;
+    }
   </style>
 
 </head>
@@ -115,73 +118,79 @@
         <img src='./../img/projects/art-designer-03-c.png' class="rnd-7">
       </figure>
 
+      <blockquote class="mg-b-0">
+        <p>Display, configure, and ship new art configurations on the fly</p>
+      </blockquote>
+
       <h3>Why</h3>
       
       <p>
-        Initially, Mursion's 3D art configurations (art-bundles) were mass-deployed as extensive presets, per industry and
-        setting. <em>Example:</em> Corporate Conference Room with almost 100 combinations of corporate perspectives, 1-5 avatars per scene, in
-        business attire. And repeat, for every industry/setting type, or custom client artwork.
+        Initially, Mursion's 3D art configurations were mass-deployed as extensive presets, per industry and
+        setting. <em>Example:</em> Corporate Conference Room with almost 100 combinations of corporate perspectives, 1-5 avatars per scene, each in business attire. And repeat, for every industry/setting type, or custom client contract.
       </p>
       
       <p>
-        Naturally, this ends up being restrictive and repetitive and requires manual updates from the Art team - the only
-        users with the tools and knowledge to create new configurations. As the Operation Team designs scenarios and reviews
+        Naturally, this ends up being restrictive &amp; repetitive; requiring manual updates from the Art team - the only
+        users with the tools and knowledge to create new configurations. As the Operations Team designed scenarios and reviewed
         artwork with clients prior to requesting updates - they should have the power to launch new art work as-needed, from a
         rolling release library.
       </p>
       
-      <h3>Objectives</h3>
-      
-      <ul>
-        <li>Launch new art configurations faster, to reduce contract timelines</li>
-        <li>Pair scenario design with art design, and offload operational work from artists</li>
-        <li>Create a database of art assets, with meta information for filtering, customization, and configuration</li>
-        <li>Launch a visual library of Mursion artwork, that can be updated quickly without any software deployments</li>
-        <li>Create the baseline code and UX to eventually enable clients and their learners to view assets and customize their
-          own scenarios</li>
-      </ul>
+    </section>
+    <article>
+      <section>
+        <h3>Objectives</h3>
+        
+        <ul>
+          <li>Launch new art configurations faster, to reduce contract timelines</li>
+          <li>Pair scenario design with art design, and offload operational work from artists</li>
+          <li>Create a database of art assets, with meta information for filtering, customization, and configuration</li>
+          <li>Launch a visual library of Mursion artwork, that can be updated quickly without any software deployments</li>
+          <li>Lay the groundwork for library APIs to be used across entire product suite</li>
+          <li>Create a foundation to eventually empower client users to customize or design their own experiences</li>
+        </ul>
+      </section>
+    </article>
+
+    <section>
       
       <h3>Components</h3>
       <hr>
       
-      <h4 class="mg-t-8 mg-b-3"><span style="color: #aaa;">1. </span>Art Designer Front-End</h4>
-      <p>Source &amp; display 3D artwork, create visual builder, add filtering logic, connect submission forms to live
-        pipeline</p>
-      <figure class="w-full frame rnd-7 mg-b-8 w-mx-900">
+      <div class="d-flx flx-spc-2 flx-children-spc-2 mg-b-8 flx-children-1 text-center">
+        <div>
+          <h4 class="mg-t-8 mg-b-3"><span style="color: #aaa;">1. </span>Designer Front-End</h4>
+          <p>Source &amp; display 3D artwork, create visual builder, add filtering logic, connect submission forms to live
+            pipeline</p>
+        </div>
+        <div>
+          <h4 class="mg-t-8 mg-b-3"><span style="color: #aaa;">2. </span>Backend Service</h4>
+          <p>APIs to query 3D artwork assets, modify art-project configurations, trigger build pipelines, and create tracking
+            tickets</p>
+        </div>
+        <div>
+          <h4 class="mg-t-8 mg-b-3"><span style="color: #aaa;">3. </span>Asset Library</h4>
+          <p>Local application to import 3D assets from Unity3D, define meta rules &amp; interdependencies, configure
+            default settings, and upload images</p>
+        </div>
+      </div>
+
+      <figure class="w-full frame rnd-7 mg-0-auto mg-b-8 w-mx-900 slideshow">
         <img src='./../img/projects/art-designer-02-c.png' class="rnd-7">
-      </figure>
-
-      <h4 class="mg-t-8 mg-b-3"><span style="color: #aaa;">2. </span>Designer Service Backend</h4>
-      <p>APIs to query 3D artwork assets, modify art-project configurations, trigger build pipelines, and create tracking
-        tickets</p>
-      <figure class="w-full rnd-7 frame mg-b-8 w-mx-900">
         <img src='./../img/projects/art-designer-12-c.png' class="rnd-7">
-      </figure>
-
-      <h4 class="mg-t-8 mg-b-3"><span style="color: #aaa;">3. </span>Art Library</h4>
-      <p>Local application to import 3D assets from Unity3D, define meta rules &amp; interdependencies, configure
-        default settings, and upload images</p>
-      <figure class="w-full rnd-7 mg-b-8 w-mx-900">
         <img src='./../img/projects/art-designer-07-c.png' class="rnd-7">
       </figure>
 
       <h3>Challenges</h3>
 
       <ul>
-        <li>Assets can't always be freely combined, and need rules in place</li>
-        <ul class="mg-b-3">
-          <li>Each environment has a number of camera perspectives, each with a separate set of seats</li>
-          <li>Each avatar support a number of animations, optomized for body shape, setting context, gender, etc.</li>
-          <li>Avatars and outfits may be gendered, uniquely sized, customized per client, etc.</li>
-        </ul>
-        <li>No listing of any of this information existed previously, other than in spreadsheets and documentation</li>
+        <li>How to define asset info for display, filtering, and correct assembly of all asset types</li>
         <li>How to represent a Unity assetbundle in a web application, with custom definitions</li>
         <li>How to keep the library up-to-date with fixes, improvements, and releases</li>
-        <li>How to import, edit, and submit from the existing library of art-projects (configurations)</li>
+        <li>How to import, edit, and submit from the existing library of art-configs</li>
         <li>How to distill all of this information to Operational users, without art-pipeline knowledge</li>
       </ul>
 
-    
     </section>
 
     <section class='divider'>
@@ -189,8 +198,23 @@
     </section>
 
     <section>
-      <h3>In-Progress</h3>
-      <p>Full write-up in coming soon...</p>
+      <h3>Architecture</h3>
+
+      <figure class="frame rnd-7 mg-b-8 mg-t-0 w-full w-mx-800">
+        <img src="./../img/projects/art-designer-11-c.png" class="rnd-7">
+      </figure>
+
+      <p>
+        All of the new supportive products needed to build on top of the existing art pipeline, with minimal overhead as to avoid any disruption of delivery. While not the ideal solution, it did still reduce the design timeline from weeks to same-day. This was achieved by giving powerful new tools to the designers in direct contact with clients, and supporting various automation components to offload all of the manual work involved.
+      </p>
+
+    </section>
+
+    <section class="divider"><hr></section>
+
+    <section>
+      <h3>In the Works</h3>
+      <p>More to come soon!</p>
     </section>
 
     <section>&nbsp;</section>

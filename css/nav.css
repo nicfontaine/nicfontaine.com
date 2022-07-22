@@ -36,6 +36,10 @@
     flex: 0 0 140px;
   }
 
+  nav.shrink #nav-link-home {
+    display: none;
+  }
+
   nav.shrink > div, nav.shrink > ul {
     opacity: 0;
   }
@@ -522,7 +526,7 @@
 
   /* Inactive lighten */
 
-  main.off p, main.off ul li, main.off a, main.off h1, main.off h2, main.off h3, main.off h4, main.off h5, main.off h6, main.off a.btn {
+  main.off:not(.expand) p, main.off:not(.expand) ul li, main.off:not(.expand) a, main.off:not(.expand) h1, main.off:not(.expand) h2, main.off:not(.expand) h3, main.off:not(.expand) h4, main.off:not(.expand) h5, main.off:not(.expand) h6, main.off:not(.expand) a.btn {
     color: #aaa;
     transition: color 0.3s;
   }
@@ -540,15 +544,15 @@
     border-left-color: #ccc;
   }
 
-  main figure {
+  main:not(.expand) figure {
     background: #f2f2f2;
     /*transition: all 0.3s;*/
   }
 
-  main img, main video {
+  main:not(.expand) img, main:not(.expand) video {
     opacity: 0.12;
     transition: opacity 0.4s;
-    position: relative;
+    /* position: relative; */
   }
 
   main.on img, main.on video {
