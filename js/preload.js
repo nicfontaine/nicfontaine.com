@@ -18,7 +18,10 @@
 				"./img/art/bunker-blast-slide-02.jpg",
 				"./img/art/bunker-blast-slide-03.jpg",
 				"./img/art/bunker-blast-slide-04.jpg",
-				"./img/art/bunker-blast-slide-05.jpg"
+				"./img/art/bunker-blast-slide-05.jpg",
+				"./img/art/shotwells-shirt-schoolhouse-02-bow-c.png",
+				"./img/art/shotwells-shirt-pigeons-01-bow-c.png",
+				"./img/art/shotwells-shirt-map-01-bow-c.png"
 			],
 			projects: [
 				"./img/projects/art-designer-01-c.png",
@@ -53,7 +56,7 @@
 				"./img/projects/site-thalia-01-c.png",
 				"./img/projects/email-the-grove-01-c.png"
 			],
-			delay: 9000,
+			delay: 5000,
 			load: function() {
 				for (var i=0; i < this.art.length; i++) {
 					var imgD = new Image()
